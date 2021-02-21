@@ -9,6 +9,7 @@
 ## 🖖 Introduction
 [zoomkoding.dev](https://sad-haibt-6a7a35.netlify.app/)는 Gatsby와 React를 활용해서 만든 **저만의 블로그**입니다.  
 이전에 사용하던 jekyll theme가 아닌 제가 좋아하는 디자인과 기능으로 블로그를 개편해보려고 합니다.
+> 현재는 **netlify**를 이용해서 배포해놓은 상황입니다!
 
 ## 🚀 Progress
 - [x] Home 
