@@ -1,21 +1,20 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-starter-zoomkoding",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "zoomkoding <zoomkoding@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.32.3",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-manifest": "^2.12.0",
     "gatsby-plugin-mdx": "^1.10.0",
     "gatsby-plugin-offline": "^3.10.0",
     "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-plugin-sass": "^3.2.0",
     "gatsby-plugin-sharp": "^2.14.1",
-    "gatsby-plugin-styled-components": "^3.10.0",
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-transformer-remark": "^2.16.0",
     "gatsby-transformer-sharp": "^2.12.0",
@@ -24,7 +23,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1"
+    "sass": "^1.32.8"
   },
   "devDependencies": {
     "prettier": "2.2.1"
