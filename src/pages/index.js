@@ -1,22 +1,38 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Bio from '../components/bio';
+import PostCards from '../components/post-cards';
+import SectionHeader from '../components/section-header';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+export default ({ data }) => {
+  console.log(data.allMarkdownRemark.edges);
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Bio />
+      <SectionHeader title="Featured Posts" />
+      <PostCards contents={data.allMarkdownRemark.edges} />
+    </Layout>
+  );
+};
 
-export default IndexPage
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            slug
+            categories
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+  }
+`;
