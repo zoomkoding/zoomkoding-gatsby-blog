@@ -13,10 +13,10 @@ const Header = ({ siteTitle }) => (
         </Link>
       </div>
       <div className="trailing-section">
-        <Link className="link" to="/">
+        <Link className="link" to="/about">
           about
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/posts">
           posts
         </Link>
       </div>
