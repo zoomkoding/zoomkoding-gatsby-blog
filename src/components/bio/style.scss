@@ -1,0 +1,40 @@
+.bio-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    .bio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: var(--max-width);
+        
+        .introduction {
+            
+            font-weight: 100;
+            font-size: 45px;
+            line-height: 1.2;
+            
+            strong {
+                font-weight: 600;
+                font-size: 45px;
+            }
+            
+            .description {
+                margin-top: 10px;
+                font-weight: 100;
+                font-size: 25px;
+                word-break: keep-all;
+                line-height: 1.5;
+            }
+        }
+
+        .video {
+            width: 250px;
+            margin-left: 100px;
+        }
+    }
+}
