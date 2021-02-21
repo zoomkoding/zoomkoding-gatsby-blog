@@ -1,0 +1,15 @@
+.section-header-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 12px;
+
+    .section-header {
+        width: 100%;
+        max-width: var(--max-width);
+        
+        font-weight: 600;
+        font-size: 17px;
+        color: #000000;
+    }
+}
