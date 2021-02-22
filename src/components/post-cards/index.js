@@ -17,7 +17,7 @@ const PostCards = ({ contents }) => {
               <div className="title">{title}</div>
               <div className="description">{html}</div>
               <div className="info">
-                <div calssName="date">{date}</div>
+                <div className="date">{date}</div>
                 <div className="categories">{categories}</div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import './src/styles/reset.css';
-import './src/styles/font.css';
-import './src/styles/style.css';
-import './src/styles/markdown-style.css';
+import './src/styles/_reset.scss';
+import './src/styles/_font.scss';
+import './src/styles/_global-style.scss';
+import './src/styles/_markdown-style.scss';
