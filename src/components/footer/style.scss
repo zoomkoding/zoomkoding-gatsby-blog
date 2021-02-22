@@ -1,17 +1,18 @@
+@use '../../styles/mixins' as *;
+
 .page-footer-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 62px;
     margin-top: 20px;
+    @include padding;
 
     .page-footer {
         display: flex;
         justify-content: center;
-        align-items: center;    
-        
-        width: 100%;
-        max-width: var(--max-width);
+        align-items: center;            
+        @include max-width;
 
         .link {
             font-weight: 700;

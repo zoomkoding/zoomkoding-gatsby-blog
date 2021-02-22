@@ -1,16 +1,22 @@
+@use '../../styles/mixins' as *;
+
 .post-cards-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
+    @include padding;
 
     .post-cards {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        column-gap: 15px;
-        row-gap: 15px;
+        display: flex;
+        flex-direction: column;
 
-        width: 100%;
-        max-width: var(--max-width);
+        @include max-width;
+        @include md {
+            display: grid;
+            grid-template-columns: 49.3% 49.3%;
+            column-gap: 1.4%;
+            row-gap: 15px;
+        }
         
         .post-card {
             display: flex;
@@ -19,12 +25,18 @@
             width: 100%;
             border: 1px solid rgba(0, 0, 0, 0.12);
             border-radius: 6px;
-            padding: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+
+            @include md {
+                margin-bottom: 0;
+            }
 
             .title {
-                font-size: 20px;
-                font-weight: 700;
+                font-size: 18px;
+                font-weight: 600;
                 margin-bottom: 7px;
+                line-height: 1.4;
             }
             
             .description {
