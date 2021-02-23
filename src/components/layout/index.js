@@ -28,14 +28,14 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
       <Footer
         author={data.site.siteMetadata?.author || `Author`}
         githubUrl={data.site.siteMetadata?.social?.github || `https://www.github.com`}
       />
-    </>
+    </div>
   );
 };
 
