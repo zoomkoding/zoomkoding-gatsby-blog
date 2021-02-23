@@ -51,7 +51,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          html
+          excerpt(pruneLength: 200, truncate: true)
           frontmatter {
             slug
             categories

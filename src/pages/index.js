@@ -21,7 +21,7 @@ const getSortedCategoriesByCount = (posts) => {
   return sortObjectByValue(cntPerCategory).map(([category]) => category);
 };
 
-export default ({ category, data }) => {
+export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map((edge) => new Post(edge));
   const categories = ['전체', ...getSortedCategoriesByCount(posts)];
   const [tabIndex, setTabIndex] = useState(0);
@@ -54,7 +54,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          html
+          excerpt(pruneLength: 200, truncate: true)
           frontmatter {
             slug
             categories
