@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => (
         <Link className="link" to="/about">
           about
         </Link>
-        <Link className="link" to="/posts">
+        <Link className="link" to="/posts/전체">
           posts
         </Link>
       </div>
