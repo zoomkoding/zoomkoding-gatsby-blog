@@ -23,7 +23,7 @@ const getSortedCategoriesByCount = (posts) => {
 };
 
 export default ({ category, data }) => {
-  const posts = data.allMarkdownRemark.edges.map((edge) => new Post(edge));
+  const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
   const categories = ['전체', ...getSortedCategoriesByCount(posts)];
   const tabIndex = categories.findIndex((tab) => tab === category);
 
