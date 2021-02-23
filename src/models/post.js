@@ -1,9 +1,10 @@
 export default class Post {
   constructor(edge) {
-    const { id, html, frontmatter } = edge.node;
+    const { id, html, excerpt, frontmatter } = edge.node;
     const { slug, categories, title, date } = frontmatter;
 
     this.id = id;
+    this.excerpt = excerpt;
     this.html = html;
     this.slug = slug;
     this.title = title;
