@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+.post-content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include padding;
+
+    .post-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: $post-max;
+
+    }
+    
+}
