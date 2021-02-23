@@ -1,19 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
 import PostCards from '../components/post-cards';
-import SectionHeader from '../components/section-header';
+import Post from '../models/post';
+import Tabs from '../components/tabs';
 
-export default ({ data }) => {
-  console.log(data.allMarkdownRemark.edges);
+import { sortObjectByValue } from '../utils/helpers';
+
+const getSortedCategoriesByCount = (posts) => {
+  const cntPerCategory = {};
+
+  posts.forEach(({ categories }) => {
+    categories.forEach((category) => {
+      cntPerCategory[category] = cntPerCategory[category] ? cntPerCategory[category] + 1 : 1;
+    });
+  });
+
+  return sortObjectByValue(cntPerCategory).map(([category]) => category);
+};
+
+export default ({ category, data }) => {
+  const posts = data.allMarkdownRemark.edges.map((edge) => new Post(edge));
+  const categories = ['전체', ...getSortedCategoriesByCount(posts)];
+  const [tabIndex, setTabIndex] = useState(0);
+
+  const onTabIndexChange = (e, value) => {
+    setTabIndex(value);
+  };
+
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Posts" />
       <Bio />
-      <SectionHeader title="Featured Posts" />
-      <PostCards contents={data.allMarkdownRemark.edges} />
+      <Tabs className={'tabs'} value={tabIndex} onChange={onTabIndexChange} tabs={categories} />
+      <PostCards
+        posts={
+          tabIndex === 0
+            ? posts.filter((post, index) => index < 4)
+            : posts.filter(
+                (post, index) => post.categories.includes(categories[tabIndex]) && index < 4,
+              )
+        }
+      />
     </Layout>
   );
 };
