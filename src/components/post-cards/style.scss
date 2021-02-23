@@ -37,7 +37,9 @@
             transition: transform .2s;
 
             &:hover {
-                transform: scale(1.01);
+                .title {
+                    text-decoration: underline;
+                }
             }
 
             @include md {
@@ -54,7 +56,8 @@
             .description {
                 font-size: 13px;
                 margin-bottom: 10px;
-                line-height: 1.4;
+                line-height: 20px;
+                color: black;
                 
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -68,16 +71,12 @@
                 justify-content: space-between;
                 font-size: 14px;
                 color: rgba(0, 0, 0, 0.54);
-
-                .date {
-
-                }
                 
                 .categories {
                     .category {
                         margin-left: 4px;
                         color: rgba(0, 0, 0, 0.54);
-                        
+
                         &:hover {
                             text-decoration: underline;
                         }

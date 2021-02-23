@@ -8,11 +8,11 @@ const PostCards = ({ posts }) => {
   return (
     <div className="post-cards-wrapper">
       <div className="post-cards">
-        {posts.map(({ id, slug, title, html, date, categories }) => {
+        {posts.map(({ id, slug, title, excerpt, date, categories }) => {
           return (
             <Link className="post-card" key={id} to={slug}>
               <div className="title">{title}</div>
-              <p className="description" dangerouslySetInnerHTML={{ __html: html }} />
+              <p className="description" dangerouslySetInnerHTML={{ __html: excerpt }} />
               <div className="info">
                 <div className="date">{date}</div>
                 <div className="categories">
