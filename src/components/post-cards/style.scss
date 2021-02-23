@@ -9,6 +9,7 @@
     .post-cards {
         display: flex;
         flex-direction: column;
+        transition: transform .2s;
 
         @include max-width;
         @include md {
@@ -17,16 +18,27 @@
             column-gap: 1.4%;
             row-gap: 15px;
         }
+
+        
         
         .post-card {
             display: flex;
             flex-direction: column;
-
             width: 100%;
             border: 1px solid rgba(0, 0, 0, 0.12);
             border-radius: 6px;
             padding: 15px;
             margin-bottom: 15px;
+
+            background-color: white;
+            color: black;
+
+            cursor: pointer;
+            transition: transform .2s;
+
+            &:hover {
+                transform: scale(1.01);
+            }
 
             @include md {
                 margin-bottom: 0;
@@ -62,7 +74,14 @@
                 }
                 
                 .categories {
-
+                    .category {
+                        margin-left: 4px;
+                        color: rgba(0, 0, 0, 0.54);
+                        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }                    
                 }
             }
 
