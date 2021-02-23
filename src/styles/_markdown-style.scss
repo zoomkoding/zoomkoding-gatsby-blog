@@ -679,12 +679,6 @@
   font-size: 2em;
 }
 
-.markdown h1,
-.markdown h2 {
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #eaecef;
-}
-
 .markdown h2 {
   font-size: 1.5em;
 }
@@ -719,8 +713,14 @@
   margin-bottom: 0;
 }
 
+.markdown ul {
+  list-style-type: disc;
+}
+
 .markdown li {
+  display: list-item;
   word-wrap: break-all;
+  text-align: -webkit-match-parent;
 }
 
 .markdown li > p {
@@ -774,6 +774,8 @@
 }
 
 .markdown img {
+  display: block; 
+  margin: 0px auto;
   max-width: 100%;
   box-sizing: initial;
   background-color: #fff;
