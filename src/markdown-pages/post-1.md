@@ -1,11 +1,11 @@
 ---
 title: (개인프로젝트 개발 회고) 대학시간 개발기
 layout: post
-slug: "/blog/my-first-post"
+slug: "/blog/college-timetable-development"
 date: '2021-02-10 04:00:00'
 author: 줌코딩
 tags: 개인프로젝트 대학시간 react node express material-ui sequelize design 
-cover: "/assets/instacode.png"
+cover: "https://zoomkoding.github.io/assets//instacode.png"
 categories: 대학시간 회고
 ---
 
@@ -17,7 +17,7 @@ categories: 대학시간 회고
 
 대학시간은 수강신청을 도와주는 웹사이트로, 1월 중순에 배포하여 유지보수를 진행하고 있다.
 
-![/assets/college-timetable-0.png](/assets/college-timetable-0.png)
+![https://zoomkoding.github.io/assets//college-timetable-0.png](https://zoomkoding.github.io/assets//college-timetable-0.png)
 
 - [웹사이트 링크](http://www.timetable.college/handong)
 - [깃헙레포 링크](https://github.com/zoomKoding/college-timetable)
@@ -26,7 +26,7 @@ categories: 대학시간 회고
 
 기술스택은 React, Nodejs(express), MySQL을 사용했다.
 
-![/assets/college-timetable-1.png](/assets/college-timetable-1.png)
+![https://zoomkoding.github.io/assets//college-timetable-1.png](https://zoomkoding.github.io/assets//college-timetable-1.png)
 
 ## 🎨 직접 기획하고 디자인하기
 
@@ -36,19 +36,19 @@ categories: 대학시간 회고
 
 일단 내 눈을 높여 놓자는 마음으로 이 프로젝트를 기획하는 일주일 동안 Dribbble을 참고해서 눈을 높이는데 집중했다. 그리고 참고할 만한 디자인을 찾아 스크랩하게 되었다.
 
-![/assets/college-timetable-2.png](/assets/college-timetable-2.png)
+![https://zoomkoding.github.io/assets//college-timetable-2.png](https://zoomkoding.github.io/assets//college-timetable-2.png)
 
 처음에는 Dribbble에 있는 디자인을 고대로 따라하려 했지만 완전 도일한 서비스가 아니다보니 적용이 쉽지 않았다...ㅎㅎ 결국 계속 부분부분을 참고하며 직접 디자인을 진행하게 되었고 이것저것을 추가해보면서 괜찮다 싶은 디자인을 찾게 되었다. (딱보면 이쁜 건 있는데 막상 만들고 보면 뭔가 아쉽다..ㅋㅋ)
 
 특히 이번 프로젝트에서는 모바일 경험에 집중하게 되었다. 그 이유로 수강신청 준비는 사실 검색과 시간표를 한번에 보는 것이 편리하기 때문에 당연히 컴퓨터를 이용해서 진행할 것이라는 예상과는 달리 사람들은 모바일에 집중했다. 실제로도 Mobile Web 사용자가 훨씬 많았다. 그래서 모바일에서 사용감을 좋은 디자인을 찾기 위해 노력했다.
 
-![/assets/college-timetable-3.png](/assets/college-timetable-3.png)
+![https://zoomkoding.github.io/assets//college-timetable-3.png](https://zoomkoding.github.io/assets//college-timetable-3.png)
 
 ### 🐥 첫 디자인
 
 디자인을 진행할 때는 Figma나 Sketch와 같은 툴을 사용하지 않고 바로 CSS 작업을 진행하게 되었다. 아무래도 디자인 툴들은 아직 잘 못 다루다 보니 오히려 CSS를 바로 작업하면서 변화를 직접 관찰하는 편이 편했다. 그렇게 계속해서 조금씩 디자인을 바꾸다 보니 디자인이 조금씩 나아지기(?) 시작했다..! 아래는 CSS로 완성된 첫 디자인결과물이다.
 
-![/assets/college-timetable-4.png](/assets/college-timetable-4.png)
+![https://zoomkoding.github.io/assets//college-timetable-4.png](https://zoomkoding.github.io/assets//college-timetable-4.png)
 
 ### 🐓 현재 디자인
 
@@ -56,19 +56,20 @@ categories: 대학시간 회고
 
 <center><strong>데스크탑 뷰</strong></center>
 
-![/assets/college-timetable-5.png](/assets/college-timetable-5.png)
+![https://zoomkoding.github.io/assets//college-timetable-5.png](https://zoomkoding.github.io/assets//college-timetable-5.png)
 
 <br/>
 
 <center><strong>모바일 뷰</strong></center>
 
-<img alt="/assets/college-timetable-6.png" src="/assets/college-timetable-6.png" style="width: 30%;">
+<img alt="https://zoomkoding.github.io/assets//college-timetable-6.png" src="https://zoomkoding.github.io/assets//college-timetable-6.png" style="width: 30%;">
 
 <br/>
 
 ## 📱기술 스택 정하기
 
-<img alt="/assets/college-timetable-7.png" src="/assets/college-timetable-7.png" style="width: 100%;">
+<img alt="https://zoomkoding.github.io/assets//college-timetable-7.png" src="https://zoomkoding.github.io/assets//college-timetable-7.png" style="width: 100%;">
+
 ### 프론트엔드
 
 나는 웹 프론트엔드 개발자로 채용이 되었지만 사실 나는 express와 모바일 앱 프레임워크인 Flutter가 더 친숙하다. 그나마 우아한테크캠프를 통해 바닐라js와는 좀 더 친해진 것 같은데 아직 React와는 어색하다.
@@ -120,7 +121,7 @@ export default class User {
 
 우아한테크캠프 마지막 프로젝트인 bmart를 React로 구현하였는데 이때 사용했던 atomic design pattern은 개념은 간단한 듯 하나 실제 구현을 하다보니 컴포넌트의 depth를 정의하는데 조금은 어려움이 있었다. 그래서 이번에는 상위 컴포넌트를 정의하고 그 내부에 여러 컴포넌트가 존재한다면 디렉토리를 생성하여 하위 컴포넌트를 정의하도록 했다. 
 
-![/assets/college-timetable-8.png](/assets/college-timetable-8.png)
+![https://zoomkoding.github.io/assets//college-timetable-8.png](https://zoomkoding.github.io/assets//college-timetable-8.png)
 
 ### pages
 
@@ -140,15 +141,15 @@ export default class User {
 
 ### User-Driven Development
 
-![/assets/college-timetable-9.png](/assets/college-timetable-9.png)
+![https://zoomkoding.github.io/assets//college-timetable-9.png](https://zoomkoding.github.io/assets//college-timetable-9.png)
 
 이 부분은 이전에 Picky를 배포하고 성장하는 과정에서 많이 배운 점을 참고한 것이다. 당시 앱을 배포하고 나서 대표님은 만드는 사람이 원하는 게 아니라 `사용자들이 원하는 것을 만들어야 한다`는 점을 강조하셨다. 그래서 본인의 감보다는 유저의 행동이나 피드백에 귀를 기울이셨고 거기에 맞춰서 방향을 잡으셨다. 유저의 피드백을 최대한 많이 듣기 위해 피드백 기능을 첫 배포에 추가했고 유저의 피드백과 추가적으로 지인들의 피드백을 수렴해서 서비스를 발전시켜 나갔다.
 
-![/assets/college-timetable-10.png](/assets/college-timetable-10.png)
+![https://zoomkoding.github.io/assets//college-timetable-10.png](https://zoomkoding.github.io/assets//college-timetable-10.png)
 
 프로젝트 하는 내내 적극적으로 도움을 줬던 현섭이와 수현이에게 고맙다ㅋㅋㅋ
 
-![/assets/college-timetable-11.png](/assets/college-timetable-11.png)
+![https://zoomkoding.github.io/assets//college-timetable-11.png](https://zoomkoding.github.io/assets//college-timetable-11.png)
 
 이를 통해 버그 리포트 뿐만 아니라 기능적인 개선점도 많이 발견했고, 이를 반영해서 지속적으로 배포했다.
 
@@ -194,15 +195,15 @@ const sendEmail = ({
 
 기능이 잘 돌아가는 것을 어느정도 확인한 후에 제대로 서비스 해보자는 마음으로 기능 소개용 모달도 구현하고 홍보를 진행했다.
 
-![/assets/college-timetable-12.png](/assets/college-timetable-12.png)
+![https://zoomkoding.github.io/assets//college-timetable-12.png](https://zoomkoding.github.io/assets//college-timetable-12.png)
 
 ### 👍 반응
 
 생각보다 이삭줍기 알림에 대한 반응이 좋았다. 현재까지 약 400개의 알림 메일을 발송했고, 알림 덕에 수강신청을 할 수 있다는 연락을 여럿으로 부터 받았다..! 기쁜 것도 기뻤지만 서비스를 믿고 이용해주신 여러 분들에게 감사했다. 
 
-![/assets/college-timetable-13.png](/assets/college-timetable-13.png)
+![https://zoomkoding.github.io/assets//college-timetable-13.png](https://zoomkoding.github.io/assets//college-timetable-13.png)
 
-![/assets/college-timetable-14.png](/assets/college-timetable-14.png)
+![https://zoomkoding.github.io/assets//college-timetable-14.png](https://zoomkoding.github.io/assets//college-timetable-14.png)
 
 <br/>
 
@@ -214,11 +215,11 @@ const sendEmail = ({
 
 유저의 Authentication 여부에 따라서 API 사용을 제한되지만 내가 알지 못하는 암흑의 경로로 들어와 데이터를 날릴 수 있기에 두가지 대비를 진행했다.  하나는 sequl pro의 export 기능을 활용해서 그냥 데이터베이스의 내용을 sql문으로 저장해놓았다. 
 
-![/assets/college-timetable-15.png](/assets/college-timetable-15.png)
+![https://zoomkoding.github.io/assets//college-timetable-15.png](https://zoomkoding.github.io/assets//college-timetable-15.png)
 
 뿐만 아니라 Lightsail에서 지원하는 `Automatic snapshot`을 활용하면 주기적으로 백업 데이터를 모을 수 있었다!
 
-![/assets/college-timetable-16.png](/assets/college-timetable-16.png)
+![https://zoomkoding.github.io/assets//college-timetable-16.png](https://zoomkoding.github.io/assets//college-timetable-16.png)
 
 아직 데이터가 날아간 적은 없지만 혹시 날아간다면 이런 준비를 안해놓은 것을 엄청나게 후회할 것이다...😭
 
@@ -226,7 +227,7 @@ const sendEmail = ({
 
 유저의 사용량과 서비스의 모니터링 하기 위해 두가지를 사용했다. 먼저 Google Analytics(GA)를 통해 실시간으로 모니터링을 진행했다. 사실 이걸로 큰 도움은 안되지만 유저 수가 지금 어떠한지 보는 맛이 쏠쏠했다.
 
-![/assets/college-timetable-17.png](/assets/college-timetable-17.png)
+![https://zoomkoding.github.io/assets//college-timetable-17.png](https://zoomkoding.github.io/assets//college-timetable-17.png)
 
 그리고 주기적으로 개설 과목의 정보를 크롤링해서 DB에 넣기 때문에 문제가 발생하는지 확인하는 방법이 필요했다. 나는 간단하게 **[텔레그램의 봇](https://core.telegram.org/bots/api)**을 활용해서 해서 크롤러의 동작 상황을 전달하게 했다.(무료이며 구현이 매우 간단하기 때문에 이를 활용했다!) 
 
@@ -241,7 +242,7 @@ try {
 
 이 방법을 이용해서 아래와 같이 지속적으로 업데이트와 이삭줍기 알림 전송 상황을 확인하며 크롤러가 열일하고 있는지 알 수 있다.
 
-<img alt="/assets/college-timetable-18.png" src="/assets/college-timetable-18.png" style="width: 30%;">
+<img alt="https://zoomkoding.github.io/assets//college-timetable-18.png" src="https://zoomkoding.github.io/assets//college-timetable-18.png" style="width: 30%;">
 
 **물론 서비스가 잘 돌고 있는지 확인하려는 목적도 있지만 그냥 심심할 때 들어가서 사람들이 잘 쓰고 있는지 보는 맛이 있었다..ㅎㅎ**
 
