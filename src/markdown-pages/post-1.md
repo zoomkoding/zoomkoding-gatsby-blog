@@ -1,4 +1,5 @@
 ---
+emoji: 🥇
 title: (개인프로젝트 개발 회고) 대학시간 개발기
 layout: post
 slug: "/blog/college-timetable-development"
