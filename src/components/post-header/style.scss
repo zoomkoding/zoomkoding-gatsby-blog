@@ -2,71 +2,66 @@
 @use '../../styles/mixins' as *;
 
 .post-header-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include padding;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  word-break: keep-all;
+
+  .post-header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     width: 100%;
-    @include padding;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    word-break: keep-all;
+    max-width: $post-max;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eaecef;
+    .categories {
+      margin-bottom: 5px;
 
-    .post-header {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: $post-max;
-        padding-bottom: 15px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      .category {
+        margin-right: 4px;
 
-        
+        font-weight: 600;
+        // color: rgb(243, 147, 37);
+        color: black;
 
-            .categories {
-                margin-bottom: 5px;
-                
-                .category {
-                    margin-right: 4px;
-    
-                    font-weight: 600;
-                    // color: rgb(243, 147, 37);
-                    color: #9e9e9e;
-    
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }                    
-            }
-        
-
-        .title {
-            font-weight: 600;
-            font-size: 28px;
-            color: #000000;
-            margin-bottom: 6px;
-            line-height: 1.3;
+        &:hover {
+          text-decoration: underline;
         }
-
-        .info {
-            display: flex;
-            // justify-content: space-between;
-            font-size: 16px;
-            font-weight: 500;
-            color: #9e9e9e;
-
-            .author {
-                display: flex;
-                font-size: 16px;
-                font-weight: 500;
-                color: #9e9e9e;
-                margin-right: 4px;
-
-                strong {
-                    margin-left: 4px;
-
-                    color: #000000;
-                    font-weight: 600;
-                }
-            }
-        }
+      }
     }
-    
+
+    .title {
+      font-weight: 600;
+      font-size: 32px;
+      color: #000000;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .info {
+      display: flex;
+      // justify-content: space-between;
+      font-size: 16px;
+      font-weight: 500;
+      color: #9e9e9e;
+
+      .author {
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        color: #9e9e9e;
+        margin-right: 4px;
+
+        strong {
+          margin-left: 4px;
+
+          color: #000000;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 }
