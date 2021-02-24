@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import Header from '../components/header';
 import Layout from '../components/layout';
-import TableOfContents from '../components/toc';
+// import TableOfContents from '../components/toc';
 import PostHeader from '../components/post-header';
 import Post from '../models/post';
 import PostContent from '../components/post-content';
