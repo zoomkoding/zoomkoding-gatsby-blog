@@ -19,7 +19,7 @@ const createBlogPages = ({ createPage, results }) => {
   const blogPostTemplate = require.resolve(`./src/templates/blog-template.js`);
   results.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: node.fileAbsolutePath.split('/').slice(-1)[0].split('.')[0],
       component: blogPostTemplate,
       context: {
         // additional data can be passed via context
@@ -32,7 +32,7 @@ const createBlogPages = ({ createPage, results }) => {
 };
 
 const createPostsPages = ({ createPage, results }) => {
-  const categoryTemplate = require.resolve(`./src/pages/posts.js`);
+  const categoryTemplate = require.resolve(`./src/templates/category-template.js`);
 
   let categories = [];
 
@@ -46,7 +46,7 @@ const createPostsPages = ({ createPage, results }) => {
     path: `/posts`,
     component: categoryTemplate,
     context: {
-      currentCategory: 'All',
+      currentCategory: '전체',
       categories: sortedCategories,
       edges: results.data.allMarkdownRemark.edges,
     },
@@ -76,6 +76,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             id
+            fileAbsolutePath
             excerpt(pruneLength: 200, truncate: true)
             frontmatter {
               slug
