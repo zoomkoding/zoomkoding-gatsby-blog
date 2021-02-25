@@ -1,89 +1,22 @@
 @use '../../styles/mixins' as *;
 
 .post-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include padding;
+
+  .post-cards {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    @include padding;
+    flex-direction: column;
+    transition: transform 0.2s;
 
-    .post-cards {
-        display: flex;
-        flex-direction: column;
-        transition: transform .2s;
-
-        @include max-width;
-        @include md {
-            display: grid;
-            grid-template-columns: 49.3% 49.3%;
-            column-gap: 1.4%;
-            row-gap: 15px;
-        }
-
-        
-        
-        .post-card {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            border: 1px solid rgba(0, 0, 0, 0.12);
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-
-            background-color: white;
-            color: black;
-
-            cursor: pointer;
-            transition: transform .2s;
-
-            &:hover {
-                .title {
-                    text-decoration: underline;
-                }
-            }
-
-            @include md {
-                margin-bottom: 0;
-            }
-
-            .title {
-                font-size: 18px;
-                font-weight: 600;
-                margin-bottom: 7px;
-                line-height: 1.4;
-            }
-            
-            .description {
-                font-size: 13px;
-                margin-bottom: 10px;
-                line-height: 20px;
-                color: black;
-                
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 3; /* number of lines to show */
-                -webkit-box-orient: vertical;
-            }
-
-            .info {
-                display: flex;
-                justify-content: space-between;
-                font-size: 14px;
-                color: rgba(0, 0, 0, 0.54);
-                
-                .categories {
-                    .category {
-                        margin-left: 4px;
-                        color: rgba(0, 0, 0, 0.54);
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }                    
-                }
-            }
-
-        }
+    @include max-width;
+    @include md {
+      display: grid;
+      grid-template-columns: 49.3% 49.3%;
+      column-gap: 1.4%;
+      row-gap: 15px;
     }
+  }
 }
