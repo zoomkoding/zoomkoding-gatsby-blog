@@ -8,9 +8,10 @@
   .post-cards-column {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    
-    .post-card {
+
+    .post-card-wrapper {
       margin-bottom: 10px;
     }
   }

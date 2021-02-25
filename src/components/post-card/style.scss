@@ -1,11 +1,15 @@
 @use '../../styles/mixins' as *;
 
-.post-card-wrapper {
+.post-card-wrapper {  
+  height: 150px;
   width: 100%;
+  display: flex;
+  justify-content: center;
   
   .post-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     width: 100%;
     max-width: 800px;
     border: 1px solid rgba(0, 0, 0, 0.12);
