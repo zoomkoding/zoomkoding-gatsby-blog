@@ -13,7 +13,8 @@
         display: flex;
         justify-content: center;
         height: 40px;
-        @include max-width;
+        width: 100%;
+        max-width: 800px;
 
         .mui-tabs {
             .MuiTab-root {
