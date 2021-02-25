@@ -1,0 +1,17 @@
+@use '../../styles/mixins' as *;
+
+.post-cards-column-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .post-cards-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    .post-card {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -5,10 +5,10 @@ import React from 'react';
 import PostCard from '../post-card';
 import './style.scss';
 
-const PostCards = ({ posts }) => {
+const PostCardsColumn = ({ posts }) => {
   return (
-    <div className="post-cards-wrapper">
-      <div className="post-cards">
+    <div className="post-cards-column-wrapper">
+      <div className="post-cards-column">
         {posts.map((post) => (
           <PostCard post={post} />
         ))}
@@ -30,4 +30,4 @@ const PostCards = ({ posts }) => {
 //   }).isRequired,
 // };
 
-export default PostCards;
+export default PostCardsColumn;
