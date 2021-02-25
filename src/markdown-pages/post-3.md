@@ -1,7 +1,7 @@
 ---
 title: 스타트업 팀과 앱을 떠나보내며 (퇴사 회고)
 layout: post
-slug: "/blog/start-up-finish"
+slug: "/post-3"
 date: '2020-06-30 02:00:00'
 author: 줌코딩
 tags: 스타트업 회고

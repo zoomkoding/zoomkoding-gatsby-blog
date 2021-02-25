@@ -1,7 +1,7 @@
 ---
 title: (우아한테크캠프 3기) 캠프를 마치며
 layout: post
-slug: "/blog/woowa-finish"
+slug: "/post-2"
 date: "2020-10-05 03:00:00"
 author: 줌코딩
 tags: 우아한테크캠프 우테캠 회고

@@ -1,7 +1,7 @@
 ---
 title: 대학시간
 layout: post
-slug: "/blog/3"
+slug: "/post-4"
 date: '2019-12-05 02:00:00'
 author: 줌코딩
 tags: algorithm 회고
