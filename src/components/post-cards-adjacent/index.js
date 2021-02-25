@@ -5,7 +5,6 @@ import React from 'react';
 import './style.scss';
 
 const PostCardsAdjacent = ({ prevPost, nextPost }) => {
-  console.log(prevPost);
   return (
     <div className="post-cards-adjacent-wrapper">
       <div className="post-cards-adjacent">

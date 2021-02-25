@@ -989,13 +989,13 @@
 }
 
 .markdown .table-of-contents {
-  &::before {
-    padding-left: 35px;
-    content: 'Table of Contents';
-    font-weight: 500;
-    font-size: 15px;
-    margin-bottom: 3px;
-  }
+  // &::before {
+  //   padding-left: 35px;
+  //   content: 'Table of Contents';
+  //   font-weight: 500;
+  //   font-size: 15px;
+  //   margin-bottom: 3px;
+  // }
 
   @media (max-width: 1300px) {
     display: none;
