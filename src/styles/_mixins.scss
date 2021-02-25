@@ -33,6 +33,11 @@
     max-width: $screen-max;
  }
 
+ @mixin post-max-width {
+   width: 100%;
+   max-width: $post-max;
+}
+
  @mixin padding {
     padding-left: $content-padding;
     padding-right: $content-padding;

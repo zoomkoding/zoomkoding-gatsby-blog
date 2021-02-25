@@ -13,8 +13,8 @@
   .post-header {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: $post-max;
+    @include post-max-width;
+
     padding-bottom: 15px;
     border-bottom: 1px solid #eaecef;
 
