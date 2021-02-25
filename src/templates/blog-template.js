@@ -23,7 +23,7 @@ export default ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query($slug: String!, $nextSlug: String, $prevSlug: String) {
+  query($slug: String, $nextSlug: String, $prevSlug: String) {
     cur: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
