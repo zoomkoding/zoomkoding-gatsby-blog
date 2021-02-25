@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
-import PostCards from '../components/post-cards';
+import PostCardsGrid from '../components/post-cards-grid';
 import Post from '../models/post';
 import Tabs from '../components/tabs';
 
@@ -20,16 +20,16 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Posts" />
+      <SEO title="Home" />
       <Bio />
       <Tabs className={'tabs'} value={tabIndex} onChange={onTabIndexChange} tabs={categories} />
-      <PostCards
+      <PostCardsGrid
         posts={
           tabIndex === 0
-            ? posts.filter((post, index) => index < 4)
-            : posts.filter(
-                (post, index) => post.categories.includes(categories[tabIndex]) && index < 4,
-              )
+            ? posts.slice(0, 4)
+            : posts
+                .filter((post, index) => post.categories.includes(categories[tabIndex]))
+                .slice(0, 4)
         }
       />
     </Layout>
