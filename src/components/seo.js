@@ -45,28 +45,21 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:site_title`,
+          content: title,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
         {
+          property: 'og:image',
+          content:
+            'https://github.com/zoomKoding/zoomKoding.github.io/blob/source/assets/zoomkoding-intro.png?raw=true',
+        },
+        {
           property: `og:type`,
           content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
         },
       ].concat(meta)}
     />
