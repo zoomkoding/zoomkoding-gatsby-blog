@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.page-heading-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include padding;
+  margin-bottom: 20px;
+  margin-top: 30px;
+
+  .page-heading {
+    padding-bottom: 7px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 3px solid black;
+  }
+}
