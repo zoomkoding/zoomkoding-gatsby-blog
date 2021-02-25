@@ -6,6 +6,7 @@ import PostHeader from '../components/post-header';
 import PostCardsAdjacent from '../components/post-cards-adjacent';
 import Post from '../models/post';
 import PostContent from '../components/post-content';
+import { Utterances } from '../components/utterances';
 
 export default ({ data }) => {
   const curPost = new Post(data.cur);
@@ -16,6 +17,7 @@ export default ({ data }) => {
       <PostHeader post={curPost} />
       <PostContent html={curPost.html} />
       <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
+      <Utterances />
     </Layout>
   );
 };
