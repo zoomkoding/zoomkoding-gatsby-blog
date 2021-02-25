@@ -7,19 +7,7 @@ import PostCards from '../components/post-cards';
 import Post from '../models/post';
 import Tabs from '../components/tabs';
 
-import { sortObjectByValue } from '../utils/helpers';
-
-const getSortedCategoriesByCount = (posts) => {
-  const cntPerCategory = {};
-
-  posts.forEach(({ categories }) => {
-    categories.forEach((category) => {
-      cntPerCategory[category] = cntPerCategory[category] ? cntPerCategory[category] + 1 : 1;
-    });
-  });
-
-  return sortObjectByValue(cntPerCategory).map(([category]) => category);
-};
+import { getSortedCategoriesByCount } from '../utils/helpers';
 
 export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
