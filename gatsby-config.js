@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `zoomkoding.dev`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `줌코딩의 개발일기`,
     author: `zoomkoding`,
+    og: {
+      image:
+        'https://github.com/zoomKoding/zoomKoding.github.io/blob/source/assets/zoomkoding-intro.png',
+    },
     social: {
       github: `https://github.com/zoomKoding`,
       linkedIn: `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
