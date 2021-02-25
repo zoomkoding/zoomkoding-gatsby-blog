@@ -34,8 +34,11 @@ module.exports = {
       options: {
         name: `zoomkoding-dev-blog`,
         short_name: `zoomkoding.dev`,
+        description: `줌코딩의 개발일기`,
+        lang: `en`,
+        display: `standalone`,
         start_url: `/`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     {
