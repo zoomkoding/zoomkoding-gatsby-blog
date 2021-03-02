@@ -1,17 +1,8 @@
+const metaConfig = require('./gatsby-meta-config');
+
 module.exports = {
-  siteMetadata: {
-    title: `zoomkoding.dev`,
-    description: `줌코딩의 개발일기`,
-    author: `zoomkoding`,
-    og: {
-      image:
-        'https://github.com/zoomKoding/zoomKoding.github.io/blob/source/assets/zoomkoding-intro.png',
-    },
-    social: {
-      github: `https://github.com/zoomKoding`,
-      linkedIn: `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
-    },
-  },
+  siteMetadata: metaConfig,
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
