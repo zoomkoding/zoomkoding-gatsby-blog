@@ -4,17 +4,21 @@
 .tabs-wrapper {
     display: flex;
     justify-content: center;
-
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
     width: 100%;
     margin-bottom: 12px;
+    background-color: white;
     @include padding;
 
     .tabs {  
+        
         display: flex;
         justify-content: center;
         height: 40px;
         width: 100%;
-        max-width: 800px;
+        max-width: $screen-max;
 
         .mui-tabs {
             .MuiTab-root {

@@ -4,13 +4,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 12px;
-    @include padding;
+    margin-bottom: 32px;
 
     .section-header {
-        @include max-width;
-        font-weight: 600;
-        font-size: 17px;
+        padding-bottom: 5px;
+        border-bottom: 4px solid black;
+        font-weight: 700;
+        font-size: 30px;
         color: #000000;
     }
 }
