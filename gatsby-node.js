@@ -77,7 +77,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             id
             fileAbsolutePath
-            excerpt(pruneLength: 200, truncate: true)
+            excerpt(pruneLength: 350, truncate: true)
             frontmatter {
               slug
               categories
