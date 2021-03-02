@@ -12,8 +12,8 @@ export default function VerticalTabs({ value, onChange, tabs }) {
           orientation="vertical"
           value={value}
           onChange={onChange}
-          variant="full-width"
-          scrollButtons="desktop"
+          variant="scrollable"
+          scrollButtons="on"
         >
           {tabs.map((title, index) => (
             <Tab label={title} key={index} />
