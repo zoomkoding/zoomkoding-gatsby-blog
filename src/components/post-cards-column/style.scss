@@ -4,15 +4,25 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  @include padding;
+
 
   .post-cards-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    @include max-width;
 
     .post-card-wrapper {
       margin-bottom: 10px;
+    }
+
+
+    .more-post-cards-button {
+      height: 40px;
+      font-weight: 500;
+      font-size: 15px;
+      background-color: #f3f3f4;
     }
   }
 }

@@ -5,12 +5,11 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  @include padding;
 
   .posts-page-body {
     display: flex;
     flex-direction: column;
-    @include max-width;
+    width: 100%;
 
     .tabs-wrapper {
       display: flex;
@@ -19,17 +18,17 @@
       display: none;
     }
 
-    @include md {
-      flex-direction: row;
+    // @include md {
+    //   flex-direction: row;
   
-      .tabs-wrapper {
-        display: none;
-      }
-      .vertical-tabs-wrapper{
-        display: flex;
-        margin-left: 20px;
-      }
-    }
+    //   .tabs-wrapper {
+    //     display: none;
+    //   }
+    //   .vertical-tabs-wrapper{
+    //     display: flex;
+    //     margin-left: 20px;
+    //   }
+    // }
   }
 
   
