@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
-import PostCardsGrid from '../components/post-cards-grid';
+import PostCardsColumn from '../components/post-cards-column';
 import Post from '../models/post';
 import Tabs from '../components/tabs';
 
@@ -23,7 +23,7 @@ export default ({ data }) => {
       <SEO title="Home" />
       <Bio />
       <Tabs className={'tabs'} value={tabIndex} onChange={onTabIndexChange} tabs={categories} />
-      <PostCardsGrid
+      <PostCardsColumn
         posts={
           tabIndex === 0
             ? posts.slice(0, 4)
@@ -31,6 +31,7 @@ export default ({ data }) => {
                 .filter((post, index) => post.categories.includes(categories[tabIndex]))
                 .slice(0, 4)
         }
+        moreUrl={`posts/${tabIndex === 0 ? '' : categories[tabIndex]}`}
       />
     </Layout>
   );
