@@ -1,0 +1,76 @@
+@use '../../styles/mixins' as *;
+
+.timestamps-section-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include padding;
+
+
+  .timestamps-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include max-width;
+    margin-bottom: 50px;
+
+    .body {
+      width: 100%;
+
+      .timestamp {
+        display: flex;
+        justify-items: center;
+        
+        width: 100%;
+        margin-left: 5px;
+        padding: 10px 0;
+        border-left: 2px solid #bdbdbd;
+
+        
+        font-size: 18px;
+        font-weight: 400;
+
+        &:first-child {
+          padding-top: 7px;
+        } 
+        
+        &:last-child {
+          padding-bottom: 7px;
+        }   
+        
+        &::before {
+          position: relative;
+          left: -1px;
+          content: "";
+          align-self: center;
+          width: 10px;
+          height: 10px;
+          background: white;
+          border-radius: 10px;
+          transform: translatex(-50%);
+          border: 2px solid #828282;
+        }
+        
+        .date {
+          margin-left: 5px;
+          margin-right: 5px;
+          width: 115px;
+          min-width: 115px;
+          color: #828282;
+          align-self: center;
+
+          @include md {
+            width: 200px;
+            min-width: 200px;
+          }
+        }
+        .activity {
+          line-height: 23px;
+          width: 100%;
+        }
+
+        
+      }
+    }
+  }
+}
