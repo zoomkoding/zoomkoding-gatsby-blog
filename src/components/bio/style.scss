@@ -1,55 +1,71 @@
 @use '../../styles/mixins' as *;
 
 .bio-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  @include padding;
+
+  .bio {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    @include padding;
-    
-    .bio {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        @include max-width;
+    flex-direction: column;
+    justify-content: space-between;
+    @include max-width;
 
-        @include md {
-            flex-direction: row;
-        }
-
-        .introduction{ 
-            display: flex;
-            flex-direction: column;
-            word-break: keep-all;
-
-            .title {
-                font-weight: 100;
-                font-size: 42px;
-                line-height: 1.2;
-                
-                strong {
-                    font-weight: 600;
-                    font-size: 42px;
-                }
-            }
-    
-            .description {
-                margin-top: 10px;
-                font-weight: 100;
-                font-size: 22px;
-                line-height: 1.5;
-            }
-        }
-
-        .video {
-            display: none;
-            width: 250px;
-
-            @include sm {
-                display: block;
-            }
-        }
+    @include md {
+      flex-direction: row;
+      align-items: center;
     }
+
+    .introduction {
+      display: flex;
+      flex-direction: column;
+      word-break: keep-all;
+
+      .title {
+        font-weight: 100;
+        font-size: 42px;
+        line-height: 1.2;
+
+        .react-rotating-text-cursor {
+            font-size: 50px;
+            animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+          }
+      
+          @keyframes blinking-cursor {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+        strong {
+          font-weight: 600;
+          font-size: 42px;
+        }
+      }
+
+      .description {
+        margin-top: 10px;
+        font-weight: 100;
+        font-size: 22px;
+        line-height: 1.5;
+      }
+    }
+
+    .video {
+      display: none;
+      width: 250px;
+
+      @include sm {
+        display: block;
+      }
+    }
+  }
 }
