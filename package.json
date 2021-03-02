@@ -6,6 +6,7 @@
   "author": "zoomkoding <zoomkoding@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby": "^2.32.3",
@@ -27,6 +28,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-rotating-text": "^1.4.1",
     "sass": "^1.32.8"
   },
   "devDependencies": {
