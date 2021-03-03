@@ -1,3 +1,16 @@
+const { createFilePath } = require(`gatsby-source-filesystem`);
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `content` });
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    });
+  }
+};
 const sortObjectByValue = (obj) => {
   let sortable = [];
   for (let item in obj) sortable.push([item, obj[item]]);
@@ -19,13 +32,13 @@ const createBlogPages = ({ createPage, results }) => {
   const blogPostTemplate = require.resolve(`./src/templates/blog-template.js`);
   results.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
     createPage({
-      path: node.fileAbsolutePath.split('/').slice(-1)[0].split('.')[0],
+      path: node.fields.slug,
       component: blogPostTemplate,
       context: {
         // additional data can be passed via context
-        slug: node.frontmatter.slug,
-        nextSlug: next?.frontmatter.slug ?? '',
-        prevSlug: previous?.frontmatter.slug ?? '',
+        slug: node.fields.slug,
+        nextSlug: next?.fields.slug ?? '',
+        prevSlug: previous?.fields.slug ?? '',
       },
     });
   });
@@ -76,22 +89,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             id
-            fileAbsolutePath
             excerpt(pruneLength: 350, truncate: true)
-            frontmatter {
+            fields {
               slug
+            }
+            frontmatter {
               categories
               title
               date(formatString: "MMMM DD, YYYY")
             }
           }
           next {
-            frontmatter {
+            fields {
               slug
             }
           }
           previous {
-            frontmatter {
+            fields {
               slug
             }
           }
