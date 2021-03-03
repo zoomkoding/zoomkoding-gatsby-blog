@@ -24,42 +24,48 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query($slug: String, $nextSlug: String, $prevSlug: String) {
-    cur: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    cur: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        slug
         title
         categories
         author
         emoji
       }
+      fields {
+        slug
+      }
     }
 
-    next: markdownRemark(frontmatter: { slug: { eq: $nextSlug } }) {
+    next: markdownRemark(fields: { slug: { eq: $nextSlug } }) {
       id
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        slug
         title
         categories
         author
         emoji
       }
+      fields {
+        slug
+      }
     }
 
-    prev: markdownRemark(frontmatter: { slug: { eq: $prevSlug } }) {
+    prev: markdownRemark(fields: { slug: { eq: $prevSlug } }) {
       id
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        slug
         title
         categories
         author
         emoji
+      }
+      fields {
+        slug
       }
     }
   }
