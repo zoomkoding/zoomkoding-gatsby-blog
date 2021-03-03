@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const Image = ({ src, ...rest }) => {
   const data = useStaticQuery(graphql`
     query {
-      images: allFile(filter: { internal: { mediaType: { regex: "/image/" } } }) {
+      images: allFile(filter: { internal: { mediaType: { regex: "/assets/" } } }) {
         edges {
           node {
             relativePath

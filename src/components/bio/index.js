@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import authorVideo from '../../images/author.mp4'; //import the video file and then
+import authorVideo from '../../assets/author.mp4'; //import the video file and then
 import ReactRotatingText from 'react-rotating-text';
 import './style.scss';
 
