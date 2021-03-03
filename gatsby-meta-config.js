@@ -2,7 +2,7 @@ module.exports = {
   title: `zoomkoding.dev`,
   description: `줌코딩의 개발일기`,
   author: `zoomkoding`,
-  ogImageUrl: 'src/images/zoomkoding-intro.png',
+  ogImageUrl: 'src/assets/zoomkoding-intro.png',
 
   social: {
     github: `https://github.com/zoomKoding`,
