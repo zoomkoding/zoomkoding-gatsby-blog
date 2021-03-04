@@ -1,4 +1,4 @@
-# zoomkoding.dev
+# gatsby-starter-zoomkoding
 <p>
   <img alt="Version" src="https://img.shields.io/github/v/release/zoomKoding/zoomkoding.dev?include_prereleases&sort=semver&label=version">
   <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/zoomkoding/zoomkoding.dev.svg?color=08CE5D&label=%E2%AC%86%20commits&style=flat-square">
