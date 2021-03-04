@@ -7,7 +7,7 @@
   align-items: center;
   margin-bottom: 20px;
 
-  @include padding;
+  @include content-horizontal-padding;
 
   .page-sub-heading {
     padding-bottom: 10px;

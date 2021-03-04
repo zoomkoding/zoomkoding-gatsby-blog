@@ -10,7 +10,7 @@
     width: 100%;
     margin-bottom: 12px;
     background-color: white;
-    @include padding;
+    @include content-horizontal-padding;
 
     .tabs {  
         
@@ -18,7 +18,7 @@
         justify-content: center;
         height: 40px;
         width: 100%;
-        max-width: $screen-max;
+        max-width: $content-max-width;
 
         .mui-tabs {
             .MuiTab-root {

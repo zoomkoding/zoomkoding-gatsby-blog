@@ -28,17 +28,12 @@
   }
 }
 
-@mixin max-width {
+@mixin content-max-width {
   width: 100%;
-  max-width: $screen-max;
+  max-width: $content-max-width;
 }
 
-@mixin post-max-width {
-  width: 100%;
-  max-width: $post-max;
-}
-
-@mixin padding {
-  padding-left: $content-padding;
-  padding-right: $content-padding;
+@mixin content-horizontal-padding {
+  padding-left: $content-horizontal-padding;
+  padding-right: $content-horizontal-padding;
 }

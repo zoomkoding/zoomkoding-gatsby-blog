@@ -1,7 +1,8 @@
 $font-family: 'NotoSansKR', -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-$screen-max: 720px;
-$post-max: 720px;
-$content-padding: 15px;
+
+$content-max-width: 720px;
+$content-horizontal-padding: 15px;
+$content-image-max-height: 560px;
 
 $screen-sm-min: 576px;
 $screen-md-min: 768px;

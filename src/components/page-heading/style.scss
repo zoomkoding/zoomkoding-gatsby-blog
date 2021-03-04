@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  @include padding;
+  @include content-horizontal-padding;
   margin-bottom: 20px;
   margin-top: 30px;
 

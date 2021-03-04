@@ -6,13 +6,13 @@
   width: 100%;
   margin-top: 40px;
   margin-bottom: 70px;
-  @include padding;
+  @include content-horizontal-padding;
 
   .bio {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include max-width;
+    @include content-max-width;
 
     @include md {
       flex-direction: row;

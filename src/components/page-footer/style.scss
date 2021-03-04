@@ -7,11 +7,11 @@
     width: 100%;
     height: 62px;
     margin-top: auto;
-    @include padding;
+    @include content-horizontal-padding;
 
     .page-footer {
 
-        @include max-width;
+        @include content-max-width;
         text-align: center;
 
         .link {

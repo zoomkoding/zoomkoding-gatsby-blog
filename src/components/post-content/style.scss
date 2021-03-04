@@ -6,13 +6,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    @include padding;
+    @include content-horizontal-padding;
     margin-bottom: 20px;
 
     .post-content {
         display: flex;
         flex-direction: column;
-        @include post-max-width;
+        @include content-max-width;
     }
     
 }

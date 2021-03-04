@@ -32,4 +32,4 @@ PageHeader.defaultProps = {
   siteTitle: ``,
 };
 
-export default Header;
+export default PageHeader;

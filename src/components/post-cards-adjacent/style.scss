@@ -6,19 +6,19 @@
   justify-content: center;
   width: 100%;
   margin-bottom: 20px;
-  @include padding;
+  @include content-horizontal-padding;
 
   .post-cards-adjacent {
-    display: flex;
-    transition: transform 0.2s;
+    display: grid;
+    grid-template-columns: 49.3% 49.3%;
+    column-gap: 1.4%;
 
-    @include post-max-width;
+    @include content-max-width;
 
     .post-card {
       display: flex;
       flex-direction: column;
       width: 100%;
-      max-width: #{$post-max / 2 - 5px};
       border: 1px solid rgba(0, 0, 0, 0.12);
       border-radius: 6px;
       padding: 15px;

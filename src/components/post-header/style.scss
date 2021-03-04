@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  @include padding;
+  @include content-horizontal-padding;
   margin-top: 20px;
   margin-bottom: 40px;
   word-break: keep-all;
@@ -13,7 +13,7 @@
   .post-header {
     display: flex;
     flex-direction: column;
-    @include post-max-width;
+    @include content-max-width;
 
     padding-bottom: 15px;
     border-bottom: 1px solid #eaecef;

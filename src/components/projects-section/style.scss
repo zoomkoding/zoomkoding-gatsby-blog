@@ -4,14 +4,14 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  @include padding;
+  @include content-horizontal-padding;
 
 
   .projects-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include max-width;
+    @include content-max-width;
 
 
     .project {

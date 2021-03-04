@@ -5,13 +5,13 @@
     justify-content: center;
     width: 100%;
     height: 62px;
-    @include padding;
+    @include content-horizontal-padding;
 
     .page-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include max-width;
+        @include content-max-width;
 
         .link {
             font-weight: 700;

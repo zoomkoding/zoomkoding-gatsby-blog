@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .markdown .octicon {
   display: inline-block;
   fill: currentColor;
@@ -1039,11 +1041,11 @@
   display: flex !important;
   justify-content: center !important;
   width: 100% !important;
-  max-height: 460px !important;
+  max-height: $content-image-max-height !important;
 
   img {
     max-width: 100% !important;
-    max-height: 460px !important;
+    max-height: $content-image-max-height !important;
     width: auto !important;
     height: auto !important;
     position: relative !important;
