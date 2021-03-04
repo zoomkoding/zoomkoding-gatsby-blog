@@ -12,12 +12,14 @@ export default ({ data }) => {
   const curPost = new Post(data.cur);
   const prevPost = data.prev && new Post(data.prev);
   const nextPost = data.next && new Post(data.next);
+  const utterancesRepo = data.site?.siteMetadata?.comments?.utterances?.repo;
+
   return (
     <Layout>
       <PostHeader post={curPost} />
       <PostContent html={curPost.html} />
       <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
-      <Utterances />
+      {utterancesRepo && <Utterances repo={utterancesRepo} />}
     </Layout>
   );
 };
@@ -66,6 +68,16 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+      }
+    }
+
+    site {
+      siteMetadata {
+        comments {
+          utterances {
+            repo
+          }
+        }
       }
     }
   }
