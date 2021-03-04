@@ -988,6 +988,7 @@
   vertical-align: middle;
 }
 
+// added for toc
 .markdown .table-of-contents {
   // &::before {
   //   padding-left: 35px;
@@ -1031,5 +1032,20 @@
     }
     
   }
-  
+}
+
+// added for image resizing
+.markdown .gatsby-resp-image-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-height: 460px !important;
+
+  img {
+    max-width: 100% !important;
+    max-height: 460px !important;
+    width: auto !important;
+    height: auto !important;
+    position: relative !important;
+  }
 }
