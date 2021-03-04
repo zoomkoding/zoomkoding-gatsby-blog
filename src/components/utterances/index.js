@@ -10,7 +10,7 @@ export const Utterances = ({ repo }) => {
     const utterances = document.createElement('script');
     const utterancesConfig = {
       src,
-      repo: 'zoomkoding/zoomkoding.dev',
+      repo,
       branch,
       theme: 'github-light',
       label: 'comment',
