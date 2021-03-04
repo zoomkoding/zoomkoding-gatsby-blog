@@ -8,11 +8,12 @@ import ProjectsSection from '../components/projects-section';
 
 export default ({ data }) => {
   const metaData = data.site.siteMetadata;
-  const { timestamps, projects } = metaData.about;
+  const { bio, social, about } = metaData;
+  const { timestamps, projects } = about;
   return (
     <Layout>
       <SEO title="About" />
-      <Bio />
+      <Bio bio={bio} social={social} />
       <TimeStampsSection timestamps={timestamps} />
       <ProjectsSection projects={projects} />
     </Layout>
@@ -26,6 +27,18 @@ export const pageQuery = graphql`
         title
         description
         author
+
+        bio {
+          name
+          description
+        }
+
+        social {
+          github
+          linkedIn
+          email
+        }
+
         about {
           timestamps {
             date
@@ -38,6 +51,7 @@ export const pageQuery = graphql`
               appStore
             }
           }
+
           projects {
             title
             description

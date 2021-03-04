@@ -11,6 +11,7 @@ import { getSortedCategoriesByCount } from '../utils/helpers';
 
 export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
+  const { bio, social } = data.site.siteMetadata;
   const categories = ['전체', ...getSortedCategoriesByCount(posts)];
   const [tabIndex, setTabIndex] = useState(0);
 
@@ -21,7 +22,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Bio />
+      <Bio bio={bio} social={social} />
       <Tabs className={'tabs'} value={tabIndex} onChange={onTabIndexChange} tabs={categories} />
       <PostCardsColumn
         posts={
@@ -52,6 +53,20 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+        }
+      }
+    }
+
+    site {
+      siteMetadata {
+        bio {
+          name
+          description
+        }
+        social {
+          github
+          linkedIn
+          email
         }
       }
     }
