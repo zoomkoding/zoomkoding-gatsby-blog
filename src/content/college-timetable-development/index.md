@@ -60,13 +60,14 @@ categories: 대학시간 회고
 
 <center><strong>모바일 뷰</strong></center>
 
-<img alt="./college-timetable-6.png" src="./college-timetable-6.png" style="width: 30%;">
+![college-timetable-6.png](./college-timetable-6.png)
 
 <br/>
 
 ## 📱기술 스택 정하기
 
-<img alt="./college-timetable-7.png" src="./college-timetable-7.png" style="width: 100%;">
+![college-timetable-7.png](./college-timetable-7.png)
+
 ### 프론트엔드
 
 나는 웹 프론트엔드 개발자로 채용이 되었지만 사실 나는 express와 모바일 앱 프레임워크인 Flutter가 더 친숙하다. 그나마 우아한테크캠프를 통해 바닐라js와는 좀 더 친해진 것 같은데 아직 React와는 어색하다.
@@ -239,7 +240,8 @@ try {
 
 이 방법을 이용해서 아래와 같이 지속적으로 업데이트와 이삭줍기 알림 전송 상황을 확인하며 크롤러가 열일하고 있는지 알 수 있다.
 
-<img alt="./college-timetable-18.png" src="./college-timetable-18.png" style="width: 30%;">
+![college-timetable-18.png](./college-timetable-18.png)
+
 
 **물론 서비스가 잘 돌고 있는지 확인하려는 목적도 있지만 그냥 심심할 때 들어가서 사람들이 잘 쓰고 있는지 보는 맛이 있었다..ㅎㅎ**
 
