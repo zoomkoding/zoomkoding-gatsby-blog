@@ -54,8 +54,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: 'og:image',
-          content:
-            'https://github.com/zoomKoding/zoomKoding.github.io/blob/source/assets/zoomkoding-intro.png?raw=true',
+          content: `src/assets/og-image.png`,
         },
         {
           property: `og:type`,
@@ -67,9 +66,10 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ko`,
   meta: [],
-  description: ``,
+  title: `zoomkoding`,
+  description: `description`,
 };
 
 SEO.propTypes = {
