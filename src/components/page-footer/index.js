@@ -4,7 +4,7 @@ import React from 'react';
 
 import './style.scss';
 
-const Footer = ({ author, githubUrl }) => (
+const PageFooter = ({ author, githubUrl }) => (
   <>
     <footer className="page-footer-wrapper">
       <p className="page-footer">
@@ -12,15 +12,17 @@ const Footer = ({ author, githubUrl }) => (
         &nbsp;
         <a href={githubUrl}>{author}</a>
         &nbsp;powered by
-        <a href="https://www.gatsbyjs.com/">&nbsp;Gatsby</a>
+        <a href="https://github.com/zoomKoding/gatsby-starter-zoomkoding">
+          &nbsp;gatsby-starter-zoomkoding
+        </a>
       </p>
     </footer>
   </>
 );
 
-Footer.propTypes = {
+PageFooter.propTypes = {
   author: PropTypes.string,
   githubUrl: PropTypes.string,
 };
 
-export default Footer;
+export default PageFooter;

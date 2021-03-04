@@ -4,7 +4,7 @@ import React from 'react';
 
 import './style.scss';
 
-const Header = ({ siteTitle }) => (
+const PageHeader = ({ siteTitle }) => (
   <header className="page-header-wrapper">
     <div className="page-header">
       <div className="front-section">
@@ -24,11 +24,11 @@ const Header = ({ siteTitle }) => (
   </header>
 );
 
-Header.propTypes = {
+PageHeader.propTypes = {
   siteTitle: PropTypes.string,
 };
 
-Header.defaultProps = {
+PageHeader.defaultProps = {
   siteTitle: ``,
 };
 

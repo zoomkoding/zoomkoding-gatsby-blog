@@ -9,8 +9,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from '../header';
-import Footer from '../footer';
+import PageHeader from '../page-header';
+import PageFooter from '../page-footer';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,9 +29,9 @@ const Layout = ({ children }) => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <PageHeader siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main>{children}</main>
-      <Footer
+      <PageFooter
         author={data.site.siteMetadata?.author || `Author`}
         githubUrl={data.site.siteMetadata?.social?.github || `https://www.github.com`}
       />

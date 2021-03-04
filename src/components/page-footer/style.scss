@@ -3,16 +3,16 @@
 .page-footer-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 62px;
     margin-top: auto;
     @include padding;
 
     .page-footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;            
+
         @include max-width;
+        text-align: center;
 
         .link {
             font-weight: 700;
