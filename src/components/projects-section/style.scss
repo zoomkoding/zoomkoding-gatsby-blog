@@ -6,13 +6,11 @@
   width: 100%;
   @include content-horizontal-padding;
 
-
   .projects-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     @include content-max-width;
-
 
     .project {
       padding: 15px;
@@ -37,9 +35,9 @@
           height: 120px;
           width: 120px;
           margin-right: 15px;
-          border-radius: 15px; 
+          border-radius: 15px;
         }
-  
+
         .content {
           display: flex;
           flex-direction: column;

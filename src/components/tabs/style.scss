@@ -2,63 +2,61 @@
 @use '../../styles/variables' as *;
 
 .tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  align-self: flex-start;
+  width: 100%;
+  margin-bottom: 12px;
+  background-color: white;
+  @include content-horizontal-padding;
+
+  .tabs {
     display: flex;
     justify-content: center;
-    position: sticky;
-    top: 0px;
-    align-self: flex-start;
+    height: 40px;
     width: 100%;
-    margin-bottom: 12px;
-    background-color: white;
-    @include content-horizontal-padding;
+    max-width: $content-max-width;
 
-    .tabs {  
-        
-        display: flex;
-        justify-content: center;
+    .mui-tabs {
+      .MuiTab-root {
         height: 40px;
-        width: 100%;
-        max-width: $content-max-width;
+        min-height: auto;
+        min-width: auto;
+        padding: 10px 12px;
+        font-family: $font-family;
+        color: #6e6d7a;
+        font-weight: 500;
+        font-size: 17px;
+        transition: all 200ms ease;
 
-        .mui-tabs {
-            .MuiTab-root {
-                height: 40px;
-                min-height: auto;
-                min-width: auto;
-                padding: 10px 12px;
-                font-family: $font-family;
-                color: #6e6d7a;
-                font-weight: 500;
-                font-size: 17px;
-                transition: all 200ms ease;
-
-                :hover {
-                    color: #0d0c22;
-                    transition: all 200ms ease;
-                }
-            }
-            
-            .Mui-selected {
-                background-color: rgba(13,12,34,0.05);
-                color: #0d0c22;
-                border-radius: 8px;
-                font-weight: 600;
-                transition: all 200ms ease;
-            }
-
-            .MuiTabScrollButton-root {
-                height: 40px;
-                width: 20px; 
-            }
-
-            .MuiTabs-scrollable {
-                height: 40px;
-            }
-
-            .MuiTabs-indicator {
-                display: none,
-            }
+        :hover {
+          color: #0d0c22;
+          transition: all 200ms ease;
         }
-        
+      }
+
+      .Mui-selected {
+        background-color: rgba(13, 12, 34, 0.05);
+        color: #0d0c22;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 200ms ease;
+      }
+
+      .MuiTabScrollButton-root {
+        height: 40px;
+        width: 20px;
+      }
+
+      .MuiTabs-scrollable {
+        height: 40px;
+      }
+
+      .MuiTabs-indicator {
+        display: none;
+      }
     }
+  }
 }

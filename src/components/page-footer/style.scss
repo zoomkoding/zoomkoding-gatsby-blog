@@ -1,25 +1,23 @@
 @use '../../styles/mixins' as *;
 
 .page-footer-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 62px;
-    margin-top: auto;
-    @include content-horizontal-padding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 62px;
+  margin-top: auto;
+  @include content-horizontal-padding;
 
-    .page-footer {
+  .page-footer {
+    @include content-max-width;
+    text-align: center;
 
-        @include content-max-width;
-        text-align: center;
-
-        .link {
-            font-weight: 700;
-            font-size: 20px;
-            color: #000000;
-            margin-right: 20px;
-        }
+    .link {
+      font-weight: 700;
+      font-size: 20px;
+      color: #000000;
+      margin-right: 20px;
     }
-    
+  }
 }

@@ -14,24 +14,8 @@
     .tabs-wrapper {
       display: flex;
     }
-    .vertical-tabs-wrapper{
+    .vertical-tabs-wrapper {
       display: none;
     }
-
-    // @include md {
-    //   flex-direction: row;
-  
-    //   .tabs-wrapper {
-    //     display: none;
-    //   }
-    //   .vertical-tabs-wrapper{
-    //     display: flex;
-    //     margin-left: 20px;
-    //   }
-    // }
   }
-
-  
-
-  
 }

@@ -1,16 +1,16 @@
 @use '../../styles/mixins' as *;
 
 .section-header-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 32px;
 
-    .section-header {
-        padding-bottom: 5px;
-        border-bottom: 4px solid black;
-        font-weight: 700;
-        font-size: 30px;
-        color: #000000;
-    }
+  .section-header {
+    padding-bottom: 5px;
+    border-bottom: 4px solid black;
+    font-weight: 700;
+    font-size: 30px;
+    color: #000000;
+  }
 }

@@ -6,7 +6,6 @@
   width: 100%;
   @include content-horizontal-padding;
 
-
   .post-cards-column {
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@
     .post-card-wrapper {
       margin-bottom: 10px;
     }
-
 
     .more-post-cards-button {
       height: 40px;
