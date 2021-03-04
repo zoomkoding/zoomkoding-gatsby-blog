@@ -1,8 +1,12 @@
 module.exports = {
-  title: `zoomkoding.dev`,
+  title: `zoomkoding`,
   description: `줌코딩의 개발일기`,
   author: `zoomkoding`,
-  ogImageUrl: 'src/assets/zoomkoding-intro.png',
+
+  bio: {
+    name: '정진혁',
+    description: ['배워서 남주고 싶은', '성장을 추구하는', '개발을 즐기는', '프론트엔드 디자이너'],
+  },
 
   social: {
     github: `https://github.com/zoomKoding`,
@@ -12,21 +16,12 @@ module.exports = {
 
   comments: {
     utterances: {
-      repo: `zoomkoding/zoomkoding.dev`,
+      repo: `zoomkoding/gatsby-starter-zoomkoding`,
     },
   },
 
+  // this data is for About Page
   about: {
-    bio: {
-      name: '정진혁',
-      description: [
-        '배워서 남주고 싶은',
-        '성장을 추구하는',
-        '개발을 즐기는',
-        '프론트엔드 디자이너',
-      ],
-    },
-
     timestamps: [
       {
         date: '2018.07 ~ 2018.12',
@@ -116,7 +111,7 @@ module.exports = {
       {
         title: 'Picky(글로벌 스킨케어 제품 분석 모바일 앱) 개발',
         description:
-          '스타트업에서 구글 출신 CEO님과 CTO님을 포함한 훌륭하신 4분과 함께 앱 개발 사업을 진행했습니다. 저는 코어 개발자로 초기 v1.0 개발과 이후 유지보수를 담당했습니다. 앱은 2020년 4월부터 본격적으로 서비스를 진행하여 2021년 3월 현재 4만명 넘는 유저를 보유하고 있습니다',
+          '스타트업에서 구글 출신 CEO님과 CTO님을 포함한 훌륭하신 4분과 함께 앱 개발 사업을 진행했습니다. 저는 초기에 1인 개발자로 v1.0 개발과 이후 유지보수를 담당했습니다. 약 한달 반의 개발 기간을 거쳐 2020년 4월에 v1.0을 배포했고 2021년 3월 현재 4만명 넘는 유저를 보유하고 있습니다.',
         techStack: ['flutter', 'nodejs'],
         thumbnailUrl:
           'https://media-exp1.licdn.com/dms/image/C560BAQGc18OyGfmPZQ/company-logo_200_200/0/1603042283518?e=1622678400&v=beta&t=brvRul711R43vMtIGR96EX7ZEPSTbemrbyzlhC6Dhm4',
@@ -128,9 +123,9 @@ module.exports = {
         },
       },
       {
-        title: '2020 웹 중심 우아한테크캠프',
+        title: '2020 웹 중심 우아한테크캠프 참여',
         description:
-          '웹 프론트엔드 개발 경험을 키워보고자 지원하여 2달간 우아한테크캠프를 진행했습니다. 캠프 기간 동안 저와 비슷한 열정을 가진 사람들과 함께 성장할 수 있었던 유익한 시간이었습니다.',
+          '웹 프론트엔드 개발 경험을 키워보고자 지원하여 2달간 우아한 형제들에서 주관하는 우아한테크캠프를 진행했습니다. 캠프 기간 동안 저와 비슷한 열정을 가진 사람들과 함께 성장할 수 있었던 유익한 시간이었습니다.',
         techStack: ['react', 'nodejs'],
         thumbnailUrl:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYxT7-ADQQo72P5qbwJjwySPY8p1C1a3L0w&usqp=CAU',
