@@ -3,25 +3,29 @@ import React from 'react';
 import authorVideo from '../../assets/author.mp4'; //import the video file and then
 import ReactRotatingText from 'react-rotating-text';
 import './style.scss';
+import IconButtonBar from '../icon-button-bar';
 
-const Bio = () => (
+const Bio = ({ bio, social }) => (
   <div className="bio-wrapper">
     <div className="bio">
       <div className="introduction">
         <p className="title">
           안녕하세요!
           <br />
-          <ReactRotatingText
-            items={['배워서 남주고 싶은', '성장을 추구하는', '개발을 즐기는', '디자인도 관심있는']}
-          />
+          <ReactRotatingText items={bio?.description} />
           <br />
-          <strong>정진혁</strong>입니다.
+          개발자 <strong>{bio?.name}</strong>입니다.
           <br />
         </p>
-        {/* <p className="description">
-          오늘 내가 만들고 나누는 것이
-          <br /> 누군가에게 도움을 줄 수 있다는 사실에서 동기를 얻습니다.
-        </p> */}
+        <div className="social-links">
+          <IconButtonBar
+            links={social}
+            style={{
+              fontSize: '30px',
+              color: 'rgba(0, 0, 0, 0.54)',
+            }}
+          />
+        </div>
       </div>
 
       <video className="video" muted autoPlay loop>

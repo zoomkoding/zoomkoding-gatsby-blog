@@ -26,7 +26,7 @@
 
       .title {
         font-weight: 100;
-        font-size: 42px;
+        font-size: 38px;
         line-height: 1.2;
 
         .react-rotating-text-cursor {
@@ -47,7 +47,10 @@
           }
         strong {
           font-weight: 600;
-          font-size: 42px;
+        }
+
+        @include md {
+          font-size: 45px;
         }
       }
 
@@ -57,13 +60,18 @@
         font-size: 22px;
         line-height: 1.5;
       }
+
+      .social-links {
+        margin-top: 20px;
+        display: flex;
+      }
     }
 
     .video {
       display: none;
       width: 250px;
 
-      @include sm {
+      @include md {
         display: block;
       }
     }
