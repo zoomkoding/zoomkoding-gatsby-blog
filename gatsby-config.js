@@ -27,9 +27,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `zoomkoding-dev-blog`,
-        short_name: `zoomkoding.dev`,
-        description: `줌코딩의 개발일기`,
+        name: metaConfig.title,
+        short_name: metaConfig.title,
+        description: metaConfig.description,
         lang: `en`,
         display: `standalone`,
         start_url: `/`,
@@ -44,12 +44,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 720,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              linkImagesToOriginal: false,
+              backgroundColor: 'transparent',
             },
           },
           {
@@ -99,10 +95,5 @@ module.exports = {
         ],
       },
     },
-
-    `gatsby-plugin-mdx`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };
