@@ -12,10 +12,11 @@
     align-items: center;
     @include content-max-width;
     margin-bottom: 50px;
+    word-break: keep-all;
 
     .body {
       width: 100%;
-
+      padding: 0 10px;
       .timestamp {
         display: flex;
         justify-items: center;
