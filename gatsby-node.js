@@ -53,13 +53,13 @@ const createPostsPages = ({ createPage, results }) => {
     categories = categories.concat(node.frontmatter.categories.split(' '));
   });
 
-  const sortedCategories = getSortedCategoriesByCount(categories);
+  const sortedCategories = ['All', ...getSortedCategoriesByCount(categories)];
 
   createPage({
     path: `/posts`,
     component: categoryTemplate,
     context: {
-      currentCategory: '전체',
+      currentCategory: 'All',
       categories: sortedCategories,
       edges: results.data.allMarkdownRemark.edges,
     },
