@@ -1,9 +1,10 @@
 module.exports = {
-  title: `zoomkoding`,
+  title: `zoomkoding.dev`,
   description: `줌코딩의 개발일기`,
   author: `zoomkoding`,
 
   bio: {
+    language: `ko`, // 'en', 'ko'
     name: '정진혁',
     description: ['배워서 남주고 싶은', '성장을 추구하는', '개발을 즐기는', '프론트엔드 디자이너'],
   },
