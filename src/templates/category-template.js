@@ -4,14 +4,13 @@ import { navigate } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Post from '../models/post';
-import PageHeading from '../components/page-heading';
-import PageSubheading from '../components/page-sub-heading';
 import PostsPageBody from '../components/posts-page-body';
+import PostsPageHeader from '../components/posts-page-header';
 
 export default ({ pageContext }) => {
   const { edges, currentCategory } = pageContext;
   const posts = edges.map(({ node }) => new Post(node));
-  const categories = ['전체', ...pageContext.categories];
+  const categories = pageContext.categories;
   const tabIndex = categories.findIndex((tab) => tab === currentCategory);
 
   const onTabIndexChange = (e, value) => {
@@ -22,8 +21,7 @@ export default ({ pageContext }) => {
   return (
     <Layout>
       <SEO title="Posts" />
-      <PageHeading title={categories[tabIndex]} />
-      <PageSubheading subtitle={`총 ${posts.length}개의 글`} />
+      <PostsPageHeader title={categories[tabIndex]} subtitle={`${posts.length} posts`} />
       <PostsPageBody
         tabIndex={tabIndex}
         onChange={onTabIndexChange}
