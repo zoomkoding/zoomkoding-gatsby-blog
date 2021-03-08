@@ -12,7 +12,7 @@ import { getSortedCategoriesByCount } from '../utils/helpers';
 export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
   const { bio, social } = data.site.siteMetadata;
-  const categories = ['전체', ...getSortedCategoriesByCount(posts)];
+  const categories = ['All', ...getSortedCategoriesByCount(posts)];
   const [tabIndex, setTabIndex] = useState(0);
 
   const onTabIndexChange = (e, value) => {
@@ -60,6 +60,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         bio {
+          language
           name
           description
         }
