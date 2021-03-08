@@ -1,11 +1,27 @@
 @use '../../styles/mixins' as *;
 
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+strong {
+  font-weight: 600;
+}
+
 .bio-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 70px;
+  margin-top: 120px;
+  margin-bottom: 120px;
   @include content-horizontal-padding;
 
   .bio {
@@ -24,55 +40,71 @@
       flex-direction: column;
       word-break: keep-all;
 
-      .title {
+      .react-rotating-text-cursor {
+        animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+      }
+
+      strong {
+        display: inline-block;
+        font-weight: 600;
+      }
+
+      &.korean {
         font-weight: 100;
-        font-size: 38px;
+        font-size: 32px;
         line-height: 1.2;
-
-        .react-rotating-text-cursor {
-          font-size: 50px;
-          animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
-        }
-
-        @keyframes blinking-cursor {
-          0% {
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            opacity: 0;
-          }
-        }
-        strong {
-          font-weight: 600;
-        }
 
         @include md {
           font-size: 45px;
         }
+
+        .title {
+          .react-rotating-text-cursor {
+            font-size: 50px;
+          }
+        }
       }
 
-      .description {
-        margin-top: 10px;
-        font-weight: 100;
-        font-size: 22px;
-        line-height: 1.5;
-      }
+      &.english {
+        font-family: 'montserrat';
+        font-size: 25px;
+        line-height: 1.2;
 
-      .social-links {
-        margin-top: 20px;
-        display: flex;
+        @include md {
+          font-size: 45px;
+        }
+
+        .name {
+          font-size: 35px;
+          font-weight: 600;
+        }
+
+        .job {
+          font-size: 35px;
+        }
+
+        .description {
+          font-weight: 200;
+          margin-top: 8px;
+          font-size: 20px;
+          // span {
+          //   font-weight: 600;
+          // }
+        }
+
+        .social-links {
+          margin-top: 20px;
+          display: flex;
+        }
       }
     }
 
     .video {
       display: none;
-      width: 250px;
 
       @include md {
         display: block;
+        width: 250px;
       }
     }
   }
