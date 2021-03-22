@@ -16,7 +16,7 @@
     justify-content: center;
     height: 40px;
     width: 100%;
-    max-width: $content-max-width;
+    max-width: $content-max-width + 40px;
 
     .mui-tabs {
       .MuiTab-root {

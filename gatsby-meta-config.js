@@ -2,17 +2,16 @@ module.exports = {
   title: `zoomkoding.dev`,
   description: `줌코딩의 개발일기`,
   author: `zoomkoding`,
-
-  bio: {
-    language: `ko`, // 'en', 'ko'
-    name: '정진혁',
-    description: ['배워서 남주고 싶은', '성장을 추구하는', '개발을 즐기는', '프론트엔드 디자이너'],
-  },
-
   social: {
     github: `https://github.com/zoomKoding`,
     linkedIn: `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
     email: `zoomkoding@gmail.com`,
+  },
+
+  bio: {
+    language: `ko`, // 'en', 'ko'
+    name: '줌코딩',
+    description: ['이로운 것을 만드는', '배움을 좋아하는', 'UI/UX에 관심있는', '글로 나누길 좋아하는'],
   },
 
   comments: {
@@ -94,17 +93,6 @@ module.exports = {
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'http://www.timetable.college',
         },
-      },
-    ],
-
-    works: [
-      {
-        companyName: 'Picky',
-        companyLogoUrl:
-          'https://media-exp1.licdn.com/dms/image/C560BAQGc18OyGfmPZQ/company-logo_200_200/0/1603042283518?e=1622678400&v=beta&t=brvRul711R43vMtIGR96EX7ZEPSTbemrbyzlhC6Dhm4',
-        position: 'Core Developer',
-        description:
-          '스킨케어 제품 분석하고 유저의 피부에게 맞는 제품을 추천하는 서비스를 제공하는 회사입니다. 약 한달 반 동안 앱을 개발하여 배포하였고 현재 ',
       },
     ],
 

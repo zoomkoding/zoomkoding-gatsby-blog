@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-zoomkoding",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
+  "description": "A neat blog theme for awesome bloggers",
+  "version": "0.9.0",
   "author": "zoomkoding <zoomkoding@gmail.com>",
   "dependencies": {
     "@fontsource/montserrat": "^4.2.2",
@@ -21,13 +21,14 @@
     "gatsby-remark-autolink-headers": "^2.11.0",
     "gatsby-remark-copy-linked-files": "^3.0.0",
     "gatsby-remark-images": "^4.0.0",
+    "gatsby-remark-mathjax": "^1.0.0",
     "gatsby-remark-prismjs": "^4.0.0",
     "gatsby-remark-responsive-iframe": "^3.0.0",
     "gatsby-remark-smartypants": "^3.0.0",
     "gatsby-remark-table-of-contents": "^1.0.0",
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-theme-material-ui": "^1.0.13",
-    "gatsby-transformer-remark": "^2.16.0",
+    "gatsby-transformer-remark": "^2.16.1",
     "gatsby-transformer-sharp": "^2.12.0",
     "github-markdown-css": "^4.0.0",
     "prismjs": "^1.23.0",
@@ -42,7 +43,10 @@
     "prettier": "2.2.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+
   ],
   "license": "0BSD",
   "scripts": {
@@ -56,9 +60,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/zoomkoding/gatsby-starter-zoomkoding"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/zoomkoding/gatsby-starter-zoomkoding/issues"
   }
 }

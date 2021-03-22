@@ -1,10 +1,11 @@
-# gatsby-starter-zoomkoding
-<p>
-  <img alt="Version" src="https://img.shields.io/github/v/release/zoomKoding/zoomkoding.dev?include_prereleases&sort=semver&label=version">
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/zoomkoding/zoomkoding.dev.svg?color=08CE5D&label=%E2%AC%86%20commits&style=flat-square">
-  <img alt="React" src="https://img.shields.io/static/v1.svg?label=&message=React&style=flat-square&logo=React&logoColor=white&color=61dafb">
-  <img alt="GitHub" src="https://img.shields.io/github/license/zoomkoding/zoomkoding.dev?style=flat-square&label=%F0%9F%93%9C%20license&color=08CE5D">
-</p>
+---
+emoji: 🧢
+title: Gatsby로 나만의 블로그 만들기
+date: '2021-03-22 23:00:00'
+author: 줌코딩
+tags: tutorial
+categories: tutorial
+---
 
 ## 🤓 소개
 Jekyll 테마로 만든 블로그를 커스터마이징 하거나 기능을 추가하는 것은 한계를 느끼게 되었습니다. 자연스럽게 블로그를 직접 디자인해보고 만들어보고 싶은 마음을 가지게 되었고 Gatsby를 활용하여 블로그 테마를 만들게 되었습니다. 이 블로그 테마가 여러분의 스토리를 풀어갈 좋은 공간이 될 수 있기를 바랍니다!
@@ -173,3 +174,9 @@ module.exports = {
 그렇게 내용을 문제 없이 입력하셨다면 나만의 블로그가 탄생한 것을 확인하실 수 있습니다.🎉
 
 > **위 과정을 진행하시면서 실행하고 있는 프로그램에 변동사항이 바로 반영이 되지 않을 것이므로 재실행하셔서 결과를 확인해주세요!**
+
+
+```toc
+```
+
+
