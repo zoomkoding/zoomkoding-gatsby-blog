@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/src/content`,
+        path: `${__dirname}/content`,
       },
     },
     `gatsby-transformer-remark`,
@@ -92,6 +92,7 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-mathjax`,
         ],
       },
     },
