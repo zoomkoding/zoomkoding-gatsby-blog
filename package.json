@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-zoomkoding",
-  "private": true,
+  "private": false,
   "description": "A neat blog theme for awesome bloggers",
   "version": "0.9.0",
   "author": "zoomkoding <zoomkoding@gmail.com>",
