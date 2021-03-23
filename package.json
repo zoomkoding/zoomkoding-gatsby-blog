@@ -2,7 +2,7 @@
   "name": "gatsby-starter-zoomkoding",
   "private": false,
   "description": "A neat blog theme for awesome bloggers",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "zoomkoding <zoomkoding@gmail.com>",
   "dependencies": {
     "@fontsource/montserrat": "^4.2.2",
