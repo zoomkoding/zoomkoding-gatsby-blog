@@ -1,15 +1,18 @@
 ---
 emoji: 🧢
-title: Getting Started
+title: 쉽게 Gatsby로 나만의 개발 블로그 만들기
 date: '2021-03-22 23:00:00'
 author: 줌코딩
-tags: tutorial
+tags: tutorial gatsby
 categories: tutorial
 ---
 
 ## 👋 소개
 
 예쁘고 깔끔한 개발 블로그를 만들고 싶으신 개발자분들을 위해 만들게 된 블로그 테마입니다.🏅  
+
+### ⭐️ 깃헙 링크 주소
+[gatsby-starter-zoomkoding](https://github.com/zoomkoding/gatsby-starter-zoomkoding)
 
 ## ✨ 기능
 

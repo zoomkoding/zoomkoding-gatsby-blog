@@ -46,7 +46,6 @@
     "gatsby",
     "gatsby-plugin",
     "gatsby-theme"
-
   ],
   "license": "0BSD",
   "scripts": {
