@@ -2,25 +2,27 @@ module.exports = {
   title: `zoomkoding.com`,
   description: `줌코딩의 개발일기`,
   author: `zoomkoding`,
+  siteUrl: `https://www.zoomkoding.com`,
   social: {
     github: `https://github.com/zoomKoding`,
     linkedIn: `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
     email: `zoomkoding@gmail.com`,
   },
+  comments: {
+    utterances: {
+      repo: `zoomkoding/zoomkoding.com`,
+    },
+  },
+  ga: 'UA-134826755-3', // Google Analytics Tracking ID
 
+  // metadata for bio
   bio: {
     language: `ko`, // 'en', 'ko'
     name: '정진혁',
     description: ['이로운 것을 만드는', '배움을 좋아하는', 'UI/UX에 관심있는', '글로 나누길 좋아하는'],
   },
 
-  comments: {
-    utterances: {
-      repo: `zoomkoding/zoomkoding.com`,
-    },
-  },
-
-  // this data is for About Page
+  // metadata for About Page
   about: {
     timestamps: [
       {

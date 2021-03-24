@@ -1,3 +1,8 @@
+const {
+  NODE_ENV,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+
 const metaConfig = require('./gatsby-meta-config');
 
 module.exports = {
@@ -24,6 +29,37 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-theme-material-ui`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: metaConfig.ga,
+        head: true,
+        anonymize: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
