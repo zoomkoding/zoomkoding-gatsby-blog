@@ -1,5 +1,5 @@
 module.exports = {
-  title: `zoomkoding.dev`,
+  title: `zoomkoding.com`,
   description: `줌코딩의 개발일기`,
   author: `zoomkoding`,
   social: {
@@ -10,13 +10,13 @@ module.exports = {
 
   bio: {
     language: `ko`, // 'en', 'ko'
-    name: '줌코딩',
+    name: '정진혁',
     description: ['이로운 것을 만드는', '배움을 좋아하는', 'UI/UX에 관심있는', '글로 나누길 좋아하는'],
   },
 
   comments: {
     utterances: {
-      repo: `zoomkoding/gatsby-starter-zoomkoding`,
+      repo: `zoomkoding/zoomkoding.com`,
     },
   },
 
@@ -37,7 +37,7 @@ module.exports = {
         date: '2019.06 ~ 2019.12',
         activity: '알고리즘 휴학',
         links: {
-          post: 'https://zoomkoding.github.io/%ED%9A%8C%EA%B3%A0/2019/12/05/how-to-algo.html',
+          post: '/how-to-algo',
         },
       },
 
@@ -58,8 +58,7 @@ module.exports = {
         date: '2019.11.21',
         activity: '네이버 캠퍼스 핵데이 참여',
         links: {
-          post:
-            'https://zoomkoding.github.io/codingtest/naver/2019/11/26/2019-naver-hackday-2.html',
+          post: '/2019-naver-hack-day'
         },
       },
 
@@ -67,8 +66,7 @@ module.exports = {
         date: '2019.12 ~ 2020.06',
         activity: '스타트업 인턴 진행 및 Picky 앱 개발',
         links: {
-          post:
-            'https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html',
+          post: '/start-up-app-development',
           googlePlay: 'https://play.google.com/store/apps/details?id=care.jivaka.picky',
           appStore: 'https://apps.apple.com/app/picky-skincare-made-smarter/id1504197356',
         },
@@ -78,8 +76,7 @@ module.exports = {
         date: '2020.07 ~ 2020.08',
         activity: '2020 우아한테크캠프 참여',
         links: {
-          post:
-            'https://zoomkoding.github.io/%ED%9A%8C%EA%B3%A0/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BA%A0%ED%94%84/2020/10/05/woowa-tech-camp-final.html',
+          post: '/woowa-tech-camp-final',
           github: 'https://github.com/woowa-techcamp-2020/bmart-6',
         },
       },
@@ -88,10 +85,9 @@ module.exports = {
         date: '2021.01 ~ 2021.02',
         activity: '대학시간(대학교 수강신청 보조 웹 앱) 개발 및 서비스',
         links: {
-          post:
-            'https://zoomkoding.github.io/%EB%8C%80%ED%95%99%EC%8B%9C%EA%B0%84/%ED%9A%8C%EA%B3%A0/2021/02/10/college-timetable-development.html',
+          post: '/college-timetablee-development',
           github: 'https://github.com/zoomkoding/college-timetable',
-          demo: 'http://www.timetable.college',
+          demo: 'https://www.timetable.college',
         },
       },
     ],
@@ -105,10 +101,21 @@ module.exports = {
         thumbnailUrl:
           'https://media-exp1.licdn.com/dms/image/C560BAQGc18OyGfmPZQ/company-logo_200_200/0/1603042283518?e=1622678400&v=beta&t=brvRul711R43vMtIGR96EX7ZEPSTbemrbyzlhC6Dhm4',
         links: {
-          post:
-            'https://zoomkoding.github.io/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%ED%9A%8C%EA%B3%A0/2020/03/25/start-up-app-development.html',
+          post: '/start-up-app-development',
           googlePlay: 'https://play.google.com/store/apps/details?id=care.jivaka.picky',
           appStore: 'https://apps.apple.com/app/picky-skincare-made-smarter/id1504197356',
+        },
+      },
+      {
+        title: 'Gatsby로 개인 블로그 디자인 및 개발',
+        description:
+          '',
+        techStack: ['gatsby', 'react'],
+        thumbnailUrl: 'https://www.pngfind.com/pngs/m/626-6262352_load-images-in-gatsby-gatsbyjs-icon-hd-png.png',
+        links: {
+          post:'/gatsby-starter-zoomkoding-introduction',
+          github: 'https://github.com/zoomkoding/college-timetable',
+          demo: 'https://gatsby-starter-zoomkoding.netlify.app',
         },
       },
       {
@@ -119,8 +126,7 @@ module.exports = {
         thumbnailUrl:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYxT7-ADQQo72P5qbwJjwySPY8p1C1a3L0w&usqp=CAU',
         links: {
-          post:
-            'https://zoomkoding.github.io/%ED%9A%8C%EA%B3%A0/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BA%A0%ED%94%84/2020/10/05/woowa-tech-camp-final.html',
+          post:'/woowa-tech-camp-final',
           github: 'https://github.com/woowa-techcamp-2020/bmart-6',
         },
       },
@@ -131,12 +137,12 @@ module.exports = {
         techStack: ['react', 'nodejs'],
         thumbnailUrl: 'https://www.timetable.college/timetable.png',
         links: {
-          post:
-            'https://zoomkoding.github.io/%EB%8C%80%ED%95%99%EC%8B%9C%EA%B0%84/%ED%9A%8C%EA%B3%A0/2021/02/10/college-timetable-development.html',
+          post: '/college-timetable-development',
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'http://www.timetable.college',
         },
       },
+      
     ],
   },
 };
