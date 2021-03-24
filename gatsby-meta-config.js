@@ -92,6 +92,15 @@ module.exports = {
           demo: 'https://www.timetable.college',
         },
       },
+      {
+        date: '2021.02 ~ 2021.03',
+        activity: 'Gatsby로 개인 블로그 디자인 및 개발',
+        links: {
+          post:'/gatsby-starter-zoomkoding-introduction',
+          github: 'https://github.com/zoomkoding/college-timetable',
+          demo: 'https://gatsby-starter-zoomkoding.netlify.app',
+        },
+      },
     ],
 
     projects: [
@@ -109,11 +118,11 @@ module.exports = {
         },
       },
       {
-        title: 'Gatsby로 개인 블로그 디자인 및 개발',
+        title: 'Gatsby로 개인 블로그 테마 개발',
         description:
-          '',
+          '정 때문에 떠나지 못하던 Jekyll로 만든 블로그를 떠나, 제가 좋아하는 스타일로 블로그를 디자인하고 개발해보고 싶은 마음에 이 프로젝트를 시작하게 되었습니다. 많은 분들이 쓰실 수 있도록 피드백을 반영해서 꾸준히 발전시켜나갈 예정입니다.',
         techStack: ['gatsby', 'react'],
-        thumbnailUrl: 'https://www.pngfind.com/pngs/m/626-6262352_load-images-in-gatsby-gatsbyjs-icon-hd-png.png',
+        thumbnailUrl: 'https://seeklogo.com/images/G/gatsby-logo-1A245AD37F-seeklogo.com.png',
         links: {
           post:'/gatsby-starter-zoomkoding-introduction',
           github: 'https://github.com/zoomkoding/college-timetable',
