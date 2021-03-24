@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome" />
 </p>
 
-[**Demo Website**](https://zoomkoding.netlify.com)
+[**Demo Website**](https://gatsby-starter-zoomkoding.netlify.app)
 
 ## 👋 소개
 
