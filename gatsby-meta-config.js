@@ -13,7 +13,7 @@ module.exports = {
       repo: `zoomkoding/zoomkoding.com`,
     },
   },
-  ga: 'UA-134826755-3', // Google Analytics Tracking ID
+  ga: 'UA-134826755-2', // Google Analytics Tracking ID
 
   // metadata for bio
   bio: {
