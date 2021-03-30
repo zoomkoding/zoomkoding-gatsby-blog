@@ -1,9 +1,10 @@
-import { Link } from 'gatsby';
 import React from 'react';
-import authorVideo from '../../assets/author.mp4'; //import the video file and then
 import ReactRotatingText from 'react-rotating-text';
-import './style.scss';
+
+import authorVideo from '../../assets/author.mp4';
 import IconButtonBar from '../icon-button-bar';
+
+import './style.scss';
 
 const Bio = ({ bio, social }) => {
   return (

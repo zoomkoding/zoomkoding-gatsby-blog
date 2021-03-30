@@ -1,5 +1,3 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import SectionHeader from '../section-header';
 import IconButtonBar from '../icon-button-bar';
@@ -7,7 +5,6 @@ import IconButtonBar from '../icon-button-bar';
 import './style.scss';
 
 const TimeStampsSection = ({ timestamps }) => {
-  console.log(timestamps);
   return (
     <div className="timestamps-section-wrapper">
       <div className="timestamps-section">

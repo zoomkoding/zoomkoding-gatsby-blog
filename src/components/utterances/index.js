@@ -23,7 +23,8 @@ export const Utterances = ({ repo }) => {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);
     });
     rootElm.current.appendChild(utterances);
-  }, []);
+    
+  }, [repo, rootElm]);
 
   return <div className="utterances" ref={rootElm} />;
 };

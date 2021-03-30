@@ -1,5 +1,3 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
 import React from 'react';
 
@@ -10,8 +8,8 @@ const PostCardsColumn = ({ posts, moreUrl }) => {
   return (
     <div className="post-cards-column-wrapper">
       <div className="post-cards-column">
-        {posts.map((post) => (
-          <PostCard post={post} />
+        {posts.map((post, index) => (
+          <PostCard key={index} post={post} />
         ))}
         {posts.length === 4 && (
           <Button

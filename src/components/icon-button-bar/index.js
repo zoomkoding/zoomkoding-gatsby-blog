@@ -1,5 +1,3 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { IconButton, Tooltip } from '@material-ui/core';
 
@@ -34,15 +32,17 @@ const IconButtonBar = ({
         return <EmailIcon style={style} />;
       case 'linkedIn':
         return <LinkedInIcon style={style} />;
+      default: 
+        return <></>
     }
   };
 
   return (
     <>
-      {Object.keys(links).map((link) => {
+      {Object.keys(links).map((link, index) => {
         return (
           links[link] && (
-            <Tooltip title={link} arrow>
+            <Tooltip key={index} title={link} arrow>
               <IconButton size="small" href={`${link === 'email' ? `mailto:` : ``}${links[link]}`}>
                 {IconPicker(link)}
               </IconButton>

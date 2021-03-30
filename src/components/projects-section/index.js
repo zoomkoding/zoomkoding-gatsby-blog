@@ -1,5 +1,3 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import SectionHeader from '../section-header';
 import IconButtonBar from '../icon-button-bar';
@@ -7,14 +5,13 @@ import IconButtonBar from '../icon-button-bar';
 import './style.scss';
 
 const ProjectsSection = ({ projects }) => {
-  console.log(projects);
   return (
     <div className="projects-section-wrapper">
       <div className="projects-section">
         <SectionHeader title="Projects" />
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return (
-            <div className="project">
+            <div className="project" key={index}>
               <div className="head">
                 {project.title}&nbsp;&nbsp;
                 {project.links && (
@@ -32,9 +29,7 @@ const ProjectsSection = ({ projects }) => {
                 <div className="content">
                   {project.techStack && (
                     <div className="tech-stack">
-                      {project.techStack.map((tech) => {
-                        return <div className="tech">{tech}</div>;
-                      })}
+                      {project.techStack.map((tech, index) => <div key={index} className="tech">{tech}</div>)}
                     </div>
                   )}
                   <div className="description">{project.description}</div>

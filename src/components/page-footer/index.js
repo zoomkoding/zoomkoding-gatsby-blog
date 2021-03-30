@@ -1,5 +1,3 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import './style.scss';
@@ -19,10 +17,5 @@ const PageFooter = ({ author, githubUrl }) => (
     </footer>
   </>
 );
-
-PageFooter.propTypes = {
-  author: PropTypes.string,
-  githubUrl: PropTypes.string,
-};
 
 export default PageFooter;

@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import './style.scss';
@@ -15,9 +14,9 @@ const PostCard = ({ post }) => {
           <div className="date">{date}</div>
           <div className="categories">
             {categories.map((category) => (
-              <Link className="category" key={category} to={`/posts/${category}`}>
+              <div className="category" key={category} to={`/posts/${category}`}>
                 {category}
-              </Link>
+              </div>
             ))}
           </div>
         </div>

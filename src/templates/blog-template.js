@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import SEO from '../components/seo'
 // import TableOfContents from '../components/toc';
 import PostHeader from '../components/post-header';
 import PostCardsAdjacent from '../components/post-cards-adjacent';
@@ -13,9 +14,10 @@ export default ({ data }) => {
   const prevPost = data.prev && new Post(data.prev);
   const nextPost = data.next && new Post(data.next);
   const utterancesRepo = data.site?.siteMetadata?.comments?.utterances?.repo;
-
+  
   return (
     <Layout>
+      <SEO title={curPost?.title} description={curPost?.excerpt } />
       <PostHeader post={curPost} />
       <PostContent html={curPost.html} />
       <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
@@ -29,12 +31,14 @@ export const pageQuery = graphql`
     cur: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt(pruneLength: 350, truncate: true)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
         categories
         author
         emoji
+        
       }
       fields {
         slug
