@@ -62,13 +62,16 @@ $ npm start
 gatsby-meta-config.js라는 파일의 내용을 수정하면 블로그의 여러 내용을 변경할 수 있습니다!
 
 ### 1. default
-블로그의 title, description, author, social 정보를 입력합니다. (**title**은 블로그 상단에 보이는 블로그 이름을 나타냅니다.)
+블로그의 title, description, author, siteUrl, ogImage, social 정보를 입력합니다. (**title**은 블로그 상단에 보이는 블로그 이름을 나타냅니다.)
 
 ```js
 module.exports = {
     title: '', // zoomkoding.dev
     description: '', // 줌코딩의 개발일기
     author: '', // zoomkoding
+
+    siteUrl: '', // https://gatsby-starter-zoomkoding.netlify.com
+    ogImage: '', // 공유할 때 보이는 미리보기 이미지
     social: {
         github: '', // https://github.com/zoomKoding
         linkedIn: '', // https://www.linkedin.com/in/jinhyeok-jeong-800871192

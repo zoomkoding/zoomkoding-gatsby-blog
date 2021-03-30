@@ -11,9 +11,6 @@ categories: tutorial
 
 예쁘고 깔끔한 개발 블로그를 만들고 싶으신 개발자분들을 위해 만들게 된 블로그 테마입니다.🏅  
 
-### ⭐️ 깃헙 링크 주소
-[gatsby-starter-zoomkoding](https://github.com/zoomkoding/gatsby-starter-zoomkoding)
-
 ## ✨ 기능
 
 - 😛 미모지와 문자 애니메이션를 통한 자기 소개
@@ -23,6 +20,8 @@ categories: tutorial
 - ⚙️ meta-config를 통한 세부 설정 가능
 - 👨‍💻 About Page 내용 변경 가능
 - 📚 Posts Page 자동 생성
+- 🛠 sitemap.xml, robots.txt 자동 생성
+- 📈 Google Analytics 지원
 - 🧢 Emoji 지원
 - 𝑓 Mathjax 지원
 
@@ -55,14 +54,22 @@ $ npm start
 
 gatsby-meta-config.js라는 파일의 내용을 수정하면 블로그의 여러 내용을 변경할 수 있습니다!
 
+
+## ⚙️ 기본 정보 입력하기
+
+gatsby-meta-config.js라는 파일의 내용을 수정하면 블로그의 여러 내용을 변경할 수 있습니다!
+
 ### 1. default
-블로그의 title, description, author, social 정보를 입력합니다. (**title**은 블로그 상단에 보이는 블로그 이름을 나타냅니다.)
+블로그의 title, description, author, siteUrl, ogImage, social 정보를 입력합니다. (**title**은 블로그 상단에 보이는 블로그 이름을 나타냅니다.)
 
 ```js
 module.exports = {
     title: '', // zoomkoding.dev
     description: '', // 줌코딩의 개발일기
     author: '', // zoomkoding
+
+    siteUrl: '', // https://gatsby-starter-zoomkoding.netlify.com
+    ogImage: '', // 공유할 때 보이는 미리보기 이미지
     social: {
         github: '', // https://github.com/zoomKoding
         linkedIn: '', // https://www.linkedin.com/in/jinhyeok-jeong-800871192
