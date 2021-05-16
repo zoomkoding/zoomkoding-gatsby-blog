@@ -6,6 +6,8 @@
 html {
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
     Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
@@ -17,7 +19,7 @@ body {
   height: 100%;
   margin: 0;
   background-color: #ffffff;
-
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,9 +30,4 @@ ul {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0px;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
 }
