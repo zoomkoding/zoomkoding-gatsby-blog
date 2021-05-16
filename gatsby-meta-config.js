@@ -20,7 +20,12 @@ module.exports = {
   bio: {
     language: `ko`, // 'en', 'ko'
     name: '정진혁',
-    description: ['이로운 것을 만드는', '배움을 좋아하는', 'UI/UX에 관심있는', '글로 나누길 좋아하는'],
+    description: [
+      '참된 지혜를 구하는',
+      '이로운 것을 만드는',
+      '배움을 좋아하는',
+      'UI/UX에 관심있는',
+    ],
   },
 
   // metadata for About Page
@@ -61,7 +66,7 @@ module.exports = {
         date: '2019.11.21',
         activity: '네이버 캠퍼스 핵데이 참여',
         links: {
-          post: '/2019-naver-hack-day'
+          post: '/2019-naver-hack-day',
         },
       },
 
@@ -97,7 +102,7 @@ module.exports = {
         date: '2021.02 ~ 2021.03',
         activity: 'Gatsby로 개인 블로그 디자인 및 개발',
         links: {
-          post:'/gatsby-starter-zoomkoding-introduction',
+          post: '/gatsby-starter-zoomkoding-introduction',
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'https://gatsby-starter-zoomkoding.netlify.app',
         },
@@ -125,7 +130,7 @@ module.exports = {
         techStack: ['gatsby', 'react'],
         thumbnailUrl: 'https://seeklogo.com/images/G/gatsby-logo-1A245AD37F-seeklogo.com.png',
         links: {
-          post:'/gatsby-starter-zoomkoding-introduction',
+          post: '/gatsby-starter-zoomkoding-introduction',
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'https://gatsby-starter-zoomkoding.netlify.app',
         },
@@ -138,7 +143,7 @@ module.exports = {
         thumbnailUrl:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYxT7-ADQQo72P5qbwJjwySPY8p1C1a3L0w&usqp=CAU',
         links: {
-          post:'/woowa-tech-camp-final',
+          post: '/woowa-tech-camp-final',
           github: 'https://github.com/woowa-techcamp-2020/bmart-6',
         },
       },
@@ -154,7 +159,6 @@ module.exports = {
           demo: 'http://www.timetable.college',
         },
       },
-      
     ],
   },
 };
