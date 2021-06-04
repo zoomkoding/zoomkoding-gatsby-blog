@@ -9,7 +9,7 @@ categories: tutorial
 
 ## 👋 소개
 
-예쁘고 깔끔한 개발 블로그를 만들고 싶으신 개발자분들을 위해 만들게 된 블로그 테마입니다.🏅  
+예쁘고 깔끔한 개발 블로그를 만들고 싶으신 개발자분들을 위해 만들게 된 블로그 테마입니다.🏅
 
 ## ✨ 기능
 
@@ -27,7 +27,7 @@ categories: tutorial
 
 ## 🚀 시작하기
 
-아래 과정을 진행하면 현재 블로그를 로컬 환경에서 실행하고 배포할 수 있습니다. 
+아래 과정을 진행하면 현재 블로그를 로컬 환경에서 실행하고 배포할 수 있습니다.
 
 ### 🔧 설치하기
 
@@ -46,6 +46,7 @@ $ npm install
 # Start development server
 $ npm start
 ```
+
 <br/>
 
 위 명령어가 문제 없이 실행됐다면 [http://localhost:8000](http://localhost:8000)에서 블로그를 확인하실 수 있습니다.
@@ -54,12 +55,8 @@ $ npm start
 
 gatsby-meta-config.js라는 파일의 내용을 수정하면 블로그의 여러 내용을 변경할 수 있습니다!
 
-
-## ⚙️ 기본 정보 입력하기
-
-gatsby-meta-config.js라는 파일의 내용을 수정하면 블로그의 여러 내용을 변경할 수 있습니다!
-
 ### 1. default
+
 블로그의 title, description, author, siteUrl, ogImage, social 정보를 입력합니다. (**title**은 블로그 상단에 보이는 블로그 이름을 나타냅니다.)
 
 ```js
@@ -81,11 +78,10 @@ module.exports = {
 
 ### 2. bio
 
-**bio**는 홈페이지에 글쓴이를 소개하는 섹션에서 사용됩니다. 현재 영어와 한국어 두개 다 지원을 합니다. 
+**bio**는 홈페이지에 글쓴이를 소개하는 섹션에서 사용됩니다. 현재 영어와 한국어 두개 다 지원을 합니다.
 **description**은 자신을 설명하는 문구를 여러개 넣을 수 있습니다. bio에서 사용하는 **미모지를 수정**하고 싶다면 `src/assets/author.mp4`에 동영상을 삽입하면 됩니다.
 
-> 🤖 언어에 따라 description의 포맷이 달라지니 마음에 드시는 형태에 맞게 description을 작성해주세요. 
-
+> 🤖 언어에 따라 description의 포맷이 달라지니 마음에 드시는 형태에 맞게 description을 작성해주세요.
 
 ```js
 module.exports = {
@@ -120,6 +116,7 @@ module.exports = {
 ```
 
 ## 👤 about page 만들기
+
 about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about 하위에 있는 timestamps와 projects에 각각 정보를 입력하시면 about 페이지가 자동 생성됩니다.
 
 ### 1. timestamps
@@ -153,6 +150,7 @@ module.exports = {
 ```
 
 ### 2. projects
+
 마찬가지로 각 project 정보를 배열로 제공해주시면 입력하신 순서에 맞춰서 projects section에 보여지게 됩니다.
 
 ```js
@@ -192,11 +190,13 @@ module.exports = {
 ## ✍️ 글 쓰기
 
 본격적으로 블로그에 글을 쓰려면 `/content` 아래에 디렉토리를 생성하고 `index.md`에 markdown으로 작성하시면 됩니다.
-> 이 때, 폴더의 이름은 경로를 생성하는데 됩니다. 
+
+> 이 때, 폴더의 이름은 경로를 생성하는데 됩니다.
 
 ### ℹ️ 메타 정보
 
 index.md 파일의 상단에는 아래와 같이 emoji, title, date, author, tags, categories 정보를 제공해야 합니다.
+
 > emoji는 글머리에 보여지게 되며, categories는 띄어쓰기로 나누어 여러개를 입력할 수 있습니다.
 
 ```
@@ -225,7 +225,6 @@ categories: tutorial
     ```toc
     ```
 
-
-
 ```toc
+
 ```
