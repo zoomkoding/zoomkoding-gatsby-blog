@@ -7,6 +7,7 @@ export const Utterances = ({ repo }) => {
   const rootElm = React.createRef();
 
   useEffect(() => {
+    if (!rootElm.current || rootElm.current.childNodes.length !== 0) return;
     const utterances = document.createElement('script');
     const utterancesConfig = {
       src,
@@ -23,7 +24,6 @@ export const Utterances = ({ repo }) => {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);
     });
     rootElm.current.appendChild(utterances);
-    
   }, [repo, rootElm]);
 
   return <div className="utterances" ref={rootElm} />;
