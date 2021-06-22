@@ -1,10 +1,10 @@
 ---
 emoji: 🧢
-title: 쉽게 Gatsby로 나만의 개발 블로그 만들기
+title: 예쁜 Gatsby 테마로 나만의 개발 블로그 만들기
 date: '2021-03-22 23:00:00'
 author: 줌코딩
-tags: tutorial gatsby
-categories: tutorial
+tags: blog gatsby theme
+categories: 블로그
 ---
 
 ## 👋 소개
