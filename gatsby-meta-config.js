@@ -48,20 +48,7 @@ module.exports = {
         date: '2019.11.17',
         activity: '코드포스 블루',
         links: {
-          post: 'https://zoomkoding.github.io/codeforces/2019/11/17/codeforces-600.html',
-        },
-      },
-
-      {
-        date: '2019.11.18',
-        activity: '2019 교내 인공지능(육목) 경진대회 우승',
-      },
-
-      {
-        date: '2019.11.21',
-        activity: '네이버 캠퍼스 핵데이 참여',
-        links: {
-          post: '/2019-naver-hack-day',
+          post: '/codeforces-round-600',
         },
       },
 
@@ -95,12 +82,16 @@ module.exports = {
       },
       {
         date: '2021.02 ~ 2021.03',
-        activity: 'Gatsby로 개인 블로그 디자인 및 개발',
+        activity: '개인 블로그 디자인 및 개발',
         links: {
           post: '/gatsby-starter-zoomkoding-introduction',
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'https://gatsby-starter-zoomkoding.netlify.app',
         },
+      },
+      {
+        date: '2021.03 ~ ',
+        activity: '우아한 형제들에서 일하는 중🚀',
       },
     ],
 
@@ -108,10 +99,10 @@ module.exports = {
       {
         title: 'Picky(글로벌 스킨케어 제품 분석 모바일 앱) 개발',
         description:
-          '스타트업에서 구글 출신 CEO님과 CTO님을 포함한 훌륭하신 4분과 함께 앱 개발 사업을 진행했습니다. 저는 초기에 1인 개발자로 v1.0 개발과 이후 유지보수를 담당했습니다. 약 한달 반의 개발 기간을 거쳐 2020년 4월에 v1.0을 배포했고 2021년 3월 현재 4만명 넘는 유저를 보유하고 있습니다.',
+          '구글 출신 분들이 창업한 스타트업에 인턴십을 하던 중 피버팅을 하게 되면서 저는 1인 개발자로 신규 사업에 참여하게 되었습니다. 5명의 경험이 많은 팀원들과 힘을 합쳐 Picky라는 앱을 개발하고 지속적으로 서비스를 확장해나갔습니다. 이 과정을 통해 실제 서비스의 시작과 성장하는 과정을 경험해볼 수 있었습니다.',
         techStack: ['flutter', 'nodejs'],
         thumbnailUrl:
-          'https://media-exp1.licdn.com/dms/image/C560BAQGc18OyGfmPZQ/company-logo_200_200/0/1603042283518?e=1622678400&v=beta&t=brvRul711R43vMtIGR96EX7ZEPSTbemrbyzlhC6Dhm4',
+          'https://media-exp1.licdn.com/dms/image/C560BAQGc18OyGfmPZQ/company-logo_200_200/0/1603042283518?e=1633564800&v=beta&t=Ksxpku6DrCW0RygAnYwyvE2Ezx10lZLQDn0Rr4e-3Ww',
         links: {
           post: '/start-up-app-development',
           googlePlay: 'https://play.google.com/store/apps/details?id=care.jivaka.picky',
@@ -119,21 +110,22 @@ module.exports = {
         },
       },
       {
-        title: 'Gatsby로 개인 블로그 테마 개발',
+        title: '개발 블로그 테마 개발',
         description:
-          '정 때문에 떠나지 못하던 Jekyll로 만든 블로그를 떠나, 제가 좋아하는 스타일로 블로그를 디자인하고 개발해보고 싶은 마음에 이 프로젝트를 시작하게 되었습니다. 많은 분들이 쓰실 수 있도록 피드백을 반영해서 꾸준히 발전시켜나갈 예정입니다.',
+          '간단한 테마를 활용하여 개발 블로그를 만들고 운영하다 보니 점점 블로그를 내가 원하는 형태로 만들고 싶게 되었습니다. 입사 전 시기를 활용해서 원하는 기능과 디자인이 있는 블로그 테마를 만들게 되었습니다.',
         techStack: ['gatsby', 'react'],
-        thumbnailUrl: 'https://seeklogo.com/images/G/gatsby-logo-1A245AD37F-seeklogo.com.png',
+        thumbnailUrl:
+          'https://github.com/zoomKoding/zoomKoding.github.io/blob/source/zoomkoding.png?raw=true',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
+          post: '/why-dev-blog',
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'https://gatsby-starter-zoomkoding.netlify.app',
         },
       },
       {
-        title: '2020 웹 중심 우아한테크캠프 참여',
+        title: '2020 우아한테크캠프 참여',
         description:
-          '웹 프론트엔드 개발 경험을 키워보고자 지원하여 2달간 우아한 형제들에서 주관하는 우아한테크캠프를 진행했습니다. 캠프 기간 동안 저와 비슷한 열정을 가진 사람들과 함께 성장할 수 있었던 유익한 시간이었습니다.',
+          '스타트업에서 앱 개발을 하면서 좋은 개발에 대한 갈증이 매우 크던 중에 좋은 기회를 잡게 되어 참여하게 되었습니다. 2달 간 몰입해서 좋은 사람들과 웹 개발을 경험하며, 많이 배우고 성장할 수 있었던 시간이었습니다.',
         techStack: ['react', 'nodejs'],
         thumbnailUrl:
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYxT7-ADQQo72P5qbwJjwySPY8p1C1a3L0w&usqp=CAU',
@@ -145,7 +137,7 @@ module.exports = {
       {
         title: '대학시간(대학교 수강신청 보조 웹 앱) 개발',
         description:
-          '입사일을 앞두고 뭐를 할까 고민하던 중에 수강신청 준비 과정의 어려움을 해소할 수 있는 웹사이트를 개발하게 되었습니다. 이번 프로젝트는 조금 특별하게 기획, 디자인, 홍보, 개발 모두 직접 도전하게 되었고 약 한달의 시간 끝에 배포했습니다. 21년도 1학기 재학생 중 1600명 정도가 이 서비스를 사용했습니다.',
+          '학생들이 예비 수강 신청 과정에서 겪게 되는 불편함을 개선할 수 있는 웹 서비스를 개발하였습니다. 첫 서비스를 진행한 2021년 1학기에만 전체 학생의 절반 가량이 서비스를 경험했고, 사용한 학생들로부터 고맙다는 이야기를 여러 경로로 전달 받게 되었습니다. 개발이 줄 수 있는 좋은 영향력를 많이 느꼈던 프로젝트였습니다.',
         techStack: ['react', 'nodejs'],
         thumbnailUrl: 'https://www.timetable.college/timetable.png',
         links: {

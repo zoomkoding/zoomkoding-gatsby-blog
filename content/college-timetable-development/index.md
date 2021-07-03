@@ -20,9 +20,9 @@ categories: 프로젝트 회고
 - [웹사이트 링크](http://www.timetable.college/handong)
 - [깃헙레포 링크](https://github.com/zoomKoding/college-timetable)
 
-감사하게도 2월 7일 현재, 800명이 넘는 분들이 대학시간을 이용해주셨고 아직 새내기 수강신청은 시작하지 않은 상황이라 더 늘어날 걸로 기대하는 중이다!🌝
+감사하게도 한학기 학생 수의 절반이 넘는 1600명이 대학시간을 이용했다!🌝
 
-기술스택은 React, Nodejs(express), MySQL을 사용했다.
+먼저, 개발에 사용한 기술스택은 다음과 같다.
 
 ![college-timetable-1.png](./college-timetable-1.png)
 
