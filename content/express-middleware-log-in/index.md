@@ -1,10 +1,10 @@
 ---
 emoji: 🐢
-title: (우아한테크캠프 3기) Express 미들웨어 제대로 사용하기 + 로그인 구현하기
+title: Express 미들웨어 제대로 사용하기 + 로그인 구현하기
 date: '2020-07-12 20:00:00'
 author: 줌코딩
 tags: javascript node express 우아한테크캠프 백엔드개발 노드 익스프레스 미들웨어
-categories: nodejs 우아한테크캠프
+categories: 웹공부
 ---
 
 ## 🧩 목적
@@ -23,9 +23,9 @@ express의 특징에 대해서는 [Node 개발자라면 알아야 할 기본 지
 
 ### [pug](https://pugjs.org/api/getting-started.html)
 
-Express는 런타임에 템플릿 엔진을 이용해서 여러 변수가 있는 static한 템플릿 파일에 실제 값을 넣어 html 파일을 생성한다. 
+Express는 런타임에 템플릿 엔진을 이용해서 여러 변수가 있는 static한 템플릿 파일에 실제 값을 넣어 html 파일을 생성한다.
 
-Pug는 가장 대표적인 템플릿엔진으로 템플릿이 있는 디렉토리를  views에 정해주고 view engine으로 pug로 설정해주면 사용할 수 있다.
+Pug는 가장 대표적인 템플릿엔진으로 템플릿이 있는 디렉토리를 views에 정해주고 view engine으로 pug로 설정해주면 사용할 수 있다.
 
 <br>
 
@@ -46,10 +46,10 @@ block content
   p Welcome to #{title}
 ```
 
-**router.js** 에서 res.render 함수를 통해 사용할 template과 변수 값을 전달해주면 
+**router.js** 에서 res.render 함수를 통해 사용할 template과 변수 값을 전달해주면
 
 ```jsx
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 ```
@@ -60,7 +60,7 @@ template에 변수 값을 넣어서 해당하는 페이지를 유저에게 전�
 
 ### [morgan](https://www.npmjs.com/package/morgan)
 
-morgan은 이름에서 바로 알 수 없지만 request를 logging을 해주는 아주 유용한 미들웨어이다. 
+morgan은 이름에서 바로 알 수 없지만 request를 logging을 해주는 아주 유용한 미들웨어이다.
 
 ```jsx
 var logger = require('morgan');
@@ -92,37 +92,43 @@ morgan을 사용하면 에러가 어떤 요청에서 발생했는지 확인할 �
 
 <br>
 
-🍯**꿀팁** 🍯 
+🍯**꿀팁** 🍯
 
-**morgan은 console 대신 file에 logging 하도록 설정이 가능하다.** 
+**morgan은 console 대신 file에 logging 하도록 설정이 가능하다.**
 
 **rotating-file-stream이라는 미들웨어를 사용하면 매일 다른 파일에 로깅을 할 수 있도록 설정할 수 있고 심지어는 console에는 에러 요청만 기록하도록 하고 파일에는 모든 요청을 다 기록하도록 설정할 수도 있다.**
 
 다음은 그 예시이다!
 
 ```jsx
-var express = require('express')
-var morgan = require('morgan')
-var path = require('path')
-var rfs = require('rotating-file-stream') // version 2.x
- 
-var app = express()
- 
+var express = require('express');
+var morgan = require('morgan');
+var path = require('path');
+var rfs = require('rotating-file-stream'); // version 2.x
+
+var app = express();
+
 // create a rotating write stream
 var accessLogStream = rfs.createStream('access.log', {
   interval: '1d', // rotate daily
-  path: path.join(__dirname, 'log')
-})
+  path: path.join(__dirname, 'log'),
+});
 
 // log only 4xx and 5xx responses to console
-app.use(morgan('dev', {
-  skip: function (req, res) { return res.statusCode < 400 }
-}))
- 
+app.use(
+  morgan('dev', {
+    skip: function (req, res) {
+      return res.statusCode < 400;
+    },
+  }),
+);
+
 // log all requests to access.log
-app.use(morgan('common', {
-  stream: fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
-}))
+app.use(
+  morgan('common', {
+    stream: fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' }),
+  }),
+);
 // ···
 ```
 
@@ -132,7 +138,7 @@ app.use(morgan('common', {
 
 express-session은 서버가 세션을 이용하게 해주고 유저 쿠키에 세션 정보를 담을 수 있게 해주는 매우 유용한 미들 웨어이다.
 
-유저 쿠키에 세션 정보를 담을 때는 세션의 모든 정보를 담는 것이 아니라 **세션의 아이디 값을 저장**하고 서버에서  데이터를 관리하게 된다.
+유저 쿠키에 세션 정보를 담을 때는 세션의 모든 정보를 담는 것이 아니라 **세션의 아이디 값을 저장**하고 서버에서 데이터를 관리하게 된다.
 
 이때 여러 옵션을 정해줘야 하는데 주요 옵션의 특징은 다음과 같다.
 
@@ -142,7 +148,7 @@ express-session은 서버가 세션을 이용하게 해주고 유저 쿠키에 �
 
 **saveUninitialized** : 세션 ID를 발급하지 않는 세션도 다 기록할지 정한다.(로그인에 사용할 때는 서버 메모리 사용을 줄여주기 위해 false로 설정한다.)
 
-**storage** : 세션을 어디에 저장할지 정한다.(기본 값은 MemoryStore를 사용하기 때문에 production에 사용하면 memory leak이 발생할 수도 있다. [세션을 저장할 수 있는 다양한 storage](https://www.npmjs.com/package/express-session#compatible-session-stores)가 존재한다.) 
+**storage** : 세션을 어디에 저장할지 정한다.(기본 값은 MemoryStore를 사용하기 때문에 production에 사용하면 memory leak이 발생할 수도 있다. [세션을 저장할 수 있는 다양한 storage](https://www.npmjs.com/package/express-session#compatible-session-stores)가 존재한다.)
 
 ![express-middleware-2](./express-middleware-2.png)
 
@@ -151,34 +157,36 @@ express-session은 서버가 세션을 이용하게 해주고 유저 쿠키에 �
 다음 코드는 session 미들웨어를 지나가면서 어떤 req에 어떤 내용이 생기는지 보는 코드이다.
 
 ```jsx
-var express = require('express')
-var session = require('express-session')
- 
-var app = express()
+var express = require('express');
+var session = require('express-session');
+
+var app = express();
 
 function logSessionInfo(req) {
   console.log(`req.session : ${req.session}`);
   console.log(`req.sessionID : ${req.sessionID}`);
 }
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   console.log(`express-session 통과 전`);
   console.log(`req.headers.cookie : ${req.session}`);
   logSessionInfo(req);
   next();
-})
+});
 
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true
-}));
+app.use(
+  session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+  }),
+);
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   console.log(`express-session 통과 후`);
   logSessionInfo(req);
   next();
-})
+});
 
 // ···
 ```
@@ -193,9 +201,9 @@ app.use(function(req, res, next) {
 
 🗒️**정리** 🗒️
 
-express-sesssion은 req.headers.cookie에 주어진 sid를 sessionID로 번역하고 그 sessionID에 해당하는 session 값을 req.session에 저장하게 된다! 
+express-sesssion은 req.headers.cookie에 주어진 sid를 sessionID로 번역하고 그 sessionID에 해당하는 session 값을 req.session에 저장하게 된다!
 
-**즉, 세션의 정보 값은 쿠키에 전달되지 않고  해쉬화된 sid만 유저의 쿠키에 저장되고 요청이 들어오면 sid를 번역하고 얻은 session ID에 해당하는 session 값을 req.session에 넣어주어 next함수에서 사용할 수 있게 해준다!!(이제 좀 알겠다...ㅋㅋㅋ)**
+**즉, 세션의 정보 값은 쿠키에 전달되지 않고 해쉬화된 sid만 유저의 쿠키에 저장되고 요청이 들어오면 sid를 번역하고 얻은 session ID에 해당하는 session 값을 req.session에 넣어주어 next함수에서 사용할 수 있게 해준다!!(이제 좀 알겠다...ㅋㅋㅋ)**
 
 <br>
 
@@ -214,7 +222,7 @@ passport에서 제공하는 여러 strategy를 설치해서 사용할 수 있다
 다음과 같이 passport와 하나의 Strategy를 가져와서
 
 ```jsx
-const passport = require('passport')
+const passport = require('passport');
 const localStrategy = require('passport-local').Strategy;
 ```
 
@@ -244,13 +252,11 @@ passport.use(new LocalStrategy(
 그리고 passport.authenticate를 다음과 같이 login request에 사용할 수 있다.
 
 ```jsx
-app.post('/login',
-  passport.authenticate('local'),
-  function(req, res) {
-    // If this function gets called, authentication was successful.
-    // `req.user` contains the authenticated user.
-    res.redirect('/users/' + req.user.username);
-  });
+app.post('/login', passport.authenticate('local'), function (req, res) {
+  // If this function gets called, authentication was successful.
+  // `req.user` contains the authenticated user.
+  res.redirect('/users/' + req.user.username);
+});
 ```
 
 passport.authentication 함수가 성공하면 req.user에 유저 정보를 넣어서 콜백 함수를 실행하지만 로그인 실패시 바로 401 authentication error 메시지를 전달한다.
@@ -259,7 +265,7 @@ passport.authentication 함수가 성공하면 req.user에 유저 정보를 넣�
 
 **❓그럼 로그인 여부는 어디서 결정 될까?**
 
-위의 코드에서  username, password, done을 파라미터로 받는 함수는 verify callback라고 하는데 여기서 authentication 성공과 실패 여부를 **done함수**로 전달한다. (이때 전달된 값이 req.user에 넣어진다.)
+위의 코드에서 username, password, done을 파라미터로 받는 함수는 verify callback라고 하는데 여기서 authentication 성공과 실패 여부를 **done함수**로 전달한다. (이때 전달된 값이 req.user에 넣어진다.)
 
 성공시에는 done의 두번째 인자로 유저 정보로 실패시에는 false를 반환한다.
 
@@ -282,12 +288,12 @@ app.use(passport.session());
 세션을 이용하기 위해서는 serializeUser와 deserializeUser 함수를 정의해줘야 한다.
 
 ```jsx
-passport.serializeUser(function(user, done) {
+passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
 
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function(err, user) {
+passport.deserializeUser(function (id, done) {
+  User.findById(id, function (err, user) {
     done(err, user);
   });
 });
@@ -321,27 +327,27 @@ cookie에 들어있는 express session이 생성한 connect.sid을 풀면 그 �
 
 **❓로그인 상태에 따라 페이지 접근 제어하기!**
 
-마이페이지와 같은 페이지에 접근할 때는 유저의 로그인 상태에 따라서 페이지를 달리 해줘야 한다. 
+마이페이지와 같은 페이지에 접근할 때는 유저의 로그인 상태에 따라서 페이지를 달리 해줘야 한다.
 
 이런 상황에는 passport에 의해 req에 생성된 isAuthenticated를 이용할 수 있다. 함수의 형태는 다음과 같다.
 
 ```jsx
-req.isAuthenticated = function() {
+req.isAuthenticated = function () {
   var property = 'user';
   if (this._passport && this._passport.instance) {
     property = this._passport.instance._userProperty || 'user';
   }
-  
-  return (this[property]) ? true : false;
-}
+
+  return this[property] ? true : false;
+};
 ```
 
 위의 함수를 이용하면 다음과 같은 함수를 만들어서 페이지를 보여주기 전에 로그인 상태를 확인하여 로그인 되지 않은 req를 login page로 redirect 해줄 수 있다.
 
 ```jsx
-function isAuthenticated(req, res, next){
-    if (req.isAuthenticated()) return next();
-    return res.redirect('/login');
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) return next();
+  return res.redirect('/login');
 }
 
 // ···
@@ -359,13 +365,13 @@ hash를 생성할때는 bcrypt의 hash 함수를 이용하고 비밀번호를 �
 
 ```jsx
 const saltRounds = 10;
-user.passwordHash = await bcrypt.hash(password, saltRounds);
+user.passwordHash = await bcrypt.hash(password, saltRounds);
 const match = await bcrypt.compare(password, user.passwordHash);
 ```
 
 <br>
 
-**❓bcrpyt가 근데 뭐지요? [비밀번호 암호화 관련 사진 출처 및 참고자료](https://d2.naver.com/helloworld/318732)** 
+**❓bcrpyt가 근데 뭐지요? [비밀번호 암호화 관련 사진 출처 및 참고자료](https://d2.naver.com/helloworld/318732)**
 
 비밀번호를 단방향으로 hashing 만으로 생길 수 있는 유추 가능성이나 빠른 속도로 인해 해커들에게 편의성을 제공할 수 있다.
 
@@ -378,7 +384,7 @@ bcrypt는 이에 더해 다이제스트를 생성하는 과정을 몇번 진행�
 
 ### [flash](https://www.npmjs.com/package/connect-flash)
 
-flash는 세션에서 메시지를 저장할 때 사용하는 특별한 공간이다. 
+flash는 세션에서 메시지를 저장할 때 사용하는 특별한 공간이다.
 
 flash에 작성된 메시지는 한번 유저한테 display되면 바로 삭제된다.
 
@@ -406,9 +412,10 @@ if (!user.validPassword(password)) {
 그리고 req.flash()를 이용해서 해당 값을 유저에게 전달할 수 있다!**(한번 보여주면 사라진다.)**
 
 ```jsx
-router.get('/login', (req, res) => req.isAuthenticated() 
-    ? res.redirect('/mypage') 
-    : res.render('login', { failureMsg : req.flash().error })
+router.get('/login', (req, res) =>
+  req.isAuthenticated()
+    ? res.redirect('/mypage')
+    : res.render('login', { failureMsg: req.flash().error }),
 );
 ```
 
@@ -427,75 +434,74 @@ const fs = require('fs');
 const path = require('path');
 
 class Model {
-    
-    static sync = function() {
-        if(fs.existsSync(this.fileName)){
-            const data = fs.readFileSync(this.fileName, 'utf8');
-            this.items = JSON.parse(data);
-        }
+  static sync = function () {
+    if (fs.existsSync(this.fileName)) {
+      const data = fs.readFileSync(this.fileName, 'utf8');
+      this.items = JSON.parse(data);
     }
+  };
 
-    static init = (attributesTypes, { tableName, sync }) => {
-        this.tableName = tableName;
-        this.dirname = path.join(__dirname, `../database`)
-        this.fileName = `${this.dirname}/${tableName}.json`;
-        this.attributesTypes = attributesTypes;
-        this.items = [];
-        if(sync) this.sync();
+  static init = (attributesTypes, { tableName, sync }) => {
+    this.tableName = tableName;
+    this.dirname = path.join(__dirname, `../database`);
+    this.fileName = `${this.dirname}/${tableName}.json`;
+    this.attributesTypes = attributesTypes;
+    this.items = [];
+    if (sync) this.sync();
+  };
+
+  static write = function () {
+    const data = JSON.stringify(this.items);
+    if (!fs.existsSync(this.dirname)) fs.mkdirSync(this.dirname);
+    fs.writeFileSync(this.fileName, data, 'utf8');
+  };
+
+  static validate = function (item) {
+    const data = {};
+    for (const [key, value] of Object.entries(item)) {
+      if (!this.attributesTypes[key] || !value) continue;
+
+      switch (this.attributesTypes[key]) {
+        case 'date':
+          data[key] = Date(value);
+          break;
+        case 'boolean':
+          data[key] = value == 'on' || value == 1;
+          break;
+        case typeof value:
+          data[key] = value;
+          break;
+        default:
+          throw new Error('User Input Error');
+      }
     }
+    data.createdAt = Date.now();
+    data.updatedAt = Date.now();
+    return data;
+  };
 
-    static write = function() {
-        const data = JSON.stringify(this.items);
-        if (!fs.existsSync(this.dirname)) fs.mkdirSync(this.dirname);
-        fs.writeFileSync(this.fileName, data, 'utf8');
-    }
+  static getById = (id) => this.items.find((item) => item.id === id);
 
-    static validate = function(item) {
-        const data = {};
-        for (const [key, value] of Object.entries(item)) {
-            if(!this.attributesTypes[key] || !value) continue;
+  static create = function (item) {
+    const validatedItem = this.validate(item);
+    this.items.push(validatedItem);
+    this.write();
+    return validatedItem;
+  };
 
-            switch(this.attributesTypes[key]){
-                case 'date':
-                    data[key] = Date(value);
-                    break;
-                case 'boolean':
-                    data[key] = value == 'on' || value == 1;
-                    break;
-                case typeof(value):
-                    data[key] = value;
-                    break;
-                default:
-                    throw new Error('User Input Error'); 
-            }
-        }
-        data.createdAt = Date.now();
-        data.updatedAt = Date.now();
-        return data;
-    }
+  static update = function (item) {
+    const id = this.items.findIndex(item.id);
+    item.updatedAt = Date.now();
+    this.items[id] = item;
+    this.write();
+  };
 
-    static getById = (id) => this.items.find(item => item.id === id);   
-
-    static create = function (item) {
-        const validatedItem = this.validate(item);
-        this.items.push(validatedItem);
-        this.write();
-        return validatedItem;
-    }
-
-    static update = function (item) {
-        const id = this.items.findIndex(item.id);
-        item.updatedAt = Date.now();
-        this.items[id] = item;
-        this.write();
-    } 
-
-    static delete = function (item) {
-        const id = this.items.findIndex(item.id);
-        item.updatedAt = Date.now();
-        if(id) this.items[id] = null;
-        this.write();
-    }
+  static delete = function (item) {
+    const id = this.items.findIndex(item.id);
+    item.updatedAt = Date.now();
+    if (id) this.items[id] = null;
+    this.write();
+  };
 }
 
 module.exports = Model;
@@ -507,22 +513,25 @@ module.exports = Model;
 const Model = require('./model');
 
 class Users extends Model {
-    static init() {
-        return super.init({
-            id : 'string',
-            pw : 'string',
-            email : 'string',
-            name : 'string',
-            phoneNo : 'string',
-            address1 : 'string',
-            address2 : 'string',
-            zipCode : 'string',
-            isAdAgreed : 'boolean',
-        }, { 
-            tableName : 'Users', 
-            sync : true 
-        });
-    } 
+  static init() {
+    return super.init(
+      {
+        id: 'string',
+        pw: 'string',
+        email: 'string',
+        name: 'string',
+        phoneNo: 'string',
+        address1: 'string',
+        address2: 'string',
+        zipCode: 'string',
+        isAdAgreed: 'boolean',
+      },
+      {
+        tableName: 'Users',
+        sync: true,
+      },
+    );
+  }
 }
 
 module.exports = Users;
@@ -546,4 +555,5 @@ module.exports = Users;
 > 잘못 정리된 점이나 피드백 있으면 말씀해주세요!
 
 ```toc
+
 ```

@@ -1,10 +1,10 @@
 ---
 emoji: 💅
-title: (우아한테크캠프 3기) Atomic Design Pattern이 뭐지?
+title: Atomic Design Pattern이 뭐지?
 date: '2020-07-09 20:00:00'
 author: 줌코딩
 tags: javascript 디자인패턴 우아한테크캠프 atomicdesign
-categories: 디자인패턴 우아한테크캠프
+categories: 웹공부
 ---
 
 ## 🤔 목적
@@ -23,16 +23,16 @@ categories: 디자인패턴 우아한테크캠프
 
 ## 📒 참고 글
 
-Brad Frost의 개념적인 내용에 Danilo Woznica의 글을 참고에서 개발에 필요한 구체적인 내용을 담아보았다. 
+Brad Frost의 개념적인 내용에 Danilo Woznica의 글을 참고에서 개발에 필요한 구체적인 내용을 담아보았다.
 
 - [atomic design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
 - [Atomic Design and ReactJS by Danilo Woznica](https://danilowoz.com/blog/atomic-design-with-react)
 
 ## ⚛️ Atomic Design Pattern
 
-> *Atomic Design helps to build consistent, solid and reusable design systems.*
+> _Atomic Design helps to build consistent, solid and reusable design systems._
 
-이 개발 방식은 사실 개발에만 적용되는 개념이 아니라 디자인에도 적용되는 설계 패턴이다. 
+이 개발 방식은 사실 개발에만 적용되는 개념이 아니라 디자인에도 적용되는 설계 패턴이다.
 
 말 그래도 작은 단위의 컴포넌트를 재사용성이 강하고, 단단하게 잘 설계함으로서 점진적으로 지속적으로 개발하기 용이하게 하는 방식이다.
 
@@ -83,6 +83,7 @@ Brad Frost의 개념적인 내용에 Danilo Woznica의 글을 참고에서 개�
 - 초기 개발 시간이 길지 모르기만 작은 단위의 Component를 잘 설계해놓으면 중장기적으로 개발 기간을 단축할 수 있다 😎
 
 ## 👹 적용기
+
 구조와 사용 방법은 비슷했으나 내부 코드가 똥이 많았다..💩ㅋㅋ
 
 이번 프로젝트는 자바스크립트만 사용하다보니 컴포넌트화 하는데 어려움이 조금 있었다.
@@ -92,7 +93,9 @@ Brad Frost의 개념적인 내용에 Danilo Woznica의 글을 참고에서 개�
 다음 프로젝트에는 css와 javascript에 대해 좀더 공부해서 내부 코드도 잘짜봐야겠다.
 
 ## 📽️ 프로젝트 깃헙 레포지토리
+
 [[우아한테크캠프] 배민상회 회원가입/로그인 구현 프로젝트](https://github.com/woowa-techcamp-2020/market-8/tree/develop/client/src/components)
 
 ```toc
+
 ```

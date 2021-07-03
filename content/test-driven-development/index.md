@@ -1,10 +1,10 @@
 ---
 emoji: 🛠
-title: (우아한테크캠프 3기) Test Driven Development란?
+title: Test Driven Development란?
 date: '2020-07-10 20:00:00'
 author: 줌코딩
 tags: tdd 우아한테크캠프
-categories: tdd 우아한테크캠프
+categories: 웹공부
 ---
 
 ## 🧪 TDD란
@@ -33,9 +33,9 @@ Test Driven Development : 말그대로 **테스트가 이끌어 나가는 개발
 
 1. 도구나 규칙에 집착하지 말아라(TDD는 어떤 도구가 아니다.)
 2. 상황에 맞게 적응적으로 진화적으로 접근하라
-    1. 어떻게 하면 피드백을 더 많이 받을까를 계속해서 고민해보라
-    2. 테스트 자체가 처음부터 완벽할 수 없다!
-    3. 상황에 맞게 반복적으로 개선해나가자
+   1. 어떻게 하면 피드백을 더 많이 받을까를 계속해서 고민해보라
+   2. 테스트 자체가 처음부터 완벽할 수 없다!
+   3. 상황에 맞게 반복적으로 개선해나가자
 
 ## 🧠 테스트 코드를 잘 짜는 사고법
 
@@ -53,7 +53,7 @@ Test Driven Development : 말그대로 **테스트가 이끌어 나가는 개발
 함수의 매개변수와 반환값을 정의한다.
 
 ```jsx
-var strong = isStrongPassword('password string goes here')
+var strong = isStrongPassword('password string goes here');
 ```
 
 ### 3. 기능상 아주 작은 하나의 관점으로 판단하기
@@ -64,7 +64,7 @@ var strong = isStrongPassword('password string goes here')
 
 비밀번호 강도를 생각해보면, 특수문자, 숫자, 길이, 등등 다양한 규칙들이 있을 것이다. 이 모든 것을 포함하는 테스트를 생각하는 건 당연히 어렵다!
 
-비밀번호 강도에 관해 가장 단순한 규칙은 빈 문자열이다. 이건 매우 쉽다 
+비밀번호 강도에 관해 가장 단순한 규칙은 빈 문자열이다. 이건 매우 쉽다
 
 **비밀번호가 비어있다면 출력값은 언제나 false여야 한다.**
 
@@ -73,11 +73,11 @@ var strong = isStrongPassword('password string goes here')
 함수의 한줄 한줄을 모른채 테스트 코드 만을 작성해보자.
 
 ```jsx
-describe('isPasswordStrong', function() {
-  it('should give negative result for empty string', function() {
-    var password = '';    
-		var result = isPasswordStrong(password);   
-		expect(result).to.be.false;
+describe('isPasswordStrong', function () {
+  it('should give negative result for empty string', function () {
+    var password = '';
+    var result = isPasswordStrong(password);
+    expect(result).to.be.false;
   });
 });
 ```
@@ -88,13 +88,13 @@ describe('isPasswordStrong', function() {
 
 ```jsx
 function isPasswordStrong(password) {
-  if(!password) {
+  if (!password) {
     return false;
   }
 }
 ```
 
-계속해서 비밀번호 강도 측정 함수를 개발하고 싶다면 3번부터 5번까지의 과정을 반복하면 된다. 
+계속해서 비밀번호 강도 측정 함수를 개발하고 싶다면 3번부터 5번까지의 과정을 반복하면 된다.
 
 이렇게 작은 절차를 반복하다보면 결국에는 좋은 결과에 이를 수 있을 것이다.
 
@@ -106,4 +106,5 @@ function isPasswordStrong(password) {
 - Login Validation Func
 
 ```toc
+
 ```
