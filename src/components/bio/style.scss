@@ -1,16 +1,19 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 @keyframes blinking-cursor {
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 strong {
   font-weight: 600;
 }
@@ -54,13 +57,25 @@ strong {
         font-size: 32px;
         line-height: 1.2;
 
+        .title {
+          .react-rotating-text-cursor {
+            font-size: 40px;
+          }
+        }
+
         @include md {
-          font-size: 45px;
+          font-size: 40px;
+
+          .title {
+            .react-rotating-text-cursor {
+              font-size: 45px;
+            }
+          }
         }
 
         .title {
           .react-rotating-text-cursor {
-            font-size: 50px;
+            font-size: 40px;
           }
         }
       }
