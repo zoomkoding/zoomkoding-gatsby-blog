@@ -4,7 +4,7 @@ title: 나의 비효율적이지만 효율적인 알고리즘 공부법 (코딩�
 date: '2019-12-05 02:00:00'
 author: 줌코딩
 tags: algorithm 회고
-categories: 회고
+categories: 회고 알고리즘
 ---
 
 ## 목적
