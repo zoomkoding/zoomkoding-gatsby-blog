@@ -42,6 +42,7 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "prettier": "2.2.1"
   },
   "keywords": [
@@ -54,6 +55,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "deploy": "gatsby build && gh-pages -d public",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
