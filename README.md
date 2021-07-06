@@ -72,7 +72,7 @@ module.exports = {
     description: '', // zoomkoding's dev log
     author: '', // zoomkoding
 
-    siteUrl: '', // https://gatsby-starter-zoomkoding.netlify.com
+    siteUrl: '', // https://zoomkoding-gatsby-blog.netlify.com
     ogImage: '', // open graph image (image displayed when the link is shared)
     social: {
         github: '', // https://github.com/zoomKoding
