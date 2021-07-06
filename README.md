@@ -1,9 +1,9 @@
 <h1 align="center">
-  Gatsby Starter Zoomkoding
+  Zoomkoding Gatsby Blog
 </h1>
 
 <p align="center">
-  <a href="https://github.com/zoomkoding/gatsby-starter-zoomkoding/blob/master/LICENSE">
+  <a href="https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Gatsby Starter Zoomkoding is released under the 0BSD license." />
   </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
@@ -12,7 +12,7 @@
 
 **Demo Websites**: [**English**](https://zoomkoding.netlify.app) | [**Korean**](https://www.zoomkoding.com)
 
-[**🇰🇷 한국어 README.md**](https://github.com/zoomkoding/gatsby-starter-zoomkoding/blob/master/README.ko.md)
+[**🇰🇷 한국어 README.md**](https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/README.ko.md)
 
 ## 👋 Introduction
 
@@ -40,7 +40,7 @@ This is a blog theme created for developers who want to create a pretty, clean a
 
     ```shell
     # create a new Gatsby site using the zoomkoding starter
-    gatsby new my-default-starter https://github.com/zoomkoding/gatsby-starter-zoomkoding
+    gatsby new my-default-starter https://github.com/zoomkoding/zoomkoding-gatsby-blog
     ```
 
 1.  **Start developing.**
@@ -114,7 +114,7 @@ module.exports = {
 
     comments: {
         utterances: {
-            repo: '' // zoomkoding/gatsby-starter-zoomkoding
+            repo: '' // zoomkoding/zoomkoding-gatsby-blog
         },
     },
     ...
