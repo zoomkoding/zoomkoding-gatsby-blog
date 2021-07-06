@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeader from '../section-header';
 import IconButtonBar from '../icon-button-bar';
-
+import Image from '../image';
 import './style.scss';
 
 const ProjectsSection = ({ projects }) => {
@@ -25,11 +25,17 @@ const ProjectsSection = ({ projects }) => {
                 )}
               </div>
               <div className="body">
-                <img className="thumbnail" src={project.thumbnailUrl} alt={project.title} />
+                <div className="thumbnail-wrapper">
+                  <Image className="thumbnail" src={project.thumbnailUrl} />
+                </div>
                 <div className="content">
                   {project.techStack && (
                     <div className="tech-stack">
-                      {project.techStack.map((tech, index) => <div key={index} className="tech">{tech}</div>)}
+                      {project.techStack.map((tech, index) => (
+                        <div key={index} className="tech">
+                          {tech}
+                        </div>
+                      ))}
                     </div>
                   )}
                   <div className="description">{project.description}</div>

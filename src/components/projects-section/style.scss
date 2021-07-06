@@ -28,16 +28,22 @@
 
       .body {
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
 
-        .thumbnail {
-          height: 120px;
-          width: 120px;
-          max-width: 120px;
-          height: auto;
+        .thumbnail-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 100px;
+          height: 100%;
           margin-right: 15px;
+
+          .thumbnail {
+            width: 100px;
+          }
         }
+
 
         .content {
           display: flex;
