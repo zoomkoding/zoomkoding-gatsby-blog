@@ -31,9 +31,9 @@ categories: 블로그
 
 ### 🔧 설치하기
 
-아래 버튼을 활용하면 개인 계정에 `gatsby-starter-zoomkoding`를 사용하고 있는 Repository 생성과 Netlify에 배포를 동시에 진행할 수 있습니다. 이후에, 생성된 Repository를 clone합니다.
+아래 버튼을 활용하면 개인 계정에 `zoomkoding-gatsby-blog`를 사용하고 있는 Repository 생성과 Netlify에 배포를 동시에 진행할 수 있습니다. 이후에, 생성된 Repository를 clone합니다.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zoomkoding/gatsby-starter-zoomkoding)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zoomkoding/zoomkoding-gatsby-blog)
 
 ### 🏃‍♀️ 실행하기
 
@@ -65,7 +65,7 @@ module.exports = {
     description: '', // 줌코딩의 개발일기
     author: '', // zoomkoding
 
-    siteUrl: '', // https://gatsby-starter-zoomkoding.netlify.com
+    siteUrl: '', // https://zoomkoding-gatsby-blog.netlify.com
     ogImage: '', // 공유할 때 보이는 미리보기 이미지
     social: {
         github: '', // https://github.com/zoomKoding
@@ -108,7 +108,7 @@ module.exports = {
 
     comments: {
         utterances: {
-            repo: '' // zoomkoding/gatsby-starter-zoomkoding
+            repo: '' // zoomkoding/zoomkoding-gatsby-blog
         },
     },
     ...

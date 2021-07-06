@@ -3,7 +3,7 @@ module.exports = {
   description: `줌코딩의 개발일기`,
   author: `zoomkoding`,
   siteUrl: `https://www.zoomkoding.com`,
-  ogImage: `https://raw.githubusercontent.com/zoomKoding/gatsby-starter-zoomkoding/master/src/assets/og-image.png`,
+  ogImage: `https://raw.githubusercontent.com/zoomKoding/zoomkoding-gatsby-blog/master/src/assets/og-image.png`,
   social: {
     github: `https://github.com/zoomKoding`,
     linkedIn: `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
@@ -11,7 +11,7 @@ module.exports = {
   },
   comments: {
     utterances: {
-      repo: `zoomkoding/zoomkoding.com`,
+      repo: `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: 'UA-134826755-2', // Google Analytics Tracking ID
@@ -84,7 +84,7 @@ module.exports = {
         date: '2021.02 ~ 2021.03',
         activity: '개인 블로그 디자인 및 개발',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
+          post: '/zoomkoding-gatsby-blog-introduction',
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'https://gatsby-starter-zoomkoding.netlify.app',
         },

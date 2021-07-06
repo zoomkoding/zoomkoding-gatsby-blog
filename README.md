@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Gatsby Starter Zoomkoding is released under the 0BSD license." />
+    <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Zoomkoding Gatsby Blog is released under the 0BSD license." />
   </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome" />
@@ -12,68 +12,75 @@
 
 **Demo Websites**: [**English**](https://zoomkoding.netlify.app) | [**Korean**](https://www.zoomkoding.com)
 
-[**🇰🇷 한국어 README.md**](https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/README.ko.md)
+[**🇰🇷 English README.md**](https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/README.en.md)
 
-## 👋 Introduction
+## 👋 소개
 
-This is a blog theme created for developers who want to create a pretty, clean and search engine friendly development blog.🏅  
+예쁘고 깔끔하면서 검색 엔진 친화적인 개발 블로그를 만들고 싶으신 개발자분들을 위해 만들게 된 블로그 테마입니다.🏅
 
-> PRs and issues are all welcome! 👍
+> PR, 이슈 모두 엄청나게 환영합니다!👍
 
-## ✨ Features
+## ✨ 기능
 
-- 😛 Biography using Memoji and rotating-text
-- 💅 Code Highlight
-- 🔍 Table of Contents
-- 💬 Comments(Utterances)
-- ⚙️ Easy to configure
-- 🛠 Enhanced SEO & `sitemap.xml`, `robots.txt`
-- 📈 Google Analytics
-- 🧢 Emoji
-- 𝑓 Mathjax
+- 😛 미모지와 문자 애니메이션를 통한 자기 소개
+- 💅 코드 하이라이팅 기능
+- 🔍 글 목차 자동 생성(ToC)
+- 💬 Utterances 댓글 기능 지원
+- ⚙️ meta-config를 통한 세부 설정 가능
+- 👨‍💻 About Page 내용 변경 가능
+- 📚 Posts Page 자동 생성
+- 🛠 sitemap.xml, robots.txt 자동 생성
+- 📈 Google Analytics 지원
+- 🧢 Emoji 지원
+- 𝑓 Mathjax 지원
 
-## 🚀 Quick start
+## 🚀 시작하기
 
-1.  **Create a Gatsby site.**
+아래 과정을 진행하면 블로그 테마를 로컬 환경에서 실행하고 배포할 수 있습니다.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+### 🦖 GitHub Page로 만들기
 
-    ```shell
-    # create a new Gatsby site using the zoomkoding starter
-    gatsby new my-default-starter https://github.com/zoomkoding/zoomkoding-gatsby-blog
-    ```
+깃헙 페이지를 통해 블로그를 만드시다면 아래 글을 참고해주세요!  
+[Gatsby 테마로 GitHub Blog 만들기](https://www.zoomkoding.com/gatsby-github-blog/)
 
-1.  **Start developing.**
+### 🔧 Netlify로 만들기
 
-    Navigate into your new site’s directory and start it up.
+아래 버튼을 활용하면 개인 계정에 `zoomkoding-gatsby-blog`를 사용하고 있는 Repository 생성과 Netlify에 배포를 동시에 진행할 수 있습니다. 이후에, 생성된 Repository를 clone합니다.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zoomkoding/zoomkoding-gatsby-blog)
 
-1.  **Open the source code and start editing!**
+### 🏃‍♀️ 실행하기
 
-    Your site is now running at `http://localhost:8000`!
+아래 명령어를 실행하여 로컬 환경에 블로그를 실행합니다.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+```bash
+# Install dependencies
+$ npm install
 
-## ⚙️ Next Steps
+# Start development server
+$ npm start
+```
 
-You can customize your blog by modifying contents of `gatsby-meta-config.js` 
+<br/>
+
+위 명령어가 문제 없이 실행됐다면 [http://localhost:8000](http://localhost:8000)에서 블로그를 확인하실 수 있습니다.
+
+## ⚙️ 기본 정보 입력하기
+
+gatsby-meta-config.js라는 파일의 내용을 수정하면 블로그의 여러 내용을 변경할 수 있습니다!
 
 ### 1. default
 
-Provide your blog's title, description, author, siteUrl, ogImage, social Information(`title` is used as the blog name in the upper left corner.)
+블로그의 title, description, author, siteUrl, ogImage, social 정보를 입력합니다. (**title**은 블로그 상단에 보이는 블로그 이름을 나타냅니다.)
 
 ```js
 module.exports = {
     title: '', // zoomkoding.dev
-    description: '', // zoomkoding's dev log
+    description: '', // 줌코딩의 개발일기
     author: '', // zoomkoding
 
     siteUrl: '', // https://zoomkoding-gatsby-blog.netlify.com
-    ogImage: '', // open graph image (image displayed when the link is shared)
+    ogImage: '', // 공유할 때 보이는 미리보기 이미지
     social: {
         github: '', // https://github.com/zoomKoding
         linkedIn: '', // https://www.linkedin.com/in/jinhyeok-jeong-800871192
@@ -85,18 +92,19 @@ module.exports = {
 
 ### 2. bio
 
-**bio(Biography** is a section introducing the blog author.  
-For `description`, you can introduce yourself by adding multiple phrases. If you want to **add your Memoji**, replace the video file named `src/assets/author.mp4`.
+**bio**는 홈페이지에 글쓴이를 소개하는 섹션에서 사용됩니다. 현재 영어와 한국어 두개 다 지원을 합니다.
+**description**은 자신을 설명하는 문구를 여러개 넣을 수 있습니다. bio에서 사용하는 **미모지를 수정**하고 싶다면 `src/assets/author.mp4`에 동영상을 삽입하면 됩니다.
 
+> 🤖 언어에 따라 description의 포맷이 달라지니 마음에 드시는 형태에 맞게 description을 작성해주세요.
 
 ```js
 module.exports = {
     ...
 
     bio: {
-        language: 'en', // en, ko
-        name: '', // author name
-        description: [''], // phases to describe who you are
+        language: 'ko', // ko, en 선택 가능(영어 선택시 어순이 변경됩니다.)
+        name: '', // 줌코딩
+        description: ['이로운 것을 만드는', '배움을 좋아하는', '글로 나누길 좋아하는'],
     },
     ...
 }
@@ -104,9 +112,9 @@ module.exports = {
 
 ### 3. comments
 
-If you want to have comments for your blog postings, please provide your github repository which is connected to `utterances`.
+**comments**는 포스팅에 댓글 기능을 제공할 서비스의 정보를 받습니다. 현재는 github 계정으로 댓글을 작성할 수 있는 utterances만 지원합니다.
 
-> 🦄 If you want to know how to set up utterances for your repository, read [https://utteranc.es/](https://utteranc.es/)
+> 🦄 utterances 사용방법은 [링크](https://utteranc.es/)를 참고해주세요!
 
 ```js
 module.exports = {
@@ -121,15 +129,15 @@ module.exports = {
 }
 ```
 
-## 👤 About Page
+## 👤 about page 만들기
 
-You can also generate **About Page** with `gatsby-meta-config.js`. In the file, you can find timestamps and projects under about. If you provide information in the correct format, your About Page will be generated. 
+about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about 하위에 있는 timestamps와 projects에 각각 정보를 입력하시면 about 페이지가 자동 생성됩니다.
 
 ### 1. timestamps
 
-If you provide each timestamp information in an array as shown below, it will be displayed in the timestamps section according to the order you entered.
+아래와 같이 각 timestamp 정보를 배열로 제공해주시면 입력하신 순서에 맞춰서 timestamps section에 보여지게 됩니다.
 
-> If there is no such information in links, you can omit it.
+> links에 해당 정보가 없다면 생략해도 됩니다.
 
 ```js
 module.exports = {
@@ -138,13 +146,13 @@ module.exports = {
     about: {
         timestamps: [
             {
-                date: '', // date
-                activity: '', // activity
-                links: { // you can omit
-                    post: '', // post link
-                    googlePlay: '', // googlePlay link
-                    appStore: '' // appStore link
-                    github: '' // github repostory link
+                date: '', // 기간
+                activity: '', // 활동
+                links: { // 링크가 없다면 지우셔도 됩니다.
+                    post: '', // 블로그 포스팅 링크
+                    googlePlay: '', // 구글플레이 링크
+                    appStore: '' // 앱스토어 링크
+                    github: '' // 깃헙링크
                 },
             }
             ...
@@ -157,7 +165,7 @@ module.exports = {
 
 ### 2. projects
 
-Similarly, if you provide information for each project in an array, it will be displayed in the projects section in the order you entered.
+마찬가지로 각 project 정보를 배열로 제공해주시면 입력하신 순서에 맞춰서 projects section에 보여지게 됩니다.
 
 ```js
 module.exports = {
@@ -168,15 +176,15 @@ module.exports = {
 
         projects: [
             {
-                title: '', // project title,
-                description: '', // description
-                techStack: ['flutter', 'nodejs'], //  tech stack
-                thumbnailUrl: '', // thumbnail Url
-                links: { // you can omit
-                    post: '', // post link
-                    googlePlay: '', // googlePlay link
-                    appStore: '' // appStore link
-                    github: '' // github repostory link
+                title: '', // 프로젝트 제목,
+                description: '', // 설명,
+                techStack: ['flutter', 'nodejs'], // 기술 스택
+                thumbnailUrl: '', // 썸네일 이미지 주소
+                links: { // 링크가 없다면 지우셔도 됩니다.
+                    post: '', // 블로그 포스팅 링크
+                    googlePlay: '', // 구글플레이 링크
+                    appStore: '' // 앱스토어 링크
+                    github: '' // 깃헙링크
                 },
             },
             ...
@@ -189,19 +197,21 @@ module.exports = {
 
 <br/>
 
-If you entered the contents without any problem, you can check that your own blog was born.🎉
+그렇게 내용을 문제 없이 입력하셨다면 나만의 블로그가 탄생한 것을 확인하실 수 있습니다.🎉
 
-> Please re-run through `npm start` to check the changes in the running blog!
+> 변동사항을 실행 중인 블로그에서 확인하시려면 `npm start`를 통해 재실행해주세요!
 
-## ✍️ How to write posts
+## ✍️ 글 쓰기
 
-To write a blog post in earnest, create a directory under `/content` and write a posting using markdown in `index.md`.
-> The name of the folder is used to create the path.
+본격적으로 블로그에 글을 쓰려면 `/content` 아래에 디렉토리를 생성하고 `index.md`에 markdown으로 작성하시면 됩니다.
 
-### ℹ️ Post's Metadata 
+> 이 때, 폴더의 이름은 경로를 생성하는데 됩니다.
 
-At the top of the index.md file, you need to provide emoji, title, date, author, tags, categories information as shown below.
-> Emoji will be shown at the top of the post, and the categories can be divided by spaces and multiple entries can be entered.
+### ℹ️ 메타 정보
+
+index.md 파일의 상단에는 아래와 같이 emoji, title, date, author, tags, categories 정보를 제공해야 합니다.
+
+> emoji는 글머리에 보여지게 되며, categories는 띄어쓰기로 나누어 여러개를 입력할 수 있습니다.
 
 ```
 ---
@@ -214,17 +224,17 @@ categories: tutorial
 ---
 ```
 
-### 🖼 Image Path
+### 🖼 이미지 경로
 
-If you want to attach an image to a post, add an image file to the same directory and use it as follows.
+글에 이미지를 첨부하고 싶으시다면 같은 디렉토리에 이미지 파일을 추가하셔서 아래와 같이 사용하시면 됩니다.
 
 ```
-![image](./[image.png])
+![사진](./[이미지 파일명])
 ```
 
-### 🔍 Table of Contents
+### 🔍 목차 생성
 
-If you want the table of contents to be displayed on the right side of the article, add the following contents to the bottom of the `index.md` file, and the table of contents will be created automatically.
+글의 우측에 목차가 보이기를 원하신다면 `index.md` 파일 맨 아래에 다음 내용을 추가하시면 자동으로 목차가 생성됩니다.
 
     ```toc
     ```
