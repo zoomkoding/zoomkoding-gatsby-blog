@@ -12,7 +12,7 @@
 
 **Demo Websites**: [**English**](https://zoomkoding.netlify.app) | [**Korean**](https://www.zoomkoding.com)
 
-[**🇰🇷 English README.md**](https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/README.en.md)
+[**English README.md**](https://github.com/zoomkoding/zoomkoding-gatsby-blog/blob/master/README.en.md)
 
 ## 👋 소개
 
