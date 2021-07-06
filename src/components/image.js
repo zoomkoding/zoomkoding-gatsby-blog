@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
 const Image = ({ src, ...rest }) => {
   const data = useStaticQuery(graphql`
     query {
-      images: allFile(filter: { internal: { mediaType: { regex: "/assets/" } } }) {
+      images: allFile(filter: { sourceInstanceName: { eq: "assets" } }) {
         edges {
           node {
             relativePath
             extension
             publicURL
             childImageSharp {
-              fluid(maxWidth: 600) {
+              fluid(maxWidth: 400) {
                 ...GatsbyImageSharpFluid
               }
             }

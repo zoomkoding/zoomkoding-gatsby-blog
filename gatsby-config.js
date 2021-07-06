@@ -1,7 +1,4 @@
-const {
-  NODE_ENV,
-  CONTEXT: NETLIFY_ENV = NODE_ENV,
-} = process.env
+const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const metaConfig = require('./gatsby-meta-config');
 
@@ -14,7 +11,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`,
+        path: `${__dirname}/assets`,
       },
     },
     {
@@ -69,7 +66,7 @@ module.exports = {
         lang: `en`,
         display: `standalone`,
         start_url: `/`,
-        icon: `src/assets/favicon.png`,
+        icon: `static/favicon.png`,
       },
     },
     {

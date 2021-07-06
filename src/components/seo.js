@@ -17,7 +17,7 @@ function SEO({ description, title }) {
       }
     `,
   );
-  
+
   const metaDescription = description || site.siteMetadata.description;
   return (
     <Helmet
@@ -49,7 +49,7 @@ function SEO({ description, title }) {
           property: 'og:image',
           content: site.siteMetadata.ogImage,
         },
-        
+
         {
           property: `og:type`,
           content: `website`,

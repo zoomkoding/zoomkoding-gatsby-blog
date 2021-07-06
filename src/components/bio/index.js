@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
 
-import authorVideo from '../../assets/author.mp4';
+import authorVideo from '../../../assets/author.mp4';
 import IconButtonBar from '../icon-button-bar';
 
 import './style.scss';
