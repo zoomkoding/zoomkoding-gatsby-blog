@@ -27,9 +27,14 @@ categories: 블로그
 
 ## 🚀 시작하기
 
-아래 과정을 진행하면 현재 블로그를 로컬 환경에서 실행하고 배포할 수 있습니다.
+아래 과정을 진행하면 블로그 테마를 로컬 환경에서 실행하고 배포할 수 있습니다.
 
-### 🔧 설치하기
+### 🦖 GitHub Page로 만들기
+
+깃헙 페이지를 통해 블로그를 만드시다면 아래 글을 참고해주세요!  
+[Gatsby 테마로 GitHub Blog 만들기](https://www.zoomkoding.com/gatsby-github-blog/)
+
+### 🔧 Netlify로 만들기
 
 아래 버튼을 활용하면 개인 계정에 `zoomkoding-gatsby-blog`를 사용하고 있는 Repository 생성과 Netlify에 배포를 동시에 진행할 수 있습니다. 이후에, 생성된 Repository를 clone합니다.
 
