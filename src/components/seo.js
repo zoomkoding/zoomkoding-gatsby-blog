@@ -10,7 +10,9 @@ function SEO({ description, title }) {
           siteMetadata {
             title
             description
-            author
+            author {
+              name
+            }
             ogImage
           }
         }
@@ -43,7 +45,7 @@ function SEO({ description, title }) {
         },
         {
           property: 'og:author',
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.author.name,
         },
         {
           property: 'og:image',

@@ -112,12 +112,12 @@ strong {
       }
     }
 
-    .video {
+    .thumbnail {
       display: none;
+      width: 250px;
 
       @include md {
         display: block;
-        width: 250px;
       }
     }
   }

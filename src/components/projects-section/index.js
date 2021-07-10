@@ -9,8 +9,8 @@ const ProjectsSection = ({ projects }) => {
     <div className="projects-section-wrapper">
       <div className="projects-section">
         <SectionHeader title="Projects" />
-        {projects.map((project, index) => {
-          return (
+        {projects.map((project, index) =>
+          index === 0 ? null : (
             <div className="project" key={index}>
               <div className="head">
                 {project.title}&nbsp;&nbsp;
@@ -26,7 +26,11 @@ const ProjectsSection = ({ projects }) => {
               </div>
               <div className="body">
                 <div className="thumbnail-wrapper">
-                  <Image className="thumbnail" src={project.thumbnailUrl} />
+                  <Image
+                    className="thumbnail"
+                    src={project.thumbnailUrl}
+                    alt={project.thumbnailUrl}
+                  />
                 </div>
                 <div className="content">
                   {project.techStack && (
@@ -42,8 +46,8 @@ const ProjectsSection = ({ projects }) => {
                 </div>
               </div>
             </div>
-          );
-        })}
+          ),
+        )}
       </div>
     </div>
   );

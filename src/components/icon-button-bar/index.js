@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { IconButton, Tooltip } from '@material-ui/core';
 
 import EmailIcon from '@material-ui/icons/Email';
@@ -16,7 +16,7 @@ const IconButtonBar = ({
   },
   links = {},
 }) => {
-  const IconPicker = (icon) => {
+  const IconPicker = useCallback((icon) => {
     switch (icon) {
       case 'post':
         return <DescriptionIcon style={style} />;
@@ -32,10 +32,10 @@ const IconButtonBar = ({
         return <EmailIcon style={style} />;
       case 'linkedIn':
         return <LinkedInIcon style={style} />;
-      default: 
-        return <></>
+      default:
+        return <></>;
     }
-  };
+  }, []);
 
   return (
     <>

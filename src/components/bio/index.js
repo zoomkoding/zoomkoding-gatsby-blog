@@ -1,23 +1,25 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
-
-import authorVideo from '../../../assets/author.mp4';
+import authorVideo from '../../../static/author.mp4';
+import authorImage from '../../../static/author.png';
 import IconButtonBar from '../icon-button-bar';
 
 import './style.scss';
 
-const Bio = ({ bio, social }) => {
+const Bio = ({ author, language = 'ko' }) => {
+  const { bio, social, name } = author;
+  if (!author) return null;
   return (
     <div className="bio-wrapper">
       <div className="bio">
-        {bio?.language === 'ko' ? (
+        {language === 'ko' ? (
           <div className="introduction korean">
             <p className="title">
               안녕하세요.
               <br />
-              <ReactRotatingText items={bio?.description} />
+              <ReactRotatingText items={bio.description} />
               <br />
-              개발자 <strong>{bio?.name}</strong>입니다.
+              {bio.role} <strong>{name}</strong>입니다.
               <br />
             </p>
             <div className="social-links">
@@ -37,11 +39,11 @@ const Bio = ({ bio, social }) => {
               <br />
               my name is
               <br />
-              <strong>{bio?.name}</strong>
+              <strong>{name}</strong>
               .<br />
             </p>
             <p className="description">
-              I'm a developer <ReactRotatingText items={bio?.description} />
+              I'm a {bio.role} <ReactRotatingText items={bio.description} />
               <br />
             </p>
             <div className="social-links">
@@ -55,9 +57,13 @@ const Bio = ({ bio, social }) => {
             </div>
           </div>
         )}
-        <video className="video" muted autoPlay loop>
-          <source src={authorVideo} type="video/mp4" />
-        </video>
+        {bio.isVideo ? (
+          <video className="thumbnail" muted autoPlay loop>
+            <source src={authorVideo} type="video/mp4" />
+          </video>
+        ) : (
+          <img className="thumbnail" src={authorImage} alt="author" />
+        )}
       </div>
     </div>
   );

@@ -1,31 +1,46 @@
 module.exports = {
   title: `zoomkoding.com`,
   description: `줌코딩의 개발일기`,
-  author: `zoomkoding`,
+  language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://www.zoomkoding.com`,
   ogImage: `/og-image.png`, // Path to your image you placed in the 'static' folder
-  social: {
-    github: `https://github.com/zoomKoding`,
-    linkedIn: `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
-    email: `zoomkoding@gmail.com`,
-  },
   comments: {
     utterances: {
       repo: `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: 'UA-134826755-2', // Google Analytics Tracking ID
-
-  // metadata for bio
-  bio: {
-    language: `ko`, // 'en', 'ko'
-    name: '정진혁',
-    description: ['사람에 가치를 두는', '주체적으로 일하는', '이로운 것을 만드는'],
+  author: {
+    name: `정진혁`,
+    bio: {
+      role: `개발자`,
+      description: ['사람에 가치를 두는', '주체적으로 일하는', '이로운 것을 만드는'],
+      isVideo: true,
+    },
+    social: {
+      github: `https://github.com/zoomKoding`,
+      linkedIn: `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
+      email: `zoomkoding@gmail.com`,
+    },
   },
 
   // metadata for About Page
   about: {
     timestamps: [
+      // =====       [Timestamp Sample and Structure]      =====
+      // ===== 🚫 Don't erase this sample (여기 지우지 마세요!) =====
+      {
+        date: '',
+        activity: '',
+        links: {
+          github: '',
+          post: '',
+          googlePlay: '',
+          appStore: '',
+        },
+      },
+      // ========================================================
+      // ========================================================
       {
         date: '2018.07 ~ 2018.12',
         activity: '자존감 랩실(X-ray 그리드 라인 제거 개선 기법 연구)',
@@ -91,11 +106,27 @@ module.exports = {
       },
       {
         date: '2021.03 ~ ',
-        activity: '우아한 형제들에서 일하는 중🚀',
+        activity: '우아한 개발자🚀',
       },
     ],
 
     projects: [
+      // =====        [Project Sample and Structure]        =====
+      // ===== 🚫 Don't erase this sample (여기 지우지 마세요!) =====
+      {
+        title: '',
+        description: '',
+        techStack: ['', ''],
+        thumbnailUrl: '',
+        links: {
+          post: '',
+          github: '',
+          googlePlay: '',
+          appStore: '',
+        },
+      },
+      // ========================================================
+      // ========================================================
       {
         title: 'Picky(글로벌 스킨케어 제품 분석 모바일 앱) 개발',
         description:

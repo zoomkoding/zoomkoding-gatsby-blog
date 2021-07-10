@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
 const Image = ({ src, ...rest }) => {
+  console.log(src, rest);
   const data = useStaticQuery(graphql`
     query {
       images: allFile(filter: { sourceInstanceName: { eq: "assets" } }) {

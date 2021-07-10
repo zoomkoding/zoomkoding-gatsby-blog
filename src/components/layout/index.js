@@ -18,22 +18,25 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
-          author
-          social {
-            github
+          author {
+            name
+            social {
+              github
+            }
           }
         }
       }
     }
   `);
+  const { title, author } = data.site.siteMetadata;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <PageHeader siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <PageHeader siteTitle={title || `Title`} />
       <main>{children}</main>
       <PageFooter
-        author={data.site.siteMetadata?.author || `Author`}
-        githubUrl={data.site.siteMetadata?.social?.github || `https://www.github.com`}
+        author={author.name || `Author`}
+        githubUrl={author.social?.github || `https://www.github.com`}
       />
     </div>
   );
