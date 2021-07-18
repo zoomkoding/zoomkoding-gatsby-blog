@@ -1,7 +1,7 @@
 ---
 emoji: 🎖
 title: 2021 SCPC 예선 후기 및 문제 풀이
-date: '2020-07-18 15:00:00'
+date: '2021-07-18 15:00:00'
 author: 줌코딩
 tags: scpc problem-solving ps 문제풀이 삼성
 categories: PS
