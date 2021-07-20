@@ -1,5 +1,5 @@
 // light mode colors
-html[data-theme='light'] {
+body {
   --background-color: #ffffff;
   --primary-text-color: #000000;
   --secondary-text-color: #9e9e9e;
@@ -20,7 +20,7 @@ html[data-theme='light'] {
 }
 
 // dark mode colors
-html[data-theme='dark'] {
+body.dark {
   --background-color: #22282d;
   --primary-text-color: #e6e6e6;
   --secondary-text-color: #768390;
