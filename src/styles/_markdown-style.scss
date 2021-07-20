@@ -159,7 +159,7 @@
   overflow: hidden;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid #dfe2e5;
+  border-bottom: 1px solid var(--markdown-blockquote-border-color);
 }
 
 .markdown hr:after,
@@ -305,7 +305,7 @@
 }
 
 .markdown .border {
-  border: 1px solid #e1e4e8 !important;
+  border: 1px solid var(--markdown-border-color) !important;
 }
 
 .markdown .border-0 {
@@ -313,7 +313,7 @@
 }
 
 .markdown .border-bottom {
-  border-bottom: 1px solid #e1e4e8 !important;
+  border-bottom: 1px solid var(--markdown-border-color) !important;
 }
 
 .markdown .rounded-1 {
@@ -321,7 +321,7 @@
 }
 
 .markdown .bg-white {
-  background-color: #fff !important;
+  background-color: transparent !important;
 }
 
 .markdown .bg-gray-light {
@@ -650,14 +650,14 @@
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
-  background-color: #e1e4e8;
+  background-color: var(--markdown-border-color);
   border: 0;
 }
 
 .markdown blockquote {
   padding: 0 1em;
   color: #6a737d;
-  border-left: 0.25em solid #dfe2e5;
+  border-left: 0.25em solid var(--markdown-blockquote-border-color);
 }
 
 .markdown blockquote> :first-child {
@@ -770,7 +770,7 @@
 .markdown table td,
 .markdown table th {
   padding: 6px 13px;
-  border: 1px solid #dfe2e5;
+  border: 1px solid var(--markdown-blockquote-border-color);
 }
 
 .markdown table tr {
@@ -787,7 +787,7 @@
   margin: 0px auto;
   max-width: 100%;
   box-sizing: initial;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .markdown img[align='right'] {

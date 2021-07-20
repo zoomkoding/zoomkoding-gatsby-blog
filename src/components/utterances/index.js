@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const src = 'https://utteranc.es/client.js';
 const branch = 'master';
 
-export const Utterances = ({ repo }) => {
+export const Utterances = ({ repo, theme }) => {
   const rootElm = React.createRef();
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export const Utterances = ({ repo }) => {
       src,
       repo,
       branch,
-      theme: 'github-light',
+      theme: theme === 'light' ? 'github-light' : 'photon-dark',
       label: 'comment',
       async: true,
       'issue-term': 'pathname',

@@ -17,11 +17,14 @@ body {
   --chip-background-color: #f3f3f4;
   --link-text-color: #0366d6;
   --post-card-border-color: rgba(0, 0, 0, 0.12);
+
+  --markdown-blockquote-border-color: #dfe2e5;
+  --markdown-border-color: #e1e4e8;
 }
 
 // dark mode colors
 body.dark {
-  --background-color: #22282d;
+  --background-color: #232326;
   --primary-text-color: #e6e6e6;
   --secondary-text-color: #768390;
 
@@ -38,4 +41,7 @@ body.dark {
 
   --link-text-color: #549bf5;
   --post-card-border-color: #363f47;
+
+  --markdown-blockquote-border-color: #4f5864;
+  --markdown-border-color: #e1e4e8;
 }

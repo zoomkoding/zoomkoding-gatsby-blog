@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import Layout from '../components/layout';
-import SEO from '../components/seo'
+import SEO from '../components/seo';
 // import TableOfContents from '../components/toc';
 import PostHeader from '../components/post-header';
 import PostCardsAdjacent from '../components/post-cards-adjacent';
@@ -14,14 +15,18 @@ export default ({ data }) => {
   const prevPost = data.prev && new Post(data.prev);
   const nextPost = data.next && new Post(data.next);
   const utterancesRepo = data.site?.siteMetadata?.comments?.utterances?.repo;
-  
+
   return (
     <Layout>
-      <SEO title={curPost?.title} description={curPost?.excerpt } />
+      <SEO title={curPost?.title} description={curPost?.excerpt} />
       <PostHeader post={curPost} />
       <PostContent html={curPost.html} />
       <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
-      {utterancesRepo && <Utterances repo={utterancesRepo} />}
+      {utterancesRepo && (
+        <ThemeToggler>
+          {({ theme }) => <Utterances repo={utterancesRepo} theme={theme} />}
+        </ThemeToggler>
+      )}
     </Layout>
   );
 };
@@ -38,7 +43,6 @@ export const pageQuery = graphql`
         categories
         author
         emoji
-        
       }
       fields {
         slug
