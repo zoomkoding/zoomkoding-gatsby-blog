@@ -15,7 +15,7 @@ module.exports = {
     bio: {
       role: `개발자`,
       description: ['사람에 가치를 두는', '주체적으로 일하는', '이로운 것을 만드는'],
-      isVideo: true,
+      isVideo: false,
     },
     social: {
       github: `https://github.com/zoomKoding`,

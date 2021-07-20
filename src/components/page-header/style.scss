@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .page-header-wrapper {
   display: flex;
@@ -16,12 +16,16 @@
     .link {
       font-weight: 700;
       font-size: 20px;
-      color: #000000;
+      color: var(--primary-text-color);
     }
 
     .trailing-section {
       .link {
         margin-left: 20px;
+      }
+
+      .dark-mode-switch {
+        margin-left: 13px;
       }
     }
   }
