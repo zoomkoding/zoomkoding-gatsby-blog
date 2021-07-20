@@ -1,0 +1,41 @@
+// light mode colors
+html[data-theme='light'] {
+  --background-color: #ffffff;
+  --primary-text-color: #000000;
+  --secondary-text-color: #9e9e9e;
+
+  --button-background-color: #f3f3f4;
+  --button-text-color: #363f47;
+
+  --tab-text-color: #6e6d7a;
+  --tab-hover-text-color: #0d0c22;
+  --tab-selected-background-color: rgba(13, 12, 34, 0.05);
+
+  --bio-link-icon-color: rgba(0, 0, 0, 0.54);
+  --about-link-icon-color: #a8a8a8;
+
+  --chip-background-color: #f3f3f4;
+  --link-text-color: #0366d6;
+  --post-card-border-color: rgba(0, 0, 0, 0.12);
+}
+
+// dark mode colors
+html[data-theme='dark'] {
+  --background-color: #22282d;
+  --primary-text-color: #e6e6e6;
+  --secondary-text-color: #768390;
+
+  --button-background-color: #444c56;
+  --button-text-color: #363f47;
+
+  --tab-text-color: #768390;
+  --tab-hover-text-color: #acbac7;
+  --tab-selected-background-color: #373e47;
+
+  --chip-background-color: #323a42;
+  --bio-link-icon-color: #e6e6e6;
+  --about-link-icon-color: #a8a8a8;
+
+  --link-text-color: #549bf5;
+  --post-card-border-color: #363f47;
+}
