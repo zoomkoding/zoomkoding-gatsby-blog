@@ -1,5 +1,4 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .posts-page-header-wrapper {
   display: flex;
@@ -20,7 +19,7 @@
     font-size: 40px;
     font-weight: 700;
     text-align: center;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid var(--primary-text-color);
   }
 
   .posts-page-sub-title {

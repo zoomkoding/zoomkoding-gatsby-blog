@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .timestamps-section-wrapper {
   display: flex;
@@ -17,6 +17,7 @@
     .body {
       width: 100%;
       padding: 0 10px;
+
       .timestamp {
         display: flex;
         justify-items: center;
@@ -44,7 +45,7 @@
           align-self: center;
           width: 10px;
           height: 10px;
-          background: white;
+          background-color: var(--background-color);
           border-radius: 10px;
           transform: translatex(-50%);
           border: 2px solid #828282;
@@ -63,6 +64,7 @@
             min-width: 200px;
           }
         }
+
         .activity {
           line-height: 23px;
           width: 100%;

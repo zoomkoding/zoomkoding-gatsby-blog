@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .section-header-wrapper {
   display: flex;
@@ -8,9 +8,9 @@
 
   .section-header {
     padding-bottom: 5px;
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid var(--primary-text-color);
     font-weight: 700;
     font-size: 30px;
-    color: #000000;
+    color: var(--primary-text-color);
   }
 }

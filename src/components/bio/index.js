@@ -23,13 +23,7 @@ const Bio = ({ author, language = 'ko' }) => {
               <br />
             </p>
             <div className="social-links">
-              <IconButtonBar
-                links={social}
-                style={{
-                  fontSize: '30px',
-                  color: 'rgba(0, 0, 0, 0.54)',
-                }}
-              />
+              <IconButtonBar links={social} />
             </div>
           </div>
         ) : (
@@ -47,13 +41,7 @@ const Bio = ({ author, language = 'ko' }) => {
               <br />
             </p>
             <div className="social-links">
-              <IconButtonBar
-                links={social}
-                style={{
-                  fontSize: '30px',
-                  color: 'rgba(0, 0, 0, 0.54)',
-                }}
-              />
+              <IconButtonBar links={social} />
             </div>
           </div>
         )}

@@ -1,5 +1,5 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/variables'as *;
+@use '../../styles/mixins'as *;
 
 .post-card-wrapper {
   min-height: 150px;
@@ -13,13 +13,12 @@
     height: 100%;
     width: 100%;
     max-width: $content-max-width;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--post-card-border-color);
     border-radius: 6px;
     padding: 15px;
     margin-bottom: 15px;
 
-    background-color: white;
-    color: black;
+    color: var(--primary-text-color);
 
     cursor: pointer;
     transition: transform 0.2s;
@@ -45,12 +44,13 @@
       font-size: 13px;
       margin-bottom: 10px;
       line-height: 20px;
-      color: black;
+      color: var(--primary-text-color);
 
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
-      -webkit-line-clamp: 3; /* number of lines to show */
+      -webkit-line-clamp: 3;
+      /* number of lines to show */
       -webkit-box-orient: vertical;
     }
 
@@ -59,14 +59,13 @@
       justify-content: space-between;
       margin-top: auto;
       font-size: 14px;
-      color: rgba(0, 0, 0, 0.54);
+      color: var(--about-link-icon-color);
 
       .categories {
         display: flex;
-        
+
         .category {
           margin-left: 4px;
-          color: rgba(0, 0, 0, 0.54);
 
           &:hover {
             text-decoration: underline;

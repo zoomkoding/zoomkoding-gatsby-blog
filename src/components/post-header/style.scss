@@ -1,5 +1,4 @@
-@use '../../styles/variables' as *;
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .post-header-wrapper {
   display: flex;
@@ -16,7 +15,7 @@
     @include content-max-width;
 
     padding-bottom: 15px;
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid var(--post-card-border-color);
 
     .emoji {
       font-size: 78px;
@@ -31,7 +30,7 @@
 
         font-weight: 600;
         // color: rgb(243, 147, 37);
-        color: black;
+        color: var(--primary-text-color);
 
         &:hover {
           text-decoration: underline;
@@ -42,7 +41,7 @@
     .title {
       font-weight: 600;
       font-size: 32px;
-      color: #000000;
+      color: var(--primary-text-color);
       margin-bottom: 6px;
       line-height: 1.3;
     }
@@ -52,19 +51,18 @@
       // justify-content: space-between;
       font-size: 16px;
       font-weight: 500;
-      color: #9e9e9e;
+      color: var(--secondary-text-color);
 
       .author {
         display: flex;
         font-size: 16px;
         font-weight: 500;
-        color: #9e9e9e;
         margin-right: 4px;
 
         strong {
           margin-left: 4px;
 
-          color: #000000;
+          color: var(--primary-text-color);
           font-weight: 600;
         }
       }

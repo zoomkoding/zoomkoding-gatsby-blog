@@ -1,0 +1,11 @@
+@use '../../styles/variables'as *;
+
+.icon {
+    font-size: 20px;
+    color: var(--about-link-icon-color);
+}
+
+.social-links .icon {
+    font-size: 30px;
+    color: var(--bio-link-icon-color);
+}

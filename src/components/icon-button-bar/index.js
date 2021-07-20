@@ -9,29 +9,26 @@ import AndroidIcon from '@material-ui/icons/Android';
 import AppleIcon from '@material-ui/icons/Apple';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-const IconButtonBar = ({
-  style = {
-    fontSize: '20px',
-    color: '#a8a8a8',
-  },
-  links = {},
-}) => {
+import './style.scss';
+
+const IconButtonBar = ({ links = {} }) => {
   const IconPicker = useCallback((icon) => {
+    const props = { className: 'icon' };
     switch (icon) {
       case 'post':
-        return <DescriptionIcon style={style} />;
+        return <DescriptionIcon {...props} />;
       case 'demo':
-        return <PlayIcon style={style} />;
+        return <PlayIcon {...props} />;
       case 'github':
-        return <GitHubIcon style={style} />;
+        return <GitHubIcon {...props} />;
       case 'googlePlay':
-        return <AndroidIcon style={style} />;
+        return <AndroidIcon {...props} />;
       case 'appStore':
-        return <AppleIcon style={style} />;
+        return <AppleIcon {...props} />;
       case 'email':
-        return <EmailIcon style={style} />;
+        return <EmailIcon {...props} />;
       case 'linkedIn':
-        return <LinkedInIcon style={style} />;
+        return <LinkedInIcon {...props} />;
       default:
         return <></>;
     }
@@ -42,7 +39,7 @@ const IconButtonBar = ({
       {Object.keys(links).map((link, index) => {
         return (
           links[link] && (
-            <Tooltip key={index} title={link} arrow>
+            <Tooltip key={index} title={link} arrow className="icon-tooltip">
               <IconButton size="small" href={`${link === 'email' ? `mailto:` : ``}${links[link]}`}>
                 {IconPicker(link)}
               </IconButton>

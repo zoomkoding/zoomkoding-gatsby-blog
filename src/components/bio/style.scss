@@ -25,6 +25,7 @@ strong {
   width: 100%;
   margin-top: 120px;
   margin-bottom: 120px;
+  color: var(--primary-text-color);
   @include content-horizontal-padding;
 
   .bio {
@@ -100,9 +101,6 @@ strong {
           font-weight: 200;
           margin-top: 8px;
           font-size: 20px;
-          // span {
-          //   font-weight: 600;
-          // }
         }
 
         .social-links {

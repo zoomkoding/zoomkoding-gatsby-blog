@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .post-cards-column-wrapper {
   display: flex;
@@ -20,7 +20,7 @@
       height: 40px;
       font-weight: 500;
       font-size: 15px;
-      background-color: #f3f3f4;
+      background-color: var(--button-background-color);
     }
   }
 }

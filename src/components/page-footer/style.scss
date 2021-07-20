@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .page-footer-wrapper {
   display: flex;
@@ -16,7 +16,7 @@
     .link {
       font-weight: 700;
       font-size: 20px;
-      color: #000000;
+      color: var(--primary-text-color);
       margin-right: 20px;
     }
   }

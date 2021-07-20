@@ -1,5 +1,5 @@
-@use '../../styles/mixins' as *;
-@use '../../styles/variables' as *;
+@use '../../styles/mixins'as *;
+@use '../../styles/variables'as *;
 
 .vertical-tabs-wrapper {
   position: sticky;
@@ -17,20 +17,20 @@
         // min-width: auto;
         padding: 10px 12px;
         font-family: $font-family;
-        color: #6e6d7a;
+        color: var(--tab-text-color);
         font-weight: 500;
         font-size: 17px;
         transition: all 200ms ease;
 
         :hover {
-          color: #0d0c22;
+          color: var(--tab-hover-text-color);
           transition: all 200ms ease;
         }
       }
 
       .Mui-selected {
-        background-color: rgba(13, 12, 34, 0.05);
-        color: #0d0c22;
+        background-color: var(--tab-selected-background-color);
+        color: var(--tab-hover-text-color);
         border-radius: 8px;
         font-weight: 600;
         transition: all 200ms ease;
