@@ -4,14 +4,14 @@ import React from 'react';
 import PostCard from '../post-card';
 import './style.scss';
 
-const PostCardsColumn = ({ posts, moreUrl }) => {
+const PostCardsColumn = ({ posts, showMoreButton, moreUrl }) => {
   return (
     <div className="post-cards-column-wrapper">
       <div className="post-cards-column">
         {posts.map((post, index) => (
           <PostCard key={index} post={post} />
         ))}
-        {posts.length === 4 && (
+        {showMoreButton && (
           <Button
             className="more-post-cards-button"
             href={moreUrl}

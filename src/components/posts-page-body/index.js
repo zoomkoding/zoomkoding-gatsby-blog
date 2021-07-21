@@ -16,12 +16,7 @@ const PostsPageBody = ({ tabIndex, onChange, tabs, posts }) => {
               ? posts
               : posts.filter((post) => post.categories.includes(tabs[tabIndex]))
           }
-        />
-        <VerticalTabs
-          className={'vertical-tabs'}
-          value={tabIndex}
-          onChange={onChange}
-          tabs={tabs}
+          showMoreButton={false}
         />
       </div>
     </div>

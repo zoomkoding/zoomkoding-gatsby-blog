@@ -1,4 +1,4 @@
-@use '../../styles/mixins' as *;
+@use '../../styles/mixins'as *;
 
 .posts-page-body-wrapper {
   margin-top: 30px;
@@ -13,9 +13,6 @@
 
     .tabs-wrapper {
       display: flex;
-    }
-    .vertical-tabs-wrapper {
-      display: none;
     }
   }
 }
