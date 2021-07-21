@@ -8,12 +8,12 @@ import ProjectsSection from '../components/projects-section';
 
 export default ({ data }) => {
   const metaData = data.site.siteMetadata;
-  const { author, about } = metaData;
+  const { author, about, language } = metaData;
   const { timestamps, projects } = about;
   return (
     <Layout>
       <SEO title="About" />
-      <Bio author={author} />
+      <Bio author={author} language={language} />
       <TimeStampsSection timestamps={timestamps} />
       <ProjectsSection projects={projects} />
     </Layout>
