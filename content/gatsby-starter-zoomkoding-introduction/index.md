@@ -80,7 +80,7 @@ comments: {
 
 ### 3. 글쓴이 정보
 
-글쓴이(author)에 입력하신 정보는 홈페이지와 about 페이지 상단에 있는 글쓴이를 소개하는 섹션인 bio에서 사용됩니다. **description**에 자신을 설명하는 문구들을 넣으면 애니메이션으로 보여지게 됩니다. bio에 들어가는 동영상이나 이미지를 바꾸고 싶다면 `static/author.mp4`나 `static/author.png`를 같은 이름의 파일로 덮어씌우면 됩니다. 만일 동영상이 아닌 이미지를 사용하고 싶으시다면 isVideo를 false로 바꾸시면 됩니다!(⚠️ author.mp4, author.png 파일은 삭제하지 마시고 덮어써주세요!)
+글쓴이(author)에 입력하신 정보는 홈페이지와 about 페이지 상단에 있는 글쓴이를 소개하는 섹션인 bio에서 사용됩니다. **description**에 자신을 설명하는 문구들을 넣으면 애니메이션으로 보여지게 됩니다. bio에 들어가는 이미지를 바꾸시려면 `assets`에 원하시는 파일을 추가하시고 파일의 이름을 **thumbnail**에 넣어주시면 됩니다.(gif도 지원합니다!)
 
 > 🤖 위에서 설정한 언어에 따라 description의 포맷이 달라집니다.
 
@@ -89,8 +89,8 @@ author: {
     name: '정진혁',
     bio: {
       role: '개발자',
-      description: ['사람에 가치를 두는', '주체적으로 일하는', '이로운 것을 만드는'],
-      isVideo: true,
+      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
+      thumbnail: 'zoomkoding.gif',
     },
     social: {
       github: 'https://github.com/zoomKoding',

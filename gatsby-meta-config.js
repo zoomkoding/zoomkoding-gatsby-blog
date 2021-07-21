@@ -3,7 +3,7 @@ module.exports = {
   description: `줌코딩의 개발일기`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://www.zoomkoding.com`,
-  ogImage: `/og-image.png`, // Path to your image you placed in the 'static' folder
+  ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
       repo: `zoomkoding/zoomkoding-gatsby-blog`,
@@ -14,8 +14,8 @@ module.exports = {
     name: `정진혁`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는', '주체적으로 일하는', '이로운 것을 만드는'],
-      isVideo: false,
+      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
+      thumbnail: 'zoomkoding.gif', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/zoomKoding`,
@@ -90,7 +90,7 @@ module.exports = {
         date: '2021.01 ~ 2021.02',
         activity: '대학시간(대학교 수강신청 보조 웹 앱) 개발 및 서비스',
         links: {
-          post: '/college-timetablee-development',
+          post: '/college-timetable-development',
           github: 'https://github.com/zoomkoding/college-timetable',
           demo: 'https://www.timetable.college',
         },

@@ -32,7 +32,7 @@ export const pageQuery = graphql`
           bio {
             role
             description
-            isVideo
+            thumbnail
           }
           social {
             github

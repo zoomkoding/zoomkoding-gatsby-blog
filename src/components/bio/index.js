@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
-import authorVideo from '../../../static/author.mp4';
-import authorImage from '../../../static/author.png';
 import IconButtonBar from '../icon-button-bar';
+import Image from '../image';
 
 import './style.scss';
 
 const Bio = ({ author, language = 'ko' }) => {
   const { bio, social, name } = author;
+
   if (!author) return null;
   return (
     <div className="bio-wrapper">
@@ -45,13 +45,7 @@ const Bio = ({ author, language = 'ko' }) => {
             </div>
           </div>
         )}
-        {bio.isVideo ? (
-          <video className="thumbnail" muted autoPlay loop>
-            <source src={authorVideo} type="video/mp4" />
-          </video>
-        ) : (
-          <img className="thumbnail" src={authorImage} alt="author" />
-        )}
+        <Image className="thumbnail" src={bio.thumbnail} alt="thumbnail" />
       </div>
     </div>
   );
