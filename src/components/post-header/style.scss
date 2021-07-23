@@ -53,19 +53,15 @@
       font-weight: 500;
       color: var(--secondary-text-color);
 
-      .author {
-        display: flex;
-        font-size: 16px;
-        font-weight: 500;
-        margin-right: 4px;
 
-        strong {
-          margin-left: 4px;
+      strong {
+        margin: 0 4px;
 
-          color: var(--primary-text-color);
-          font-weight: 600;
-        }
+
+        color: var(--primary-text-color);
+        font-weight: 600;
       }
+
     }
   }
 }

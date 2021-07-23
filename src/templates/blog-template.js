@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
+
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 // import TableOfContents from '../components/toc';
@@ -11,15 +12,27 @@ import PostContent from '../components/post-content';
 import { Utterances } from '../components/utterances';
 
 export default ({ data }) => {
+  const [viewCount, setViewCount] = useState();
+
   const curPost = new Post(data.cur);
   const prevPost = data.prev && new Post(data.prev);
   const nextPost = data.next && new Post(data.next);
-  const utterancesRepo = data.site?.siteMetadata?.comments?.utterances?.repo;
+  const { siteUrl, comments } = data.site?.siteMetadata;
+  const utterancesRepo = comments?.utterances?.repo;
+
+  useEffect(() => {
+    const namespace = siteUrl.replace(/(^\w+:|^)\/\//, '');
+    const key = curPost.slug.replace(/\//g, '');
+    fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`).then(async (result) => {
+      const data = await result.json();
+      setViewCount(data.value);
+    });
+  }, [siteUrl, curPost.slug]);
 
   return (
     <Layout>
       <SEO title={curPost?.title} description={curPost?.excerpt} />
-      <PostHeader post={curPost} />
+      <PostHeader post={curPost} viewCount={viewCount} />
       <PostContent html={curPost.html} />
       <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
       {utterancesRepo && (
@@ -81,6 +94,7 @@ export const pageQuery = graphql`
 
     site {
       siteMetadata {
+        siteUrl
         comments {
           utterances {
             repo

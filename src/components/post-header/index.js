@@ -1,9 +1,8 @@
 import { Link } from 'gatsby';
 import React from 'react';
-
 import './style.scss';
 
-const PostHeader = ({ post }) => {
+const PostHeader = ({ post, viewCount }) => {
   return (
     <header className="post-header-wrapper">
       <div className="post-header">
@@ -21,10 +20,7 @@ const PostHeader = ({ post }) => {
 
         <h1 className="title">{post.title}</h1>
         <div className="info">
-          <div className="author">
-            posted by <strong>{post.author}</strong>
-          </div>
-          <div className="date"> · {post.date}</div>
+          posted by <strong>{post.author}</strong> · {viewCount} views · {post.date}
         </div>
       </div>
     </header>
