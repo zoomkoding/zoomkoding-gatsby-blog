@@ -12,7 +12,7 @@ import PostContent from '../components/post-content';
 import { Utterances } from '../components/utterances';
 
 export default ({ data }) => {
-  const [viewCount, setViewCount] = useState(0);
+  const [viewCount, setViewCount] = useState(null);
 
   const curPost = new Post(data.cur);
   const prevPost = data.prev && new Post(data.prev);
@@ -21,8 +21,10 @@ export default ({ data }) => {
   const utterancesRepo = comments?.utterances?.repo;
 
   useEffect(() => {
+    if (!siteUrl) return;
     const namespace = siteUrl.replace(/(^\w+:|^)\/\//, '');
     const key = curPost.slug.replace(/\//g, '');
+
     fetch(
       `https://api.countapi.xyz/${
         process.env.NODE_ENV === 'development' ? 'get' : 'hit'
