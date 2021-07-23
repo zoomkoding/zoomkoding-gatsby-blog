@@ -1,7 +1,6 @@
 import React from 'react';
 import PostCardsColumn from '../post-cards-column';
 import Tabs from '../tabs';
-import VerticalTabs from '../vertical-tabs';
 
 import './style.scss';
 
