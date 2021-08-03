@@ -14,6 +14,7 @@
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-advanced-sitemap": "^1.6.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
+    "gatsby-plugin-feed": "^2.1.0",
     "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-manifest": "^2.12.0",
     "gatsby-plugin-offline": "^3.10.2",

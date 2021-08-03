@@ -6,7 +6,15 @@ module.exports = {
   siteMetadata: metaConfig,
 
   plugins: [
+    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-feed`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-theme-material-ui`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,13 +29,6 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
-    `gatsby-theme-material-ui`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -126,7 +127,6 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           `gatsby-remark-mathjax`,
-          `gatsby-plugin-dark-mode`,
         ],
       },
     },
