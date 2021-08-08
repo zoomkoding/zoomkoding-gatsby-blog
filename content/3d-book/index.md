@@ -62,7 +62,7 @@ categories: 웹공부
 
 ### 🌉 Scene
 
-Scene은 말그대로 장면을 의미한다. 무언가를 보여주기 위해서는 scene을 먼저 만들어야 한다.
+`Scene`은 말그대로 장면을 의미한다. 무언가를 보여주기 위해서는 scene을 먼저 만들어야 한다.
 
 ```jsx
 const scene = new THREE.Scene();
@@ -73,7 +73,7 @@ scene.background = new THREE.Color(style.background);
 
 ### 📷 Camera
 
-Camera는 말그대로 카메라로 Scene의 어디서, 어디를, 어떻게 보고 있게 할 것인가를 정의할 수 있다. 나는 이번 프로젝트에서 사람의 눈을 가장한 방식의 카메라인 `PerspectiveCamera`를 사용하였다.
+`Camera`는 말그대로 카메라로 Scene의 어디서, 어디를, 어떻게 보고 있게 할 것인가를 정의할 수 있다. 나는 이번 프로젝트에서 사람의 눈을 가장한 방식의 카메라인 `PerspectiveCamera`를 사용하였다.
 
 ```jsx
 const camera = new THREE.PerspectiveCamera(70, aspect, 1, 1000);
