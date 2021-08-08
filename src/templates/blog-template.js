@@ -4,7 +4,6 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import TableOfContents from '../components/toc';
 import PostHeader from '../components/post-header';
 import PostCardsAdjacent from '../components/post-cards-adjacent';
 import Post from '../models/post';
@@ -36,17 +35,17 @@ export default ({ data }) => {
   }, [siteUrl, curPost.slug]);
 
   return (
-    <Layout>
-      <SEO title={curPost?.title} description={curPost?.excerpt} />
-      <PostHeader post={curPost} viewCount={viewCount} />
-      <PostContent html={curPost.html} />
-      <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
-      {utterancesRepo && (
-        <ThemeToggler>
-          {({ theme }) => <Utterances repo={utterancesRepo} theme={theme} />}
-        </ThemeToggler>
+    <ThemeToggler>
+      {({ theme }) => (
+        <Layout>
+          <SEO title={curPost?.title} description={curPost?.excerpt} />
+          <PostHeader post={curPost} viewCount={viewCount} />
+          <PostContent html={curPost.html} />
+          <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
+          {utterancesRepo && <Utterances repo={utterancesRepo} theme={theme} />}
+        </Layout>
       )}
-    </Layout>
+    </ThemeToggler>
   );
 };
 
