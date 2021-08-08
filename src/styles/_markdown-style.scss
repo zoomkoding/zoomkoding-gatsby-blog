@@ -143,10 +143,12 @@
 .markdown a {
   color: var(--link-text-color);
   text-decoration: none;
+  border-bottom: 0.05em solid;
+  border-color: var(--link-text-color);
 }
 
-.markdown a:hover {
-  text-decoration: underline;
+.markdown a.anchor {
+  border-bottom: none;
 }
 
 .markdown strong {
@@ -284,6 +286,14 @@
 .markdown pre {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 12px;
+}
+
+.markdown code.language-text {
+  background: rgba(135, 131, 120, 0.15);
+  color: #EB5757;
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
 }
 
 .markdown pre {
