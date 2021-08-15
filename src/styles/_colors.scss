@@ -1,8 +1,9 @@
 // light mode colors
 body {
   --background-color: #ffffff;
-  --primary-text-color: #000000;
+  --primary-text-color: #000;
   --secondary-text-color: #9e9e9e;
+  --content-text-color: rgb(55, 53, 47);
 
   --button-background-color: #f3f3f4;
   --button-text-color: #363f47;
@@ -27,6 +28,7 @@ body.dark {
   --background-color: #232326;
   --primary-text-color: #e6e6e6;
   --secondary-text-color: #768390;
+  --content-text-color: #e6e6e6;
 
   --button-background-color: #444c56;
   --button-text-color: #363f47;
