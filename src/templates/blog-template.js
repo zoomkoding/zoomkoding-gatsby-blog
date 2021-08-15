@@ -54,7 +54,7 @@ export const pageQuery = graphql`
     cur: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
-      excerpt(pruneLength: 350, truncate: true)
+      excerpt(pruneLength: 500, truncate: true)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
