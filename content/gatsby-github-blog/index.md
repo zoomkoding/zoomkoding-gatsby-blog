@@ -61,7 +61,7 @@ npm install
 npm install gh-pages --save-dev
 ```
 
-그리고 나서 packages.json에 다음을 추가합니다.
+그리고 나서 package.json에 다음을 추가합니다.
 
 ```json
 {
