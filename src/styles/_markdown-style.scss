@@ -780,16 +780,15 @@
 .markdown table td,
 .markdown table th {
   padding: 6px 13px;
-  border: 1px solid var(--markdown-blockquote-border-color);
+  border: 1px solid var(--markdown-table-border-color);
 }
 
 .markdown table tr {
-  background-color: #fff;
-  border-top: 1px solid #c6cbd1;
+  border-top: 1px solid var(--markdown-table-border-color);
 }
 
 .markdown table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: var(--markdown-table-even-cell-background-color);
 }
 
 .markdown img {
