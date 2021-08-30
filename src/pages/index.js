@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -14,10 +14,14 @@ export default ({ data }) => {
   const { author, language } = data.site.siteMetadata;
   const categories = ['All', ...getSortedCategoriesByCount(posts)];
   const [tabIndex, setTabIndex] = useState(0);
-
-  const onTabIndexChange = (e, value) => {
-    setTabIndex(value);
-  };
+  const categoryPosts = useMemo(
+    () =>
+      tabIndex === 0
+        ? posts
+        : posts.filter((post) => post.categories.includes(categories[tabIndex])),
+    [categories, tabIndex, posts],
+  );
+  const onTabIndexChange = useCallback((e, value) => setTabIndex(value), []);
 
   return (
     <Layout>
@@ -25,15 +29,9 @@ export default ({ data }) => {
       <Bio author={author} language={language} />
       <Tabs className={'tabs'} value={tabIndex} onChange={onTabIndexChange} tabs={categories} />
       <PostCardsColumn
-        posts={
-          tabIndex === 0
-            ? posts.slice(0, 4)
-            : posts
-                .filter((post, index) => post.categories.includes(categories[tabIndex]))
-                .slice(0, 4)
-        }
+        posts={categoryPosts.slice(0, 4)}
         moreUrl={`posts/${tabIndex === 0 ? '' : categories[tabIndex]}`}
-        showMoreButton
+        showMoreButton={categoryPosts.length > 4}
       />
     </Layout>
   );
