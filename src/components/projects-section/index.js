@@ -20,25 +20,21 @@ const ProjectsSection = ({ projects }) => {
                 )}
               </div>
               <div className="body">
-                <div className="thumbnail-wrapper">
-                  <Image
-                    className="thumbnail"
-                    src={project.thumbnailUrl}
-                    alt={project.thumbnailUrl}
-                  />
-                </div>
-                <div className="content">
-                  {project.techStack && (
-                    <div className="tech-stack">
-                      {project.techStack.map((tech, index) => (
-                        <div key={index} className="tech">
-                          {tech}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  <div className="description">{project.description}</div>
-                </div>
+                <Image
+                  className="thumbnail"
+                  src={project.thumbnailUrl}
+                  alt={project.thumbnailUrl}
+                />
+                {project.techStack && (
+                  <div className="tech-stack">
+                    {project.techStack.map((tech, index) => (
+                      <div key={index} className="tech">
+                        {tech}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <div className="description">{project.description}</div>
               </div>
             </div>
           ),

@@ -1,3 +1,4 @@
+@use '../../styles/variables'as *;
 @use '../../styles/mixins'as *;
 
 .projects-section-wrapper {
@@ -20,7 +21,7 @@
       margin-bottom: 30px;
 
       .head {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         line-height: 30px;
         font-size: 20px;
         font-weight: 700;
@@ -28,51 +29,43 @@
 
       .body {
         display: flex;
-        align-items: flex-start;
+        flex-direction: column;
 
-        .thumbnail-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .thumbnail {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 600px;
+          margin-bottom: 10px;
 
-          width: 100px;
-          height: 100%;
-          margin-right: 15px;
-
-          .thumbnail {
-            width: 100px;
+          img {
+            object-fit: contain !important;
           }
         }
 
-
-        .content {
+        .tech-stack {
           display: flex;
-          flex-direction: column;
-          margin-top: 20px;
+          margin-bottom: 10px;
 
-          .tech-stack {
-            display: flex;
-            margin-bottom: 10px;
-
-            .tech {
-              background-color: var(--chip-background-color);
-              border-radius: 10px;
-              font-size: 15px;
-              font-weight: 500;
-              margin-right: 5px;
-              padding: 5px 7px 5px 7px;
-            }
-          }
-
-          .description {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.4;
+          .tech {
+            background-color: var(--chip-background-color);
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-right: 5px;
+            padding: 5px 7px 5px 7px;
           }
         }
+
+        .description {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.4;
+        }
+
 
         @include md {
-          flex-direction: row;
+          flex-direction: column;
 
           .content {
             margin-top: 0px;
