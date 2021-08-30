@@ -74,9 +74,9 @@ module.exports = {
       {
         title: '개발 블로그 테마 개발',
         description:
-          '간단한 테마를 활용하여 개발 블로그를 만들고 운영하다 보니 점점 블로그를 내가 원하는 형태로 만들고 싶게 되었습니다. 입사 전 시기를 활용해서 원하는 기능과 디자인이 있는 블로그 테마를 만들게 되었습니다.',
+          '간단한 테마를 활용하여 개발 블로그를 만들고 운영하다 보니 점점 블로그를 직접 개발하고 싶게 되었습니다. 입사 전 시기를 활용해서 원하는 기능과 디자인이 있는 블로그 테마를 만들게 되었습니다.',
         techStack: ['gatsby', 'react'],
-        thumbnailUrl: 'zoomkoding.png',
+        thumbnailUrl: 'blog.png',
         links: {
           post: '/gatsby-starter-zoomkoding-introduction',
           github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
