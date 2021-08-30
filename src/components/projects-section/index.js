@@ -5,6 +5,7 @@ import Image from '../image';
 import './style.scss';
 
 const ProjectsSection = ({ projects }) => {
+  if (!projects || projects.length < 2) return null;
   return (
     <div className="projects-section-wrapper">
       <div className="projects-section">
@@ -15,13 +16,7 @@ const ProjectsSection = ({ projects }) => {
               <div className="head">
                 {project.title}&nbsp;&nbsp;
                 {project.links && (
-                  <IconButtonBar
-                    links={project.links}
-                    style={{
-                      color: '#a8a8a8',
-                      fontSize: '24px',
-                    }}
-                  />
+                  <IconButtonBar links={project.links} style={{ color: '#a8a8a8', fontSize: 24 }} />
                 )}
               </div>
               <div className="body">

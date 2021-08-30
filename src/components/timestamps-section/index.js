@@ -5,6 +5,7 @@ import IconButtonBar from '../icon-button-bar';
 import './style.scss';
 
 const TimeStampsSection = ({ timestamps }) => {
+  if (!timestamps || timestamps.length < 2) return null;
   return (
     <div className="timestamps-section-wrapper">
       <div className="timestamps-section">
