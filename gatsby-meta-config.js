@@ -43,20 +43,24 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
+        data: '2018.04 ~',
+        activity: '개발 시작 & 블로그 시작',
+      },
+      {
         date: '2018.07 ~ 2018.11',
-        activity: '인공지능 육목 알고리즘 개발 및 경진대회 우승',
+        activity: '인공지능 육목 알고리즘 개발 & 경진대회 우승',
       },
 
       {
         date: '2019.06 ~ 2019.12',
-        activity: '알고리즘 휴학 및 코드포스 블루 달성',
+        activity: '알고리즘 휴학 & 코드포스 블루 달성',
         links: {
           post: '/how-to-algo',
         },
       },
       {
         date: '2019.12 ~ 2020.06',
-        activity: '스타트업 인턴십 진행 및 Picky 앱 개발',
+        activity: '스타트업 인턴십 진행 & Picky 개발',
         links: {
           post: '/start-up-app-development',
           googlePlay: 'https://play.google.com/store/apps/details?id=care.jivaka.picky',
@@ -74,7 +78,7 @@ module.exports = {
       },
 
       {
-        date: '2021.01 ~',
+        date: '2021.01 ~ 2021. 04',
         activity: '대학시간(대학교 수강신청 보조 웹 앱) 개발 및 운영',
         links: {
           post: '/college-timetable-development',
@@ -84,7 +88,7 @@ module.exports = {
       },
       {
         date: '2021.02 ~',
-        activity: '개인 블로그 개발 및 운영',
+        activity: '개발 블로그 스타터 개발 및 유지 보수',
         links: {
           post: '/gatsby-starter-zoomkoding-introduction',
           github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
@@ -95,9 +99,7 @@ module.exports = {
         date: '2021.04 ~',
         activity: '만다오(프로모션 웹앱 빌더) 개발',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
-          demo: 'https://www.zoomkoding.com',
+          post: 'https://techblog.woowahan.com/2719',
         },
       },
     ],
