@@ -105,6 +105,8 @@ comments: {
 
 글쓴이(author)에 입력하신 정보는 홈페이지와 about 페이지 상단에 있는 글쓴이를 소개하는 섹션인 bio에서 사용됩니다. **description**에 자신을 설명하는 문구들을 넣으면 애니메이션으로 보여지게 됩니다. bio에 들어가는 이미지를 바꾸시려면 `assets`에 원하시는 파일을 추가하시고 파일의 이름을 **thumbnail**에 넣어주시면 됩니다.(gif도 지원합니다!)
 
+아이폰 미모티콘으로 thumbnail을 만드는 방법이 궁금하시면 [이 글](https://www.zoomkoding.com/memoji-to-gif/)을 참고해주세요!
+
 > 🤖 위에서 설정한 언어에 따라 description의 포맷이 달라집니다.
 
 ```js
@@ -151,17 +153,17 @@ about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about �
 
 ```js
 {
-    title: '2020 우아한테크캠프 참여',
-    description:
-        '스타트업에서 앱 개발을 하면서 좋은 개발에 대한 갈증이 매우 크던 중에 좋은 기회를 잡게 되어 참여하게 되었습니다. 2달 간 몰입해서 좋은 사람들과 웹 개발을 경험하며, 많이 배우고 성장할 수 있었던 시간이었습니다.',
-    techStack: ['react', 'nodejs'],
-    thumbnailUrl: 'woowa-tech.png',
-    links: {
-        post: '/woowa-tech-camp-final',
-        github: 'https://github.com/woowa-techcamp-2020/bmart-6',
-        demo: 'http://www.timetable.college',
-    },
-},
+  title: '개발 블로그 테마 개발',
+  description:
+    '3년 간 개발 블로그를 운영하면서 점점 많은 생각과 경험이 블로그에 쌓아가면서 이를 담는 블로그 테마를 직접 만들어보고 싶은 로망이 생겼습니다. 그동안 여러 개발 블로그를 보면서 좋았던 부분과 불편했던 부분들을 바탕으로 dribbble 등 디자인 레퍼런스를 참고하여 글 중심 블로그 테마를 만들게 되었습니다.',
+  techStack: ['gatsby', 'react'],
+  thumbnailUrl: 'blog.png',
+  links: {
+    post: '/gatsby-starter-zoomkoding-introduction',
+    github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
+    demo: 'https://www.zoomkoding.com',
+  }
+}
 ```
 
 <br/>
