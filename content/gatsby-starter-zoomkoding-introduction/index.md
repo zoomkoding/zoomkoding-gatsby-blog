@@ -15,7 +15,7 @@ categories: 블로그
 블로그 테마가 맘에 드셨다면 아래 과정을 통해 자신의 블로그를 만들어보시길 바랍니다!
 
 > 혹시 만드시는 과정에서 궁금하신 점이나 어려움이 있으시다면 [이슈](https://github.com/zoomKoding/zoomkoding-gatsby-blog/issues/new)를 통해 문의 남겨주세요!  
-> 최대한 빠르게 답변 드리겠습니다! 😀
+> [⭐️](https://github.com/zoomKoding/zoomkoding.com)는 블로그 테마 발전에 큰 힘이 됩니다!😊
 
 ## 🚀 시작하기
 
@@ -102,7 +102,7 @@ author: {
 },
 ```
 
-## 👤 about page 만들기
+## 🙋‍♀️ about page 만들기
 
 about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about 하위에 있는 timestamps와 projects에 각각 정보를 입력하시면 about 페이지가 자동 생성됩니다.
 
@@ -114,12 +114,12 @@ about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about �
 
 ```js
 {
-    date: '2019.12 ~ 2020.06',
-    activity: '스타트업 인턴 진행 및 Picky 앱 개발',
+    date: '2021.02 ~',
+    activity: '개인 블로그 개발 및 운영',
     links: {
-        post: '/start-up-app-development',
-        googlePlay: 'https://play.google.com/store/apps/details?id=care.jivaka.picky',
-        appStore: 'https://apps.apple.com/app/picky-skincare-made-smarter/id1504197356',
+        post: '/gatsby-starter-zoomkoding-introduction',
+        github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
+        demo: 'https://www.zoomkoding.com',
     },
 },
 ```
@@ -130,17 +130,17 @@ about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about �
 
 ```js
 {
-    title: '2020 우아한테크캠프 참여',
-    description:
-        '스타트업에서 앱 개발을 하면서 좋은 개발에 대한 갈증이 매우 크던 중에 좋은 기회를 잡게 되어 참여하게 되었습니다. 2달 간 몰입해서 좋은 사람들과 웹 개발을 경험하며, 많이 배우고 성장할 수 있었던 시간이었습니다.',
-    techStack: ['react', 'nodejs'],
-    thumbnailUrl: 'woowa-tech.png',
-    links: {
-        post: '/woowa-tech-camp-final',
-        github: 'https://github.com/woowa-techcamp-2020/bmart-6',
-        demo: 'http://www.timetable.college',
-    },
-},
+  title: '개발 블로그 테마 개발',
+  description:
+    '개발 블로그를 운영하는 기간이 조금씩 늘어나고 점점 많은 생각과 경험이 블로그에 쌓아가면서 제 이야기를 담고 있는 블로그를 직접 만들어보고 싶게 되었습니다. 그동안 여러 개발 블로그를 보면서 좋았던 부분과 불편했던 부분들을 바탕으로 레퍼런스를 참고하여 직접 블로그 테마를 만들게 되었습니다.',
+  techStack: ['gatsby', 'react'],
+  thumbnailUrl: 'blog.png',
+  links: {
+    post: '/gatsby-starter-zoomkoding-introduction',
+    github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
+    demo: 'https://www.zoomkoding.com',
+  }
+}
 ```
 
 <br/>
@@ -155,7 +155,7 @@ about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about �
 
 > 이 때, 폴더의 이름은 경로를 생성하는데 됩니다.
 
-### ℹ️ 메타 정보
+### 🏗 메타 정보
 
 index.md 파일의 상단에는 아래와 같이 emoji, title, date, author, tags, categories 정보를 제공해야 합니다.
 

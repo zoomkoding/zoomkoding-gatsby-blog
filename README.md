@@ -22,7 +22,7 @@
 블로그 테마가 맘에 드셨다면 아래 과정을 통해 자신의 블로그를 만들어보시길 바랍니다!
 
 > 혹시 만드시는 과정에서 궁금하신 점이나 어려움이 있으시다면 [이슈](https://github.com/zoomKoding/zoomkoding-gatsby-blog/issues/new)를 통해 문의 남겨주세요!  
-> 최대한 빠르게 답변 드리겠습니다! 😀
+> [⭐️](https://github.com/zoomKoding/zoomkoding.com)는 블로그 운영에 큰 힘이 됩니다!😊
 
 ## ✨ 기능
 
@@ -125,7 +125,7 @@ author: {
 },
 ```
 
-## 👤 about page 만들기
+## 🙋‍♀️ about page 만들기
 
 about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about 하위에 있는 timestamps와 projects에 각각 정보를 입력하시면 about 페이지가 자동 생성됩니다.
 
@@ -137,13 +137,13 @@ about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about �
 
 ```js
 {
-    date: '2019.12 ~ 2020.06',
-    activity: '스타트업 인턴 진행 및 Picky 앱 개발',
-    links: {
-        post: '/start-up-app-development',
-        googlePlay: 'https://play.google.com/store/apps/details?id=care.jivaka.picky',
-        appStore: 'https://apps.apple.com/app/picky-skincare-made-smarter/id1504197356',
-    },
+  date: '2021.02 ~',
+  activity: '개인 블로그 개발 및 운영',
+  links: {
+    post: '/gatsby-starter-zoomkoding-introduction',
+    github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
+    demo: 'https://www.zoomkoding.com',
+  },
 },
 ```
 
@@ -155,7 +155,7 @@ about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about �
 {
   title: '개발 블로그 테마 개발',
   description:
-    '3년 간 개발 블로그를 운영하면서 점점 많은 생각과 경험이 블로그에 쌓아가면서 이를 담는 블로그 테마를 직접 만들어보고 싶은 로망이 생겼습니다. 그동안 여러 개발 블로그를 보면서 좋았던 부분과 불편했던 부분들을 바탕으로 dribbble 등 디자인 레퍼런스를 참고하여 글 중심 블로그 테마를 만들게 되었습니다.',
+    '개발 블로그를 운영하는 기간이 조금씩 늘어나고 점점 많은 생각과 경험이 블로그에 쌓아가면서 제 이야기를 담고 있는 블로그를 직접 만들어보고 싶게 되었습니다. 그동안 여러 개발 블로그를 보면서 좋았던 부분과 불편했던 부분들을 바탕으로 레퍼런스를 참고하여 직접 블로그 테마를 만들게 되었습니다.',
   techStack: ['gatsby', 'react'],
   thumbnailUrl: 'blog.png',
   links: {
@@ -178,7 +178,7 @@ about 페이지 또한 gatsby-meta-config.js를 통해 생성됩니다. about �
 
 > 이 때, 폴더의 이름은 경로를 생성하는데 됩니다.
 
-### ℹ️ 메타 정보
+### 🏗 메타 정보
 
 index.md 파일의 상단에는 아래와 같이 emoji, title, date, author, tags, categories 정보를 제공해야 합니다.
 
@@ -213,7 +213,3 @@ categories: tutorial
 ### 💡 버그 리포트 & 문의
 
 만일 블로그 테마를 적용하시면서 도움이 필요하시거나 궁금하신 점이 있으시다면 [이슈](https://github.com/zoomKoding/zoomkoding-gatsby-blog/issues/new)로 남겨주시면 최대한 빠르게 답변 드리도록 하겠습니다!🙋‍♂️
-
-```toc
-
-```
