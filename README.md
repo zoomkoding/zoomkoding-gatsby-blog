@@ -22,7 +22,7 @@
 블로그 테마가 맘에 드셨다면 아래 과정을 통해 자신의 블로그를 만들어보시길 바랍니다!
 
 > 혹시 만드시는 과정에서 궁금하신 점이나 어려움이 있으시다면 [이슈](https://github.com/zoomKoding/zoomkoding-gatsby-blog/issues/new)를 통해 문의 남겨주세요!  
-> [⭐️](https://github.com/zoomKoding/zoomkoding.com)는 블로그 운영에 큰 힘이 됩니다!😊
+> ⭐️는 블로그 운영에 큰 힘이 됩니다!😊
 
 ## ✨ 기능
 
