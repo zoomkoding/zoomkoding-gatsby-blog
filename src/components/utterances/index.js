@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const src = 'https://utteranc.es/client.js';
 const branch = 'master';
 
-export const Utterances = ({ repo, theme }) => {
+export const Utterances = ({ repo, theme, path }) => {
   const rootElm = React.createRef();
 
   useEffect(() => {
@@ -16,9 +16,10 @@ export const Utterances = ({ repo, theme }) => {
       theme: theme === 'light' ? 'github-light' : 'photon-dark',
       label: 'comment',
       async: true,
-      'issue-term': 'pathname',
       crossorigin: 'anonymous',
     };
+    if (path === '/gatsby-github-blog/') utterancesConfig['issue-number'] = 14;
+    else utterancesConfig['issue-term'] = 'pathname';
 
     Object.keys(utterancesConfig).forEach((configKey) => {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);

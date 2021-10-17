@@ -42,7 +42,7 @@ export default ({ data }) => {
           <PostHeader post={curPost} viewCount={viewCount} />
           <PostContent html={curPost.html} />
           <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
-          {utterancesRepo && <Utterances repo={utterancesRepo} theme={theme} />}
+          {utterancesRepo && <Utterances repo={utterancesRepo} theme={theme} path={curPost.slug} />}
         </Layout>
       )}
     </ThemeToggler>
