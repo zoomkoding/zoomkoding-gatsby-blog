@@ -1,10 +1,15 @@
 import { Button } from '@material-ui/core';
-import React from 'react';
+import { navigate } from 'gatsby-link';
+import React, { useCallback } from 'react';
 
 import PostCard from '../post-card';
 import './style.scss';
 
 const PostCardsColumn = ({ posts, showMoreButton, moreUrl }) => {
+  const onMoreButtonClick = useCallback(() => {
+    navigate(moreUrl);
+  }, []);
+
   return (
     <div className="post-cards-column-wrapper">
       <div className="post-cards-column">
@@ -14,7 +19,7 @@ const PostCardsColumn = ({ posts, showMoreButton, moreUrl }) => {
         {showMoreButton && (
           <Button
             className="more-post-cards-button"
-            href={moreUrl}
+            onClick={onMoreButtonClick}
             variant="contained"
             disableElevation
           >
