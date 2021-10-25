@@ -9,7 +9,6 @@ module.exports = {
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-feed`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
@@ -70,6 +69,7 @@ module.exports = {
         icon: `static/favicon.png`,
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
