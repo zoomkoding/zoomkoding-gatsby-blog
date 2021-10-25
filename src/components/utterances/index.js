@@ -25,7 +25,7 @@ export const Utterances = ({ repo, theme, path }) => {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);
     });
     rootElm.current.appendChild(utterances);
-  }, [repo, rootElm, theme]);
+  }, [repo, rootElm, theme, path]);
 
   return <div className="utterances" ref={rootElm} />;
 };
