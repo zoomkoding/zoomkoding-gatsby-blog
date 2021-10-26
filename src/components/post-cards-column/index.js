@@ -8,7 +8,7 @@ import './style.scss';
 const PostCardsColumn = ({ posts, showMoreButton, moreUrl }) => {
   const onMoreButtonClick = useCallback(() => {
     navigate(moreUrl);
-  }, []);
+  }, [moreUrl]);
 
   return (
     <div className="post-cards-column-wrapper">
