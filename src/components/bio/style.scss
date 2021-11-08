@@ -14,109 +14,98 @@
   }
 }
 
-strong {
-  font-weight: 600;
-}
-
-.bio-wrapper {
+.bio {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin-top: 120px;
   margin-bottom: 120px;
-  color: var(--primary-text-color);
-  @include content-horizontal-padding;
 
-  .bio {
+  color: var(--primary-text-color);
+
+  @include md {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .introduction {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    @include content-max-width;
+    word-break: keep-all;
 
-    @include md {
-      flex-direction: row;
-      align-items: center;
+    .react-rotating-text-cursor {
+      animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
     }
 
-    .introduction {
-      display: flex;
-      flex-direction: column;
-      word-break: keep-all;
+    strong {
+      display: inline-block;
+      font-weight: 600;
+    }
 
-      .react-rotating-text-cursor {
-        animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+    &.korean {
+      font-weight: 100;
+      font-size: 32px;
+      line-height: 1.2;
+
+      .title {
+        .react-rotating-text-cursor {
+          font-size: 35px;
+          line-height: 35px;
+        }
       }
 
-      strong {
-        display: inline-block;
-        font-weight: 600;
-      }
-
-      &.korean {
-        font-weight: 100;
-        font-size: 32px;
-        line-height: 1.2;
+      @include md {
+        font-size: 40px;
 
         .title {
           .react-rotating-text-cursor {
-            font-size: 35px;
-            line-height: 35px;
+            font-size: 45px;
+            line-height: 45px;
           }
         }
-
-        @include md {
-          font-size: 40px;
-
-          .title {
-            .react-rotating-text-cursor {
-              font-size: 45px;
-              line-height: 45px;
-            }
-          }
-        }
-
-
       }
 
-      &.english {
-        font-family: 'montserrat';
-        font-size: 25px;
-        line-height: 1.2;
 
-        @include md {
-          font-size: 45px;
-        }
-
-        .name {
-          font-size: 35px;
-          font-weight: 600;
-        }
-
-        .job {
-          font-size: 35px;
-        }
-
-        .description {
-          font-weight: 200;
-          margin-top: 8px;
-          font-size: 20px;
-        }
-
-        .social-links {
-          margin-top: 20px;
-          display: flex;
-        }
-      }
     }
 
-    .thumbnail {
-      display: none;
-      width: 250px;
+    &.english {
+      font-family: 'montserrat';
+      font-size: 25px;
+      line-height: 1.2;
 
       @include md {
-        display: block;
+        font-size: 45px;
       }
+
+      .name {
+        font-size: 35px;
+        font-weight: 600;
+      }
+
+      .job {
+        font-size: 35px;
+      }
+
+      .description {
+        font-weight: 200;
+        margin-top: 8px;
+        font-size: 20px;
+      }
+
+      .social-links {
+        margin-top: 20px;
+        display: flex;
+      }
+    }
+  }
+
+  .thumbnail {
+    display: none;
+    width: 250px;
+
+    @include md {
+      display: block;
     }
   }
 }

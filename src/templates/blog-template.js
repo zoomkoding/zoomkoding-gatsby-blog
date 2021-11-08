@@ -5,7 +5,7 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PostHeader from '../components/post-header';
-import PostCardsAdjacent from '../components/post-cards-adjacent';
+import PostNavigator from '../components/post-navigator';
 import Post from '../models/post';
 import PostContent from '../components/post-content';
 import { Utterances } from '../components/utterances';
@@ -41,7 +41,7 @@ export default ({ data }) => {
           <SEO title={curPost?.title} description={curPost?.excerpt} />
           <PostHeader post={curPost} viewCount={viewCount} />
           <PostContent html={curPost.html} />
-          <PostCardsAdjacent prevPost={prevPost} nextPost={nextPost} />
+          <PostNavigator prevPost={prevPost} nextPost={nextPost} />
           {utterancesRepo && <Utterances repo={utterancesRepo} theme={theme} path={curPost.slug} />}
         </Layout>
       )}

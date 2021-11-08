@@ -14,9 +14,9 @@ const PostCard = ({ post }) => {
           <div className="date">{date}</div>
           <div className="categories">
             {categories.map((category) => (
-              <Link className="category" key={category} to={`/posts/${category}`}>
+              <div className="category" key={category}>
                 {category}
-              </Link>
+              </div>
             ))}
           </div>
         </div>

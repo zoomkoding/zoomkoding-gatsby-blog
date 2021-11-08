@@ -1,22 +1,21 @@
 @use '../../styles/mixins'as *;
 @use '../../styles/variables'as *;
 
-.tabs-wrapper {
+.post-tabs-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  top: 0px;
   align-self: flex-start;
+  top: 0px;
   width: 100%;
-  margin-bottom: 12px;
 
-  @include content-horizontal-padding;
-
-  .tabs {
+  .post-tabs {
     display: flex;
     justify-content: center;
     height: 40px;
     width: 100%;
     max-width: $content-max-width + 40px;
+    margin-bottom: 12px;
 
     .mui-tabs {
       .MuiTab-root {
@@ -58,4 +57,6 @@
       }
     }
   }
+
+
 }

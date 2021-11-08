@@ -1,37 +1,30 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
-import PostCardsColumn from '../components/post-cards-column';
 import Post from '../models/post';
-import Tabs from '../components/tabs';
 
 import { getSortedCategoriesByCount } from '../utils/helpers';
+import PostTabs from '../components/post-tabs';
 
 export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
   const { author, language } = data.site.siteMetadata;
   const categories = ['All', ...getSortedCategoriesByCount(posts)];
   const [tabIndex, setTabIndex] = useState(0);
-  const categoryPosts = useMemo(
-    () =>
-      tabIndex === 0
-        ? posts
-        : posts.filter((post) => post.categories.includes(categories[tabIndex])),
-    [categories, tabIndex, posts],
-  );
   const onTabIndexChange = useCallback((e, value) => setTabIndex(value), []);
 
   return (
     <Layout>
       <SEO title="Home" />
       <Bio author={author} language={language} />
-      <Tabs className={'tabs'} value={tabIndex} onChange={onTabIndexChange} tabs={categories} />
-      <PostCardsColumn
-        posts={categoryPosts.slice(0, 4)}
-        moreUrl={`posts/${tabIndex === 0 ? '' : categories[tabIndex]}`}
-        showMoreButton={categoryPosts.length > 4}
+      <PostTabs
+        posts={posts}
+        onChange={onTabIndexChange}
+        tabs={categories}
+        tabIndex={tabIndex}
+        showMoreButton
       />
     </Layout>
   );

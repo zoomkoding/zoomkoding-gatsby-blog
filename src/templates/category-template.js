@@ -1,36 +1,38 @@
-import React from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { navigate } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Post from '../models/post';
-import PostsPageBody from '../components/posts-page-body';
-import PostsPageHeader from '../components/posts-page-header';
+import CategoryPageHeader from '../components/category-page-header';
+import PostTabs from '../components/post-tabs';
 
 export default ({ pageContext }) => {
   const { edges, currentCategory } = pageContext;
+  const { categories } = pageContext;
+  const currentTabIndex = useMemo(
+    () => categories.findIndex((category) => category === currentCategory),
+    [categories, currentCategory],
+  );
   const posts = edges.map(({ node }) => new Post(node));
-  const categories = pageContext.categories;
-  const tabIndex = categories.findIndex((tab) => tab === currentCategory);
 
-  const onTabIndexChange = (e, value) => {
-    if (value === 0) navigate(`/posts`);
-    else navigate(`/posts/${categories[value]}`);
-  };
+  const onTabIndexChange = useCallback(
+    (e, value) => {
+      if (value === 0) return navigate(`/posts`);
+      navigate(`/posts/${categories[value]}`);
+    },
+    [categories],
+  );
 
   return (
     <Layout>
       <SEO title="Posts" />
-      <PostsPageHeader title={categories[tabIndex]} subtitle={`${posts.length} posts`} />
-      <PostsPageBody
-        tabIndex={tabIndex}
+      <CategoryPageHeader title={categories[currentTabIndex]} subtitle={`${posts.length} posts`} />
+      <PostTabs
+        tabIndex={currentTabIndex}
         onChange={onTabIndexChange}
         tabs={categories}
-        posts={
-          tabIndex === 0
-            ? posts
-            : posts.filter((post) => post.categories.includes(categories[tabIndex]))
-        }
+        posts={posts}
       />
     </Layout>
   );
