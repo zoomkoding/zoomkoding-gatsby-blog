@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import PropTypes from 'prop-types';
 
 const Image = ({ src, ...rest }) => {
   const data = useStaticQuery(graphql`
@@ -37,11 +36,6 @@ const Image = ({ src, ...rest }) => {
   }
 
   return <Img fluid={childImageSharp.fluid} alt={publicURL} {...rest} />;
-};
-
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string,
 };
 
 export default Image;
