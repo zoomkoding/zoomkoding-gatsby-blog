@@ -1,67 +1,55 @@
 @use '../../styles/mixins'as *;
 
-.post-header-wrapper {
+.post-header {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
-  @include content-horizontal-padding;
+
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--post-card-border-color);
+
   margin-top: 20px;
   margin-bottom: 40px;
   word-break: keep-all;
 
-  .post-header {
-    display: flex;
-    flex-direction: column;
-    @include content-max-width;
+  .emoji {
+    font-size: 78px;
+    margin-bottom: 20px;
+  }
 
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--post-card-border-color);
+  .categories {
+    margin-bottom: 5px;
 
-    .emoji {
-      font-size: 78px;
-      margin-bottom: 20px;
-    }
-
-    .categories {
-      margin-bottom: 5px;
-
-      .category {
-        margin-right: 4px;
-
-        font-weight: 600;
-        // color: rgb(243, 147, 37);
-        color: var(--primary-text-color);
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .title {
+    .category {
+      margin-right: 4px;
       font-weight: 600;
-      font-size: 32px;
       color: var(--primary-text-color);
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
 
-    .info {
-      display: flex;
-      // justify-content: space-between;
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--secondary-text-color);
-
-
-      strong {
-        margin: 0 4px;
-
-
-        color: var(--primary-text-color);
-        font-weight: 600;
+      &:hover {
+        text-decoration: underline;
       }
+    }
+  }
 
+  .title {
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--primary-text-color);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .info {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+
+    strong {
+      margin: 0 4px;
+      color: var(--primary-text-color);
+      font-weight: 600;
     }
   }
 }

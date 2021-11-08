@@ -1,75 +1,68 @@
 @use '../../styles/variables'as *;
 @use '../../styles/mixins'as *;
 
-.projects-section-wrapper {
+.projects-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  @include content-horizontal-padding;
 
-  .projects-section {
+  .project {
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    @include content-max-width;
+    margin-bottom: 30px;
 
-    .project {
-      padding: 15px;
+    .head {
+      margin-bottom: 10px;
+      line-height: 30px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .body {
       display: flex;
       flex-direction: column;
 
-      margin-bottom: 30px;
-
-      .head {
+      .thumbnail {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 600px;
         margin-bottom: 10px;
-        line-height: 30px;
-        font-size: 20px;
-        font-weight: 700;
+
+        img {
+          object-fit: contain !important;
+        }
       }
 
-      .body {
+      .tech-stack {
         display: flex;
+        margin-bottom: 10px;
+
+        .tech {
+          background-color: var(--chip-background-color);
+          border-radius: 10px;
+          font-size: 15px;
+          font-weight: 500;
+          margin-right: 5px;
+          padding: 5px 7px 5px 7px;
+        }
+      }
+
+      .description {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+      }
+
+
+      @include md {
         flex-direction: column;
 
-        .thumbnail {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 600px;
-          margin-bottom: 10px;
-
-          img {
-            object-fit: contain !important;
-          }
-        }
-
-        .tech-stack {
-          display: flex;
-          margin-bottom: 10px;
-
-          .tech {
-            background-color: var(--chip-background-color);
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 500;
-            margin-right: 5px;
-            padding: 5px 7px 5px 7px;
-          }
-        }
-
-        .description {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 1.4;
-        }
-
-
-        @include md {
-          flex-direction: column;
-
-          .content {
-            margin-top: 0px;
-          }
+        .content {
+          margin-top: 0px;
         }
       }
     }
