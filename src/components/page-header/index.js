@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import { Switch } from '@material-ui/core';
@@ -12,9 +11,7 @@ const PageHeader = ({ siteTitle }) => {
         // Don't render anything at compile time. Deferring rendering until we
         // know which theme to use on the client avoids incorrect initial
         // state being displayed.
-        if (theme == null) {
-          return null;
-        }
+        if (!theme) return null;
         return (
           <header className="page-header-wrapper">
             <div className="page-header">
@@ -44,14 +41,6 @@ const PageHeader = ({ siteTitle }) => {
       }}
     </ThemeToggler>
   );
-};
-
-PageHeader.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-PageHeader.defaultProps = {
-  siteTitle: ``,
 };
 
 export default PageHeader;
