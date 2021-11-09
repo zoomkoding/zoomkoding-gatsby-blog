@@ -1068,3 +1068,12 @@
     position: relative !important;
   }
 }
+
+// caption
+.markdown .gatsby-resp-image-wrapper+em {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+  color: #6a737d;
+}
