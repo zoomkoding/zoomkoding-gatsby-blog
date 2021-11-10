@@ -4,28 +4,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `content` });
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    });
+    createNodeField({ node, name: `slug`, value: slug });
   }
-};
-const sortObjectByValue = (obj) => {
-  let sortable = [];
-  for (let item in obj) sortable.push([item, obj[item]]);
-  sortable.sort((a, b) => b[1] - a[1]);
-  return sortable;
-};
-
-const getSortedCategoriesByCount = (categories) => {
-  const cntPerCategory = {};
-
-  categories.forEach((category) => {
-    cntPerCategory[category] = cntPerCategory[category] ? cntPerCategory[category] + 1 : 1;
-  });
-
-  return sortObjectByValue(cntPerCategory).map(([category]) => category);
 };
 
 const createBlogPages = ({ createPage, results }) => {
@@ -46,35 +26,28 @@ const createBlogPages = ({ createPage, results }) => {
 
 const createPostsPages = ({ createPage, results }) => {
   const categoryTemplate = require.resolve(`./src/templates/category-template.js`);
+  const categories = new Set(['All']);
+  const { edges } = results.data.allMarkdownRemark;
 
-  let categories = [];
-
-  results.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    categories = categories.concat(node.frontmatter.categories.split(' '));
+  edges.forEach(({ node }) => {
+    const postCategories = node.frontmatter.categories.split(' ');
+    postCategories.forEach((category) => categories.add(category));
   });
-
-  const sortedCategories = ['All', ...getSortedCategoriesByCount(categories)];
 
   createPage({
     path: `/posts`,
     component: categoryTemplate,
-    context: {
-      currentCategory: 'All',
-      categories: sortedCategories,
-      edges: results.data.allMarkdownRemark.edges,
-    },
+    context: { currentCategory: 'All', edges, categories },
   });
 
-  categories.forEach((category) => {
+  categories.forEach((currentCategory) => {
     createPage({
-      path: `/posts/${category}`,
+      path: `/posts/${currentCategory}`,
       component: categoryTemplate,
       context: {
-        currentCategory: category,
-        categories: sortedCategories,
-        edges: results.data.allMarkdownRemark.edges.filter(({ node }) =>
-          node.frontmatter.categories.includes(category),
-        ),
+        currentCategory,
+        categories,
+        edges: edges.filter(({ node }) => node.frontmatter.categories.includes(currentCategory)),
       },
     });
   });
