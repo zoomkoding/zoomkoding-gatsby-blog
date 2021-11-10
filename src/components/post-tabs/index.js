@@ -5,7 +5,7 @@ import './style.scss';
 
 const PostTabs = ({ tabIndex, onChange, tabs, posts, showMoreButton }) => {
   const tabPosts = useMemo(() => {
-    if (tabIndex === 0) return posts;
+    if (tabs[tabIndex] === 'All') return posts;
     return posts.filter((post) => post.categories.includes(tabs[tabIndex]));
   }, [posts, tabs, tabIndex]);
 

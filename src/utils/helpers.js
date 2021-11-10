@@ -1,21 +1,9 @@
-const sortObjectByValue = (obj) => {
-  let sortable = [];
-  for (let item in obj) sortable.push([item, obj[item]]);
-  sortable.sort((a, b) => {
-    if (a[0] === 'featured') return -1;
-    return b[1] - a[1];
+export const getUniqueCategories = (posts) => {
+  const categorySet = new Set();
+  posts.forEach(({ categories }) => categories.forEach((category) => categorySet.add(category)));
+  return [...categorySet].sort((a, b) => {
+    if (a === 'featured') return -1;
+    if (b === 'featured') return 1;
+    return 0;
   });
-  return sortable;
-};
-
-export const getSortedCategoriesByCount = (posts) => {
-  const cntPerCategory = {};
-
-  posts.forEach(({ categories }) => {
-    categories.forEach((category) => {
-      cntPerCategory[category] = cntPerCategory[category] ? cntPerCategory[category] + 1 : 1;
-    });
-  });
-
-  return sortObjectByValue(cntPerCategory).map(([category]) => category);
 };
