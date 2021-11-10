@@ -38,7 +38,6 @@
 - 🛠 sitemap.xml, robots.txt 자동 생성
 - 📈 Google Analytics 지원
 - 🧢 Emoji 지원
-- 𝑓 Mathjax 지원
 
 ## 🚀 시작하기
 

@@ -30,7 +30,6 @@ This is a blog theme created for developers who want to create a pretty, clean a
 - 🛠 Enhanced SEO & `sitemap.xml`, `robots.txt`
 - 📈 Google Analytics
 - 🧢 Emoji
-- 𝑓 Mathjax
 
 ## 🚀 Quick start
 
