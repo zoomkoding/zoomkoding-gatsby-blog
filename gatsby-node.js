@@ -26,13 +26,15 @@ const createBlogPages = ({ createPage, results }) => {
 
 const createPostsPages = ({ createPage, results }) => {
   const categoryTemplate = require.resolve(`./src/templates/category-template.js`);
-  const categories = new Set(['All']);
+  const categorySet = new Set(['All']);
   const { edges } = results.data.allMarkdownRemark;
 
   edges.forEach(({ node }) => {
     const postCategories = node.frontmatter.categories.split(' ');
-    postCategories.forEach((category) => categories.add(category));
+    postCategories.forEach((category) => categorySet.add(category));
   });
+
+  const categories = [...categorySet];
 
   createPage({
     path: `/posts`,
