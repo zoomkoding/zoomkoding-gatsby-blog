@@ -6,14 +6,6 @@ module.exports = {
   siteMetadata: metaConfig,
 
   plugins: [
-    `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-dark-mode`,
-    `gatsby-plugin-feed`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
-    `gatsby-theme-material-ui`,
-    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -69,7 +61,6 @@ module.exports = {
         icon: `static/favicon.png`,
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -129,5 +120,13 @@ module.exports = {
         ],
       },
     },
+    `gatsby-theme-material-ui`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-feed`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
   ],
 };
