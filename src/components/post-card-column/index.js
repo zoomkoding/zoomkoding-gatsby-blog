@@ -4,7 +4,7 @@ import React, { useCallback } from 'react';
 import PostCard from '../post-card';
 import './style.scss';
 
-const PostCardColumn = ({ posts, showMoreButton, moreUrl }) => {
+function PostCardColumn({ posts, showMoreButton, moreUrl }) {
   const onMoreButtonClick = useCallback(() => {
     navigate(moreUrl);
   }, [moreUrl]);
@@ -28,6 +28,6 @@ const PostCardColumn = ({ posts, showMoreButton, moreUrl }) => {
       </div>
     </div>
   );
-};
+}
 
 export default PostCardColumn;

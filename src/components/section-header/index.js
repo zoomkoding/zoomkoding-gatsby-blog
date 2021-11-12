@@ -1,8 +1,7 @@
 import React from 'react';
-
 import './style.scss';
 
-const SectionHeader = ({ title }) => {
+function SectionHeader({ title }) {
   return (
     <div className="section-header-wrapper">
       <div className="section-header">
@@ -10,6 +9,6 @@ const SectionHeader = ({ title }) => {
       </div>
     </div>
   );
-};
+}
 
 export default SectionHeader;

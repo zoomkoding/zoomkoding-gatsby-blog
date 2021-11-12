@@ -3,7 +3,7 @@ import React from 'react';
 import ThemeSwitch from '../theme-switch';
 import './style.scss';
 
-const PageHeader = ({ siteTitle }) => {
+function PageHeader({ siteTitle }) {
   return (
     <header className="page-header-wrapper">
       <div className="page-header">
@@ -24,6 +24,6 @@ const PageHeader = ({ siteTitle }) => {
       </div>
     </header>
   );
-};
+}
 
 export default PageHeader;

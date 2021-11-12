@@ -1,9 +1,8 @@
 import { Link } from 'gatsby';
 import React from 'react';
-
 import './style.scss';
 
-const PostCard = ({ post }) => {
+function PostCard({ post }) {
   const { id, slug, title, excerpt, date, categories } = post;
   return (
     <div className="post-card-wrapper">
@@ -23,6 +22,6 @@ const PostCard = ({ post }) => {
       </Link>
     </div>
   );
-};
+}
 
 export default PostCard;

@@ -4,7 +4,7 @@ import IconButtonBar from '../icon-button-bar';
 import Image from '../image';
 import './style.scss';
 
-const ProjectsSection = ({ projects }) => {
+function ProjectSection({ projects }) {
   if (!projects || projects.length < 2) return null;
   return (
     <div className="projects-section">
@@ -36,6 +36,6 @@ const ProjectsSection = ({ projects }) => {
       )}
     </div>
   );
-};
+}
 
-export default ProjectsSection;
+export default ProjectSection;

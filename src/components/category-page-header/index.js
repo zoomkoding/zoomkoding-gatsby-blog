@@ -1,14 +1,13 @@
 import React from 'react';
-
 import './style.scss';
 
-const PostsPageHeader = ({ title, subtitle }) => {
+function CategoryPageHeader({ title, subtitle }) {
   return (
-    <div className="posts-page-header-wrapper">
-      <div className="posts-page-title">{title}</div>
-      <div className="posts-page-subtitle">{subtitle}</div>
+    <div className="category-page-header-wrapper">
+      <div className="category-page-title">{title}</div>
+      <div className="category-page-subtitle">{subtitle}</div>
     </div>
   );
-};
+}
 
-export default PostsPageHeader;
+export default CategoryPageHeader;

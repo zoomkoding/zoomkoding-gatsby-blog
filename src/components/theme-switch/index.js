@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Switch } from '@material-ui/core';
 import './style.scss';
 
-const ThemeSwitch = () => {
+function ThemeSwitch() {
   const storedIsDarkMode = localStorage.getItem('isDarkMode');
   const [isDarkMode, setIsDarkMode] = useState(JSON.parse(storedIsDarkMode));
 
@@ -20,6 +20,6 @@ const ThemeSwitch = () => {
       onChange={() => setIsDarkMode((isDark) => !isDark)}
     />
   );
-};
+}
 
 export default ThemeSwitch;

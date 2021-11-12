@@ -1,6 +1,6 @@
 @use '../../styles/mixins'as *;
 
-.posts-page-header-wrapper {
+.category-page-header-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
 
-  .posts-page-title {
+  .category-page-title {
     width: fit-content;
     padding-bottom: 7px;
     margin-bottom: 15px;
@@ -18,7 +18,7 @@
     border-bottom: 3px solid var(--primary-text-color);
   }
 
-  .posts-page-subtitle {
+  .category-page-subtitle {
     padding-bottom: 10px;
     font-size: 20px;
     font-weight: 500;

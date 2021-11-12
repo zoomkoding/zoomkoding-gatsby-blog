@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/seo';
 import Bio from '../components/bio';
-import TimeStampsSection from '../components/timestamps-section';
-import ProjectsSection from '../components/projects-section';
+import TimeStampSection from '../components/timestamp-section';
+import ProjectSection from '../components/project-section';
 
 function AboutPage({ data }) {
   const metaData = data.site.siteMetadata;
@@ -14,8 +14,8 @@ function AboutPage({ data }) {
     <Layout>
       <Seo title="About" />
       <Bio author={author} language={language} />
-      <TimeStampsSection timestamps={timestamps} />
-      <ProjectsSection projects={projects} />
+      <TimeStampSection timestamps={timestamps} />
+      <ProjectSection projects={projects} />
     </Layout>
   );
 }

@@ -3,7 +3,7 @@ import React, { createRef, useEffect, useRef } from 'react';
 const src = 'https://utteranc.es/client.js';
 const branch = 'master';
 
-export const Utterances = ({ repo, path }) => {
+function Utterances({ repo, path }) {
   const rootElm = createRef();
   const isUtterancesLoaded = useRef(false);
 
@@ -31,4 +31,6 @@ export const Utterances = ({ repo, path }) => {
   }, [repo, rootElm, path]);
 
   return <div className="utterances" ref={rootElm} />;
-};
+}
+
+export default Utterances;
