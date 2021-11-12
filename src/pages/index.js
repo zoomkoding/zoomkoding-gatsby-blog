@@ -1,14 +1,14 @@
 import React, { useCallback, useState } from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../layout';
+import Seo from '../components/seo';
 import Bio from '../components/bio';
 import Post from '../models/post';
 
 import { getUniqueCategories } from '../utils/helpers';
 import PostTabs from '../components/post-tabs';
 
-export default ({ data }) => {
+function HomePage({ data }) {
   const posts = data.allMarkdownRemark.edges.map(({ node }) => new Post(node));
   const { author, language } = data.site.siteMetadata;
   const categories = ['All', ...getUniqueCategories(posts)];
@@ -18,7 +18,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Bio author={author} language={language} />
       <PostTabs
         posts={posts}
@@ -29,7 +29,9 @@ export default ({ data }) => {
       />
     </Layout>
   );
-};
+}
+
+export default HomePage;
 
 export const pageQuery = graphql`
   query {
