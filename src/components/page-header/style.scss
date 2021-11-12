@@ -5,7 +5,7 @@
   justify-content: center;
   width: 100%;
   height: 62px;
-  @include content-horizontal-padding;
+
 
   .page-header {
     display: flex;
@@ -37,13 +37,7 @@
         }
       }
 
-      .dark-mode-switch {
-        margin-left: 3px;
 
-        @include md {
-          margin-left: 13px;
-        }
-      }
     }
   }
 }

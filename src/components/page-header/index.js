@@ -1,45 +1,28 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
-import { Switch } from '@material-ui/core';
+import ThemeSwitch from '../theme-switch';
 import './style.scss';
 
 const PageHeader = ({ siteTitle }) => {
   return (
-    <ThemeToggler>
-      {({ theme, toggleTheme }) => {
-        // Don't render anything at compile time. Deferring rendering until we
-        // know which theme to use on the client avoids incorrect initial
-        // state being displayed.
-        if (!theme) return null;
-        return (
-          <header className="page-header-wrapper">
-            <div className="page-header">
-              <div className="front-section">
-                <Link className="link" to="/">
-                  {siteTitle}
-                </Link>
-              </div>
-              <div className="trailing-section">
-                <Link className="link" to="/about">
-                  about
-                </Link>
-                <Link className="link" to="/posts">
-                  posts
-                </Link>
-                <Switch
-                  className="dark-mode-switch"
-                  size="medium"
-                  color="default"
-                  checked={theme === 'dark'}
-                  onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                />
-              </div>
-            </div>
-          </header>
-        );
-      }}
-    </ThemeToggler>
+    <header className="page-header-wrapper">
+      <div className="page-header">
+        <div className="front-section">
+          <Link className="link" to="/">
+            {siteTitle}
+          </Link>
+        </div>
+        <div className="trailing-section">
+          <Link className="link" to="/about">
+            about
+          </Link>
+          <Link className="link" to="/posts">
+            posts
+          </Link>
+          <ThemeSwitch />
+        </div>
+      </div>
+    </header>
   );
 };
 

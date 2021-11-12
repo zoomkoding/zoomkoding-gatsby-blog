@@ -1,0 +1,9 @@
+@use '../../styles/mixins'as *;
+
+.dark-mode-switch {
+    margin-left: 3px;
+
+    @include md {
+        margin-left: 13px;
+    }
+}
