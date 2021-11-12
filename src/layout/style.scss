@@ -1,0 +1,47 @@
+@use '../styles/variables'as *;
+@use '../styles/mixins'as *;
+@use '../styles/reset'as *;
+@use '../styles/colors'as *;
+
+* {
+    box-sizing: border-box;
+    appearance: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--background-color) !important;
+}
+
+
+a {
+    color: var(--link-text-color);
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $font-family;
+    color: var(--primary-text-color);
+    @include content-horizontal-padding;
+
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include content-max-width;
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import PageHeader from '../page-header';
-import PageFooter from '../page-footer';
+import PageHeader from '../components/page-header';
+import PageFooter from '../components/page-footer';
 import './style.scss';
 
 const Layout = ({ children }) => {
