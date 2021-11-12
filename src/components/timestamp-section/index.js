@@ -6,7 +6,7 @@ import './style.scss';
 function TimeStampSection({ timestamps }) {
   if (!timestamps || timestamps.length < 2) return null;
   return (
-    <div className="timestamps-section">
+    <div className="timestamp-section">
       <SectionHeader title="Timestamps" />
       <div className="body">
         {timestamps.map((timestamp, index) =>

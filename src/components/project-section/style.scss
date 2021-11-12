@@ -1,7 +1,7 @@
 @use '../../styles/variables'as *;
 @use '../../styles/mixins'as *;
 
-.projects-section {
+.project-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,17 +24,10 @@
     .body {
       display: flex;
       flex-direction: column;
+      width: 100%;
 
       .thumbnail {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 600px;
-        margin-bottom: 10px;
-
-        img {
-          object-fit: contain !important;
-        }
+        width: 100%;
       }
 
       .tech-stack {
