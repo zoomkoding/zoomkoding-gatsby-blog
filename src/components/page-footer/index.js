@@ -1,9 +1,8 @@
 import React from 'react';
-
 import './style.scss';
 
-const PageFooter = ({ author, githubUrl }) => (
-  <>
+function PageFooter({ author, githubUrl }) {
+  return (
     <footer className="page-footer-wrapper">
       <p className="page-footer">
         © {new Date().getFullYear()}
@@ -15,7 +14,7 @@ const PageFooter = ({ author, githubUrl }) => (
         </a>
       </p>
     </footer>
-  </>
-);
+  );
+}
 
 export default PageFooter;

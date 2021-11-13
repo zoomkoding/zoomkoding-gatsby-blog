@@ -2,13 +2,11 @@ import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
 import IconButtonBar from '../icon-button-bar';
 import Image from '../image';
-
 import './style.scss';
 
-const Bio = ({ author, language = 'ko' }) => {
-  const { bio, social, name } = author;
-
+function Bio({ author, language = 'ko' }) {
   if (!author) return null;
+  const { bio, social, name } = author;
   return (
     <div className="bio">
       {language === 'ko' ? (
@@ -47,6 +45,6 @@ const Bio = ({ author, language = 'ko' }) => {
       <Image className="thumbnail" src={bio.thumbnail} alt="thumbnail" />
     </div>
   );
-};
+}
 
 export default Bio;

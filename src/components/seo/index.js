@@ -1,8 +1,8 @@
+import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, title }) {
+function Seo({ description, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -61,4 +61,4 @@ function SEO({ description, title }) {
   );
 }
 
-export default SEO;
+export default Seo;

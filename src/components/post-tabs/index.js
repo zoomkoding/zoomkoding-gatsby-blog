@@ -3,7 +3,7 @@ import { Tabs, Tab } from '@material-ui/core';
 import PostCardColumn from '../post-card-column';
 import './style.scss';
 
-const PostTabs = ({ tabIndex, onChange, tabs, posts, showMoreButton }) => {
+function PostTabs({ tabIndex, onChange, tabs, posts, showMoreButton }) {
   const tabPosts = useMemo(() => {
     if (tabs[tabIndex] === 'All') return posts;
     return posts.filter((post) => post.categories.includes(tabs[tabIndex]));
@@ -31,5 +31,5 @@ const PostTabs = ({ tabIndex, onChange, tabs, posts, showMoreButton }) => {
       />
     </div>
   );
-};
+}
 export default PostTabs;

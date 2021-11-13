@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import './style.scss';
 
-const PostHeader = ({ post, viewCount }) => {
+function PostHeader({ post, viewCount }) {
   return (
     <header className="post-header">
       {post.emoji && <div className="emoji">{post.emoji}</div>}
@@ -26,5 +26,5 @@ const PostHeader = ({ post, viewCount }) => {
       </div>
     </header>
   );
-};
+}
 export default PostHeader;

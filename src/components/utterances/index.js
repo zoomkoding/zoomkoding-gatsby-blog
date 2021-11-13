@@ -1,19 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { createRef, useEffect, useRef } from 'react';
 
 const src = 'https://utteranc.es/client.js';
 const branch = 'master';
 
-export const Utterances = ({ repo, theme, path }) => {
-  const rootElm = React.createRef();
+function Utterances({ repo, path }) {
+  const rootElm = createRef();
+  const isUtterancesLoaded = useRef(false);
 
   useEffect(() => {
-    if (!rootElm.current || rootElm.current.childNodes.length !== 0) return;
+    if (!rootElm.current || isUtterancesLoaded.current) return;
+    const storedIsDarkMode = localStorage.getItem('isDarkMode');
+
     const utterances = document.createElement('script');
     const utterancesConfig = {
       src,
       repo,
       branch,
-      theme: theme === 'light' ? 'github-light' : 'photon-dark',
+      theme: JSON.parse(storedIsDarkMode) ? 'photon-dark' : 'github-light',
       label: 'comment',
       async: true,
       crossorigin: 'anonymous',
@@ -25,7 +28,10 @@ export const Utterances = ({ repo, theme, path }) => {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);
     });
     rootElm.current.appendChild(utterances);
-  }, [repo, rootElm, theme, path]);
+    isUtterancesLoaded.current = true;
+  }, [repo, rootElm, path]);
 
   return <div className="utterances" ref={rootElm} />;
-};
+}
+
+export default Utterances;

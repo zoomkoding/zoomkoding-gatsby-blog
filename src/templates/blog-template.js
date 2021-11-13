@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
-
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../layout';
+import Seo from '../components/seo';
 import PostHeader from '../components/post-header';
 import PostNavigator from '../components/post-navigator';
 import Post from '../models/post';
 import PostContent from '../components/post-content';
-import { Utterances } from '../components/utterances';
+import Utterances from '../components/utterances';
 
-export default ({ data }) => {
+function BlogTemplate({ data }) {
   const [viewCount, setViewCount] = useState(null);
 
   const curPost = new Post(data.cur);
@@ -35,19 +33,17 @@ export default ({ data }) => {
   }, [siteUrl, curPost.slug]);
 
   return (
-    <ThemeToggler>
-      {({ theme }) => (
-        <Layout>
-          <SEO title={curPost?.title} description={curPost?.excerpt} />
-          <PostHeader post={curPost} viewCount={viewCount} />
-          <PostContent html={curPost.html} />
-          <PostNavigator prevPost={prevPost} nextPost={nextPost} />
-          {utterancesRepo && <Utterances repo={utterancesRepo} theme={theme} path={curPost.slug} />}
-        </Layout>
-      )}
-    </ThemeToggler>
+    <Layout>
+      <Seo title={curPost?.title} description={curPost?.excerpt} />
+      <PostHeader post={curPost} viewCount={viewCount} />
+      <PostContent html={curPost.html} />
+      <PostNavigator prevPost={prevPost} nextPost={nextPost} />
+      {utterancesRepo && <Utterances repo={utterancesRepo} path={curPost.slug} />}
+    </Layout>
   );
-};
+}
+
+export default BlogTemplate;
 
 export const pageQuery = graphql`
   query($slug: String, $nextSlug: String, $prevSlug: String) {

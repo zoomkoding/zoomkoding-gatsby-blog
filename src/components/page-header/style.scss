@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 62px;
-  @include content-horizontal-padding;
+  height: 80px;
+
 
   .page-header {
     display: flex;
@@ -18,7 +18,6 @@
       font-size: 17px;
       color: var(--primary-text-color);
 
-
       @include md {
         font-weight: 700;
         font-size: 20px;
@@ -30,20 +29,14 @@
       align-items: center;
 
       .link {
-        margin-left: 10px;
+        margin-right: 10px;
 
         @include md {
-          margin-left: 20px;
+          margin-right: 20px;
         }
       }
 
-      .dark-mode-switch {
-        margin-left: 3px;
 
-        @include md {
-          margin-left: 13px;
-        }
-      }
     }
   }
 }

@@ -1,24 +1,26 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../layout';
+import Seo from '../components/seo';
 import Bio from '../components/bio';
-import TimeStampsSection from '../components/timestamps-section';
-import ProjectsSection from '../components/projects-section';
+import TimeStampSection from '../components/timestamp-section';
+import ProjectSection from '../components/project-section';
 
-export default ({ data }) => {
+function AboutPage({ data }) {
   const metaData = data.site.siteMetadata;
   const { author, about, language } = metaData;
   const { timestamps, projects } = about;
   return (
     <Layout>
-      <SEO title="About" />
+      <Seo title="About" />
       <Bio author={author} language={language} />
-      <TimeStampsSection timestamps={timestamps} />
-      <ProjectsSection projects={projects} />
+      <TimeStampSection timestamps={timestamps} />
+      <ProjectSection projects={projects} />
     </Layout>
   );
-};
+}
+
+export default AboutPage;
 
 export const pageQuery = graphql`
   query {
