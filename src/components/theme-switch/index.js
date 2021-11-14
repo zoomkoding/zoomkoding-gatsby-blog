@@ -1,24 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { Switch } from '@material-ui/core';
+import { IconButton } from '@mui/material';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import { getValueFromLocalStorage, setValueToLocalStorage } from '../../utils/localStorage';
 import './style.scss';
 
 function ThemeSwitch() {
-  const storedIsDarkMode = localStorage.getItem('isDarkMode');
-  const [isDarkMode, setIsDarkMode] = useState(JSON.parse(storedIsDarkMode));
+  const [isDarkMode, setIsDarkMode] = useState(getValueFromLocalStorage('isDarkMode'));
 
   useEffect(() => {
-    localStorage.setItem('isDarkMode', isDarkMode);
+    setValueToLocalStorage('isDarkMode', isDarkMode);
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
   return (
-    <Switch
-      className="dark-mode-switch"
-      size="medium"
-      color="default"
-      checked={isDarkMode}
-      onChange={() => setIsDarkMode((isDark) => !isDark)}
-    />
+    <div className="dark-mode-button-wrapper">
+      <IconButton className="dark-mode-button" onClick={() => setIsDarkMode((isDark) => !isDark)}>
+        {isDarkMode ? (
+          <LightModeIcon className="dark-mode-icon" fontSize="large" />
+        ) : (
+          <DarkModeIcon className="dark-mode-icon" fontSize="large" />
+        )}
+      </IconButton>
+    </div>
   );
 }
 

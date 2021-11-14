@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import { navigate } from 'gatsby-link';
 import React, { useCallback } from 'react';
 import PostCard from '../post-card';
