@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Switch } from '@material-ui/core';
+import { getValueFromLocalStorage, setValueToLocalStorage } from '../../utils/localStorage';
 import './style.scss';
 
 function ThemeSwitch() {
-  const storedIsDarkMode = localStorage.getItem('isDarkMode');
-  const [isDarkMode, setIsDarkMode] = useState(JSON.parse(storedIsDarkMode));
+  const [isDarkMode, setIsDarkMode] = useState(getValueFromLocalStorage('isDarkMode'));
 
   useEffect(() => {
-    localStorage.setItem('isDarkMode', isDarkMode);
+    setValueToLocalStorage('isDarkMode', isDarkMode);
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
