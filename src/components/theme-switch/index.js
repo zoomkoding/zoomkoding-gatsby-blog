@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Switch } from '@material-ui/core';
+import { IconButton } from '@mui/material';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import { getValueFromLocalStorage, setValueToLocalStorage } from '../../utils/localStorage';
 import './style.scss';
 
@@ -12,13 +14,15 @@ function ThemeSwitch() {
   }, [isDarkMode]);
 
   return (
-    <Switch
-      className="dark-mode-switch"
-      size="medium"
-      color="default"
-      checked={isDarkMode}
-      onChange={() => setIsDarkMode((isDark) => !isDark)}
-    />
+    <div className="dark-mode-button-wrapper">
+      <IconButton className="dark-mode-button" onClick={() => setIsDarkMode((isDark) => !isDark)}>
+        {isDarkMode ? (
+          <LightModeIcon className="dark-mode-icon" fontSize="large" />
+        ) : (
+          <DarkModeIcon className="dark-mode-icon" fontSize="large" />
+        )}
+      </IconButton>
+    </div>
   );
 }
 
