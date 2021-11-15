@@ -25,8 +25,16 @@ function PostSearch({ posts }) {
       getOptionLabel={(option) => option.title}
       renderInput={(params) => (
         <div className="search-input-wrapper">
-          <SearchIcon className="search-icon" />
-          <TextField className="search-input" variant="standard" {...params} size="medium" />
+          <TextField
+            {...params}
+            className="search-input"
+            variant="standard"
+            size="medium"
+            InputProps={{
+              ...params.InputProps,
+              endAdornment: <SearchIcon className="search-icon" />,
+            }}
+          />
         </div>
       )}
     />
