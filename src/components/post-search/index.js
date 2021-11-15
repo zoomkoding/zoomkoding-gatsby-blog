@@ -7,7 +7,6 @@ import './style.scss';
 function PostSearch({ posts }) {
   return (
     <Autocomplete
-      freeSolo
       disableClearable
       options={posts}
       onInputChange={(event, value, reason) => {
@@ -37,6 +36,7 @@ function PostSearch({ posts }) {
           />
         </div>
       )}
+      noOptionsText="해당하는 글이 없습니다."
     />
   );
 }
