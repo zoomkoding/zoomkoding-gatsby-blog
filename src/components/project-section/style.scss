@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    width: 100%;
 
     .head {
       margin-bottom: 10px;
@@ -28,6 +29,7 @@
 
       .thumbnail {
         width: 100%;
+        margin-bottom: 10px;
       }
 
       .tech-stack {
