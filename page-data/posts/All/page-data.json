@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-category-template-js",
+    "path": "/posts/All",
+    "result": {"pageContext":{"currentCategory":"All","categories":["All","블로그","featured"],"edges":[]}},
+    "staticQueryHashes": ["1073350324","1956554647","2938748437"]}
