@@ -1,0 +1,82 @@
+@use '../../styles/mixins'as *;
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.ephod-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  color: var(--primary-text-color);
+
+  .introduction {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    word-break: keep-all;
+
+    strong {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    font-family: 'montserrat';
+    font-size: 25px;
+    line-height: 1.2;
+
+    @include md {
+      font-size: 45px;
+    }
+
+    .name {
+      font-size: 35px;
+      font-weight: 600;
+    }
+
+    .job {
+      font-size: 35px;
+    }
+  }
+
+  .description {
+    font-family: 'montserrat';
+    font-weight: 400;
+    margin-top: 50px;
+    line-height: 1.5;
+    font-size: 20px;
+
+    strong {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    a {
+      color: #2abc6f;
+    }
+  }
+
+  .thumbnail-wrapper {
+    display: none;
+
+    @include md {
+      display: block;
+      margin-right: 20px;
+    }
+  }
+}
