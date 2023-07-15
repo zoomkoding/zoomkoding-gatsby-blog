@@ -24,7 +24,6 @@ This is a blog theme created for developers who want to create a pretty, clean a
 - 💅 Code Highlight
 - 🌘 Dark MOde
 - 🔍 Table of Contents
-- 👀 View Counter
 - 💬 Comments(Utterances)
 - ⚙️ Easy to configure
 - 🛠 Enhanced SEO & `sitemap.xml`, `robots.txt`

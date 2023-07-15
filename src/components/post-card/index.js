@@ -13,9 +13,9 @@ function PostCard({ post }) {
           <div className="date">{date}</div>
           <div className="categories">
             {categories.map((category) => (
-              <div className="category" key={category}>
+              <Link className="category" key={category} to={`/posts/${category}`}>
                 {category}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
