@@ -1,12 +1,12 @@
 module.exports = {
-  title: `KyuwonKwon.github.io`,
-  description: `줌코딩의 개발일기`,
+  title: `규원's Blog`,
+  description: `규원's Blog`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://github.com/KyuwonKwon/KyuwonKwon.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `https://github.com/KyuwonKwon/KyuwonKwon.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID
@@ -14,7 +14,7 @@ module.exports = {
     name: `권규원`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
+      description: '',
       thumbnail: '', // Path to the image in the 'asset' folder
     },
     social: {
