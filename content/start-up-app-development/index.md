@@ -2,7 +2,7 @@
 emoji: 🐜
 title: 대학생 개발자의 스타트업 앱 개발 후기
 date: '2020-03-25 02:00:00'
-author: 줌코딩
+author: 정진혁
 tags: 스타트업 회고
 categories: 회고 프로젝트 스타트업
 ---

@@ -2,7 +2,7 @@
 emoji: 😎
 title: Gatsby 테마 적용 후 테마 최신 버전으로 업데이트하기
 date: '2021-07-07 23:00:00'
-author: 줌코딩
+author: 정진혁
 tags: blog gatsby theme update
 categories: 블로그
 ---

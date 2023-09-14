@@ -2,7 +2,7 @@
 emoji: 🐢
 title: Express 미들웨어 제대로 사용하기 + 로그인 구현하기
 date: '2020-07-12 20:00:00'
-author: 줌코딩
+author: 정진혁
 tags: javascript node express 우아한테크캠프 백엔드개발 노드 익스프레스 미들웨어
 categories: 웹공부
 ---

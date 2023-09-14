@@ -2,7 +2,7 @@
 emoji: 💅
 title: Atomic Design Pattern이 뭐지?
 date: '2020-07-09 20:00:00'
-author: 줌코딩
+author: 정진혁
 tags: javascript 디자인패턴 우아한테크캠프 atomicdesign
 categories: 웹공부
 ---

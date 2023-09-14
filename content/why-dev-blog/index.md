@@ -2,7 +2,7 @@
 emoji: ✒️
 title: 왜 개발 블로그를 하시나요?
 date: '2021-06-23 00:00:00'
-author: 줌코딩
+author: 정진혁
 tags: blog devlog
 categories: 블로그 회고
 ---

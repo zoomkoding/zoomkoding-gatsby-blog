@@ -2,7 +2,7 @@
 emoji: 💪
 title: (알고리즘) Double Linked List C++ 구현 알고리즘
 date: '2019-06-29 04:00:00'
-author: 줌코딩
+author: 정진혁
 tags: algorithm
 categories: 알고리즘
 ---

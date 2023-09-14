@@ -2,7 +2,7 @@
 emoji: 💪
 title: (알고리즘) Knapsack 알고리즘 Greedy, DP + 코드
 date: '2019-04-11 02:00:00'
-author: 줌코딩
+author: 정진혁
 tags: algorithm
 categories: 알고리즘
 ---

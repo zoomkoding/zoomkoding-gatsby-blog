@@ -2,7 +2,7 @@
 emoji: 👨🏻‍🎓
 title: (우아한테크캠프 3기) 캠프를 마치며
 date: '2020-10-05 03:00:00'
-author: 줌코딩
+author: 정진혁
 tags: 우아한테크캠프 우테캠 회고
 categories: 회고
 ---

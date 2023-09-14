@@ -2,7 +2,7 @@
 emoji: 🌱
 title: 2019 NAVER CAMPUS HACKDAY WINTER 참가 후기
 date: '2019-11-26 13:00:00'
-author: 줌코딩
+author: 정진혁
 tags: PS naver hackday
 categories: 회고
 ---

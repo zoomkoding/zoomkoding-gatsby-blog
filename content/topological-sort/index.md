@@ -2,7 +2,7 @@
 emoji: 💪
 title: (알고리즘) 위상 정렬 Topological Sort + C++ 예제
 date: '2019-07-02 03:00:00'
-author: 줌코딩
+author: 정진혁
 tags: algorithm
 categories: 알고리즘
 ---

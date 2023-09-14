@@ -2,7 +2,7 @@
 emoji: 🛠
 title: Test Driven Development란?
 date: '2020-07-10 20:00:00'
-author: 줌코딩
+author: 정진혁
 tags: tdd 우아한테크캠프
 categories: 웹공부
 ---

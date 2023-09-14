@@ -2,7 +2,7 @@
 emoji: 💪
 title: (알고리즘) Minimum Spanning Tree MST 알고리즘 - Kruskal 알고리즘
 date: '2019-05-19 04:00:00'
-author: 줌코딩
+author: 정진혁
 tags: algorithm
 categories: 알고리즘
 ---

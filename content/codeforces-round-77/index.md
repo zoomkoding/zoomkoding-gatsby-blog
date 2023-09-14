@@ -2,7 +2,7 @@
 emoji: 🤓
 title: Codeforces Educational Round 77 후기 및 문제 풀이
 date: '2019-11-28 02:00:00'
-author: 줌코딩
+author: 정진혁
 tags: codeforces
 categories: PS
 ---

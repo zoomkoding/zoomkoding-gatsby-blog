@@ -2,7 +2,7 @@
 emoji: 🥇
 title: (개인프로젝트 개발 회고) 대학시간 개발기
 date: '2021-02-10 04:00:00'
-author: 줌코딩
+author: 정진혁
 tags: 개인프로젝트 대학시간 react node express material-ui sequelize design
 categories: 프로젝트 회고
 ---

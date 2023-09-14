@@ -2,7 +2,7 @@
 emoji: ✨
 title: 조급함 속 방황하는 신입의 마음 다잡기
 date: '2021-08-10 02:00:00'
-author: 줌코딩
+author: 정진혁
 tags: 회고 신입 개발자 조급함
 categories: 회고 featured
 ---

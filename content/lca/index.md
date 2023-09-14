@@ -2,7 +2,7 @@
 emoji: 💪
 title: (알고리즘) LCA 알고리즘 + C++ 예제코드
 date: '2019-07-27 03:00:00'
-author: 줌코딩
+author: 정진혁
 tags: algorithm LCA
 categories: 알고리즘
 ---

@@ -2,7 +2,7 @@
 emoji: 📓
 title: three.js로 회전하는 책 만들어 보기
 date: '2021-08-09 00:00:00'
-author: 줌코딩
+author: 정진혁
 tags: three.js book webgl 3d
 categories: 웹공부
 ---

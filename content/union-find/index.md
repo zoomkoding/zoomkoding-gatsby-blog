@@ -2,7 +2,7 @@
 emoji: 💪
 title: (알고리즘) Disjoint Set 구조와 Union Find 알고리즘
 date: '2019-05-19 02:00:00'
-author: 줌코딩
+author: 정진혁
 tags: algorithm
 categories: 알고리즘
 ---

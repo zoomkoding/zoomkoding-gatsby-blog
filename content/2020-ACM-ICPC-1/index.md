@@ -2,7 +2,7 @@
 emoji: 👨‍👨‍👦
 title: 2020 ACM ICPC 예선 참가 후기 및 문제 풀이 (5 Solved)
 date: '2020-10-11 04:00:00'
-author: 줌코딩
+author: 정진혁
 tags: ICPC 예선 문제풀이 후기
 categories: PS
 ---

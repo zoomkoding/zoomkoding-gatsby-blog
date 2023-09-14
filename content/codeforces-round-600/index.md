@@ -1,7 +1,7 @@
 ---
 title: Codeforces Round 600 (Div. 2) 후기 및 문제 풀이 (드디어 코포 블루)
 date: '2019-11-17 02:00:00'
-author: 줌코딩
+author: 정진혁
 tags: codeforces
 categories: PS
 ---

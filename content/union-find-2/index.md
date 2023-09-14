@@ -2,7 +2,7 @@
 emoji: 💪
 title: (알고리즘) Union Find 알고리즘 강화버전 - Rank, Path Compression 사용
 date: '2019-05-19 03:00:00'
-author: 줌코딩
+author: 정진혁
 tags: algorithm
 categories: 알고리즘
 ---

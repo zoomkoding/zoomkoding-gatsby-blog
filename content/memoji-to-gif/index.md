@@ -2,7 +2,7 @@
 emoji: 😎
 title: 움직이는 미모티콘 GIF 생성하기
 date: '2021-09-01 21:00:00'
-author: 줌코딩
+author: 정진혁
 tags: gif 블로그 미모티콘 memoji
 categories: 블로그
 ---
