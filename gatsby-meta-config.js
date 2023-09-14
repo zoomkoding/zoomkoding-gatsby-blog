@@ -14,7 +14,12 @@ module.exports = {
     name: `정진혁`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는', '능동적으로 일하는', '이로운 것을 만드는'],
+      description: [
+        '사람들의 필요에 집중하는',
+        '전달하는 가치에 관심이 있는',
+        '풀스택 개발자를 추구하는',
+        '계속해서 성장하고 싶은',
+      ],
       thumbnail: 'zoomkoding.gif', // Path to the image in the 'asset' folder
     },
     social: {
