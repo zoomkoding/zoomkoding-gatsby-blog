@@ -9,13 +9,14 @@ import ProjectSection from '../components/project-section';
 function AboutPage({ data }) {
   const metaData = data.site.siteMetadata;
   const { author, about, language } = metaData;
-  const { timestamps, projects } = about;
+  const { timestamps, projects, career } = about;
   return (
     <Layout>
       <Seo title="About" />
       <Bio author={author} language={language} />
       <TimeStampSection timestamps={timestamps} />
-      <ProjectSection projects={projects} />
+      <ProjectSection title="회사 프로젝트" projects={career} />
+      <ProjectSection title="개인 프로젝트" projects={projects} />
     </Layout>
   );
 }
@@ -47,6 +48,20 @@ export const pageQuery = graphql`
           timestamps {
             date
             activity
+            links {
+              post
+              github
+              demo
+              googlePlay
+              appStore
+            }
+          }
+
+          career {
+            title
+            description
+            techStack
+            thumbnailUrl
             links {
               post
               github
